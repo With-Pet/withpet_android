@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_appbar_navigation"
+    app:startDestination="@id/leaveListMenu">
+
+    <fragment
+        android:id="@+id/leaveListMenu"
+        android:name="com.withpet.withpet_android.ui.fragments.LeaveListFragment"
+        android:label="LeaveListFragment" />
+
+    <fragment
+        android:id="@+id/reservationMenu"
+        android:name="com.withpet.withpet_android.ui.fragments.ReservationFragment"
+        android:label="ReservationFragment" />
+
+    <fragment
+        android:id="@+id/chatMenu"
+        android:name="com.withpet.withpet_android.ui.fragments.ChatFragment"
+        android:label="ChatFragment" />
+
+    <fragment
+        android:id="@+id/accountMenu"
+        android:name="com.withpet.withpet_android.ui.fragments.AccountFragment"
+        android:label="AccountFragment" />
+</navigation>

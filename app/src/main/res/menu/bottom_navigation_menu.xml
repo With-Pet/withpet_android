@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/leaveListMenu"
+        android:icon="@drawable/ic_pets"
+        android:title="" />
+
+    <item
+        android:id="@+id/reservationMenu"
+        android:icon="@drawable/ic_event"
+        android:title="" />
+
+    <item
+        android:id="@+id/placeholder"
+        android:title="" />
+
+    <item
+        android:id="@+id/chatMenu"
+        android:icon="@drawable/ic_message"
+        android:title="" />
+
+    <item
+        android:id="@+id/accountMenu"
+        android:icon="@drawable/ic_account"
+        android:title="" />
+</menu>
