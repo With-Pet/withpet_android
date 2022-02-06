@@ -3,6 +3,7 @@
 
     <!-- toolbar title -->
     <string name="account_toolbar">계정</string>
+    <string name="my_profile_toolbar">내 프로필</string>
 
     <!-- content description -->
     <string name="main_fab">맡기기 등록 버튼</string>
@@ -28,4 +29,6 @@
     <string name="logout_menu">로그아웃</string>
     <string name="withdrawal_menu">회원탈퇴</string>
 
+    <!-- profile menu title -->
+    <string name="profile_save_menu">저장</string>
 </resources>
