@@ -18,7 +18,13 @@
     <string name="logout_menu_icon">로그아웃 아이콘</string>
     <string name="withdrawal_menu_icon">회원탈퇴 아이콘</string>
 
-    <!-- account menu title -->
+    <string name="profile_image_view">프로필 이미지</string>
+    <string name="profile_edit_image">이미지 수정</string>
+    <string name="profile_town_edit">동네 수정</string>
+    <string name="profile_certificate_add_button">자격 및 교육 추가</string>
+    <string name="profile_certificate_image_view">자격증 사진</string>
+
+    <!-- account text -->
     <string name="my_profile_menu">내 프로필 관리하기</string>
     <string name="pet_profile_menu">반려동물 프로필 관리하기</string>
     <string name="like_person_menu">찜한 돌봄이</string>
@@ -29,6 +35,29 @@
     <string name="logout_menu">로그아웃</string>
     <string name="withdrawal_menu">회원탈퇴</string>
 
-    <!-- profile menu title -->
+    <!-- profile text -->
     <string name="profile_save_menu">저장</string>
+
+    <string name="walk_label">산책</string>
+    <string name="walk_count_example">12건</string>
+    <string name="care_label">돌봄</string>
+    <string name="care_count_example">4건</string>
+    <string name="exp_label">체험</string>
+    <string name="exp_count_example">0건</string>
+
+    <string name="nickname_subtitle">닉네임</string>
+    <string name="nickname_example">홍길동</string>
+    <string name="town_subtitle">동네</string>
+    <string name="town_button_example">논현1동</string>
+    <string name="introduce_subtitle">자기소개</string>
+    <string name="introduce_subtitle_example">현재 6세 말티즈를 키우고 있고, 자격증을 보유 하고 있습니다.</string>
+    <string name="service_subtitle">이용 가능 서비스</string>
+    <string name="certificate_subtitle">자격 및 교육</string>
+
+    <string name="certificate_name_example">펫시터 전문가 교육</string>
+    <string name="certificate_org_example">(사) K.S.D 문화교육원</string>
+    <string name="certificate_date_example">2020년 4월 14일</string>
+
+    <!-- input field hint -->
+    <string name="my_profile_nickname">닉네임</string>
 </resources>

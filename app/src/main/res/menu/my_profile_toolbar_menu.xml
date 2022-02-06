@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/myProfileSaveMenu"
-        android:icon="@drawable/ic_check"
+        android:icon="@drawable/ic_check_very_peri"
         android:title="@string/profile_save_menu"
         app:showAsAction="always" />
 </menu>

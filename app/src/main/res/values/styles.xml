@@ -9,7 +9,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="account_linear_layout_style">
+    <style name="linear_layout_button_style">
         <item name="android:orientation">horizontal</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
@@ -24,10 +24,32 @@
         <item name="tint">@color/black</item>
     </style>
 
-    <style name="account_text_style">
+    <style name="default_text_style">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/black</item>
         <item name="singleLine">true</item>
+    </style>
+
+    <style name="bold_text_style" parent="default_text_style">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="profile_margin_style" parent="bold_text_style">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
+
+    <style name="small_text_style">
+        <item name="android:textSize">14sp</item>
+        <item name="singleLine">true</item>
+    </style>
+
+    <style name="left_drawable_button_style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@android:color/transparent</item>
     </style>
 
     <style name="divider_style" parent="Widget.MaterialComponents.MaterialDivider">
@@ -36,4 +58,5 @@
         <item name="dividerInsetStart">8dp</item>
         <item name="dividerInsetEnd">8dp</item>
     </style>
+
 </resources>
