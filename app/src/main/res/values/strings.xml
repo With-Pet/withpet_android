@@ -54,9 +54,14 @@
     <string name="service_subtitle">이용 가능 서비스</string>
     <string name="certificate_subtitle">자격 및 교육</string>
 
+
+    <string name="certificate_name">자격증 이름</string>
+    <string name="certificate_org">인증 기관</string>
+    <string name="certificate_date">취득 날짜</string>
     <string name="certificate_name_example">펫시터 전문가 교육</string>
     <string name="certificate_org_example">(사) K.S.D 문화교육원</string>
     <string name="certificate_date_example">2020년 4월 14일</string>
+    <string name="certificate_register_button">등록하기</string>
 
     <!-- input field hint -->
     <string name="my_profile_nickname">닉네임</string>

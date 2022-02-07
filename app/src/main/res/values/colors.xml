@@ -5,4 +5,7 @@
     <color name="very_peri_dark">#FF373D7B</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="text_field_stroke_color">#6B000000</color>
+    <color name="text_field_text_color">#DE000000</color>
 </resources>

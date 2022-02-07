@@ -6,6 +6,7 @@ import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.databinding.ActivityMyProfileBinding
+import com.withpet.withpet_android.ui.dialog.CertificationBottomSheet
 
 class MyProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMyProfileBinding
@@ -16,6 +17,7 @@ class MyProfileActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_my_profile)
 
         setToolbar()
+        setBtnClickListener()
     }
 
     private fun setToolbar() {
@@ -39,5 +41,18 @@ class MyProfileActivity : AppCompatActivity() {
     private fun clickSaveMenu() {
         // TODO: check changes and then save changes
         finish()
+    }
+
+    private fun setBtnClickListener() {
+        binding.myProfileImageEditButton.setOnClickListener {
+
+        }
+        binding.myProfileTownEditButton.setOnClickListener {
+
+        }
+        binding.myProfileCertificateAddButton.setOnClickListener {
+            val certificationBottomSheet = CertificationBottomSheet()
+            certificationBottomSheet.show(supportFragmentManager, CertificationBottomSheet.TAG)
+        }
     }
 }
