@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.databinding.FragmentAccountBinding
 import com.withpet.withpet_android.ui.activities.MyProfileActivity
+import com.withpet.withpet_android.ui.activities.OthersProfileActivity
 
 class AccountFragment : Fragment(R.layout.fragment_account) {
 
@@ -34,6 +35,9 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
     private fun setMenuClickListener() {
         binding.myProfileMenu.setOnClickListener {
             startActivity(Intent(activity, MyProfileActivity::class.java))
+        }
+        binding.noticeMenu.setOnClickListener {
+            startActivity(Intent(activity, OthersProfileActivity::class.java))
         }
     }
 }
