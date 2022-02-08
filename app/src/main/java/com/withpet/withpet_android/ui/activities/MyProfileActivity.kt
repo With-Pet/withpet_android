@@ -2,7 +2,6 @@ package com.withpet.withpet_android.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.databinding.ActivityMyProfileBinding
@@ -24,7 +23,7 @@ class MyProfileActivity : AppCompatActivity() {
         binding.myProfileToolbar.setNavigationOnClickListener { clickHomeMenu() }
         binding.myProfileToolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.myProfileSaveMenu -> {
+                R.id.profileSaveMenu -> {
                     clickSaveMenu()
                     true
                 }

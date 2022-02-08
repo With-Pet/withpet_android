@@ -4,6 +4,7 @@
     <!-- toolbar title -->
     <string name="account_toolbar">계정</string>
     <string name="profile_toolbar">프로필</string>
+    <string name="pet_toolbar">반려동물 프로필</string>
 
     <!-- content description -->
     <string name="main_fab">맡기기 등록 버튼</string>
@@ -19,7 +20,7 @@
     <string name="withdrawal_menu_icon">회원탈퇴 아이콘</string>
 
     <string name="profile_image_view">프로필 이미지</string>
-    <string name="profile_edit_image">이미지 수정</string>
+    <string name="profile_edit_image">프로필 이미지 수정</string>
     <string name="profile_town_edit">동네 수정</string>
     <string name="profile_certificate_add_button">자격 및 교육 추가</string>
     <string name="profile_certificate_image_view">자격증 사진</string>
@@ -57,7 +58,6 @@
     <string name="review_subtitle">서비스 이용자 후기</string>
     <string name="review_example">4.7</string>
 
-
     <string name="certificate_name">자격증 이름</string>
     <string name="certificate_org">인증 기관</string>
     <string name="certificate_date">취득 날짜</string>
@@ -66,6 +66,38 @@
     <string name="certificate_date_example">2020년 4월 14일</string>
     <string name="certificate_register_button">등록하기</string>
 
+    <string name="pet_name">이름</string>
+    <string name="pet_name_example">콩이</string>
+    <string name="pet_gender">성별</string>
+    <string name="pet_surgery">중성화 여부</string>
+    <string name="pet_category">종류</string>
+    <string name="pet_variety">품종</string>
+    <string name="pet_variety_example">말티즈</string>
+    <string name="pet_birthday">생일</string>
+    <string name="pet_birthday_example">2019년 10월 28일</string>
+    <string name="pet_weight">몸무게</string>
+    <string name="pet_weight_example">2.8</string>
+    <string name="pet_weight_suffix">kg</string>
+    <string name="pet_caution">특이사항</string>
+    <string name="pet_caution_example">청력이 약해서 소리를 잘 듣지 못합니다.</string>
+
     <!-- input field hint -->
     <string name="my_profile_nickname">닉네임</string>
+
+    <!-- dropdown menu -->
+    <string-array name="pet_category_arr">
+        <item>강이지</item>
+        <item>고양이</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="pet_gender_arr">
+        <item>남자</item>
+        <item>여자</item>
+    </string-array>
+
+    <string-array name="pet_surgery_arr">
+        <item>O</item>
+        <item>X</item>
+    </string-array>
 </resources>
