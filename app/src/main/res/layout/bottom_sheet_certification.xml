@@ -26,80 +26,118 @@
             android:src="@drawable/ic_photo"
             app:tint="@color/white" />
 
-        <GridLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:columnCount="2"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
             android:orientation="horizontal">
 
             <TextView
                 style="@style/bold_text_style"
-                android:layout_gravity="start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
+                android:layout_weight="1"
                 android:text="@string/certificate_name" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/certificationNameField"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="fill_horizontal"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp">
+                android:layout_weight="3">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1"
                     android:text="@string/certificate_name_example" />
             </com.google.android.material.textfield.TextInputLayout>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
             <TextView
                 style="@style/bold_text_style"
-                android:layout_gravity="start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
+                android:layout_weight="1"
                 android:text="@string/certificate_org" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/certificationOrgField"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="fill_horizontal"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp">
+                android:layout_weight="3">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1"
                     android:text="@string/certificate_org_example" />
             </com.google.android.material.textfield.TextInputLayout>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
             <TextView
                 style="@style/bold_text_style"
-                android:layout_gravity="start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
+                android:layout_weight="1"
                 android:text="@string/certificate_date" />
 
             <Button
                 android:id="@+id/certificationDateButton"
                 style="@style/outlined_button_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="fill_horizontal"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_weight="3"
                 android:gravity="start|center_vertical"
                 android:text="@string/certificate_date_example"
                 app:icon="@drawable/ic_calendar"
                 app:iconPadding="8dp" />
 
-        </GridLayout>
+        </LinearLayout>
 
         <Button
             android:id="@+id/certificationRegisterButton"
             style="@style/single_button_style"
             android:layout_gravity="center"
+            android:layout_marginTop="4dp"
             android:text="@string/certificate_register_button" />
     </LinearLayout>
 </layout>
