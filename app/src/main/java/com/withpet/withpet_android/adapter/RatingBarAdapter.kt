@@ -24,7 +24,9 @@ class RatingBarAdapter : RecyclerView.Adapter<RatingBarAdapter.RatingBarViewHold
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RatingBarViewHolder {
         val binding = DataBindingUtil.inflate<AdapterViewRatingBarBinding>(
             LayoutInflater.from(parent.context),
-            R.layout.adapter_view_rating_bar, parent, false
+            R.layout.adapter_view_rating_bar,
+            parent,
+            false
         )
         return RatingBarViewHolder(binding)
     }

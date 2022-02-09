@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WithPet">
         <activity
+            android:name=".ui.activities.ReviewListActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.OthersPetActivity"
             android:exported="false" />
         <activity

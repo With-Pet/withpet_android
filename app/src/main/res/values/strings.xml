@@ -5,6 +5,7 @@
     <string name="account_toolbar">계정</string>
     <string name="profile_toolbar">프로필</string>
     <string name="pet_toolbar">반려동물 프로필</string>
+    <string name="review_toolbar">리뷰</string>
 
     <!-- content description -->
     <string name="main_fab">맡기기 등록 버튼</string>
@@ -71,7 +72,7 @@
     <string name="pet_name_example">콩이</string>
     <string name="pet_gender">성별</string>
     <string name="pet_gender_example">남자</string>
-    <string name="pet_surgery">중성화 여부</string>
+    <string name="pet_surgery">중성화</string>
     <string name="pet_surgery_example">O</string>
     <string name="pet_category">종류</string>
     <string name="pet_category_example">강아지</string>
@@ -88,8 +89,16 @@
     <string name="pet_caution">특이사항</string>
     <string name="pet_caution_example">청력이 약해서 소리를 잘 듣지 못합니다.</string>
 
-    <!-- input field hint -->
-    <string name="my_profile_nickname">닉네임</string>
+    <!-- review -->
+    <string name="review_date_example">2021년 12월 3일</string>
+    <string name="review_service">서비스</string>
+    <string name="review_service_example">산책</string>
+    <string name="review_reservation">예약 날짜</string>
+    <string name="review_reservation_example">2021년 12월 3일</string>
+    <string name="review_fee">비용</string>
+    <string name="review_fee_example">10,000원 / 시간</string>
+    <string name="review_text_example">저희 아이들이 너무 좋아해요\n처음 후기 남겨보는데 자주 애용하겠습니다\n너무 친절하셔요 :)</string>
+    <string name="review_image">리뷰 이미지</string>
 
     <!-- dropdown menu -->
     <string-array name="pet_category_arr">

@@ -1,5 +1,6 @@
 package com.withpet.withpet_android.ui.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -18,6 +19,7 @@ class OthersPetActivity : AppCompatActivity() {
 
         setToolbar()
         setRecyclerView()
+        setBtnClickListener()
     }
 
     private fun setToolbar() {
@@ -27,5 +29,11 @@ class OthersPetActivity : AppCompatActivity() {
     private fun setRecyclerView() {
         binding.othersPetReviewRecyclerView.adapter = RatingBarAdapter()
         binding.othersPetReviewRecyclerView.layoutManager = LinearLayoutManager(this)
+    }
+
+    private fun setBtnClickListener() {
+        binding.othersPetMoreReviewButton.setOnClickListener {
+            startActivity(Intent(this, ReviewListActivity::class.java))
+        }
     }
 }
