@@ -11,6 +11,7 @@ import com.withpet.withpet_android.R
 import com.withpet.withpet_android.databinding.FragmentAccountBinding
 import com.withpet.withpet_android.ui.activities.MyPetActivity
 import com.withpet.withpet_android.ui.activities.MyProfileActivity
+import com.withpet.withpet_android.ui.activities.OthersPetActivity
 import com.withpet.withpet_android.ui.activities.OthersProfileActivity
 
 class AccountFragment : Fragment(R.layout.fragment_account) {
@@ -42,6 +43,9 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
         }
         binding.noticeMenu.setOnClickListener {
             startActivity(Intent(activity, OthersProfileActivity::class.java))
+        }
+        binding.faqMenu.setOnClickListener {
+            startActivity(Intent(activity, OthersPetActivity::class.java))
         }
     }
 }

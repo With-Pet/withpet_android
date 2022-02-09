@@ -41,6 +41,20 @@
         <item name="android:layout_marginLeft">16dp</item>
     </style>
 
+    <style name="default_profile_margin_style" parent="default_text_style">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
+
+    <style name="small_profile_margin_style" parent="small_text_style">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
+
     <style name="small_text_style">
         <item name="android:textSize">14sp</item>
         <item name="singleLine">true</item>
