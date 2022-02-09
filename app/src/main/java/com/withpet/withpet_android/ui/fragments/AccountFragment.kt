@@ -9,10 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.databinding.FragmentAccountBinding
-import com.withpet.withpet_android.ui.activities.MyPetActivity
-import com.withpet.withpet_android.ui.activities.MyProfileActivity
-import com.withpet.withpet_android.ui.activities.OthersPetActivity
-import com.withpet.withpet_android.ui.activities.OthersProfileActivity
+import com.withpet.withpet_android.ui.activities.*
 
 class AccountFragment : Fragment(R.layout.fragment_account) {
 
@@ -46,6 +43,9 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
         }
         binding.faqMenu.setOnClickListener {
             startActivity(Intent(activity, OthersPetActivity::class.java))
+        }
+        binding.settingMenu.setOnClickListener {
+            startActivity(Intent(activity, ReviewWriteActivity::class.java))
         }
     }
 }

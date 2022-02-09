@@ -93,7 +93,7 @@
     </style>
 
     <style name="rating_bar_style" parent="Theme.AppCompat">
-        <item name="colorControlNormal">?attr/colorControlNormal</item>
+        <item name="colorControlNormal">@android:color/darker_gray</item>
         <item name="colorControlActivated">@color/yellow</item>
     </style>
 

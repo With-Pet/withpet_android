@@ -6,6 +6,7 @@
     <string name="profile_toolbar">프로필</string>
     <string name="pet_toolbar">반려동물 프로필</string>
     <string name="review_toolbar">리뷰</string>
+    <string name="review_write_toolbar">리뷰 작성하기</string>
 
     <!-- content description -->
     <string name="main_fab">맡기기 등록 버튼</string>
@@ -99,6 +100,12 @@
     <string name="review_fee_example">10,000원 / 시간</string>
     <string name="review_text_example">저희 아이들이 너무 좋아해요\n처음 후기 남겨보는데 자주 애용하겠습니다\n너무 친절하셔요 :)</string>
     <string name="review_image">리뷰 이미지</string>
+    <string name="review_name_title">담당자</string>
+    <string name="review_name_example">지휘찬</string>
+    <string name="review_notice">평점과 리뷰를 남겨주세요!</string>
+    <string name="review_text_hint">다른 이용자들을 위해 리뷰를 작성해주세요.</string>
+    <string name="review_image_add_button">리뷰 이미지 추가 버튼</string>
+    <string name="review_image_add_button_text">0/3</string>
 
     <!-- dropdown menu -->
     <string-array name="pet_category_arr">
