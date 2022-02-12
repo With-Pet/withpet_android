@@ -36,7 +36,7 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
             startActivity(Intent(activity, MyProfileActivity::class.java))
         }
         binding.petProfileMenu.setOnClickListener {
-            startActivity(Intent(activity, MyPetActivity::class.java))
+            startActivity(Intent(activity, MyPetListActivity::class.java))
         }
         binding.noticeMenu.setOnClickListener {
             startActivity(Intent(activity, OthersProfileActivity::class.java))

@@ -21,7 +21,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/round_image_view"
-            android:contentDescription="@string/profile_certificate_image_view"
+            android:contentDescription="@string/certificate_image_view"
             android:scaleType="centerInside"
             android:src="@drawable/ic_photo"
             app:tint="@color/white" />

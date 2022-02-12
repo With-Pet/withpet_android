@@ -98,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:text="@string/like_person_menu" />
+                        android:text="@string/like_post_menu" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -111,7 +111,7 @@
                         style="@style/account_icon_style"
                         android:layout_weight="0"
                         android:contentDescription="@string/like_pet_menu_icon"
-                        android:src="@drawable/ic_like" />
+                        android:src="@drawable/ic_like_border" />
 
                     <TextView
                         style="@style/default_text_style"
@@ -119,7 +119,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:text="@string/like_pet_menu" />
+                        android:text="@string/like_person_menu" />
                 </LinearLayout>
 
                 <com.google.android.material.divider.MaterialDivider

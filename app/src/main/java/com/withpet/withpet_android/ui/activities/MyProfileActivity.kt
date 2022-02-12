@@ -3,7 +3,10 @@ package com.withpet.withpet_android.ui.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.withpet.withpet_android.R
+import com.withpet.withpet_android.adapter.CertificationAdapter
+import com.withpet.withpet_android.adapter.RatingBarAdapter
 import com.withpet.withpet_android.databinding.ActivityMyProfileBinding
 import com.withpet.withpet_android.ui.dialog.CertificationBottomSheet
 
@@ -16,6 +19,7 @@ class MyProfileActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_my_profile)
 
         setToolbar()
+        setRecyclerView()
         setBtnClickListener()
     }
 
@@ -40,6 +44,11 @@ class MyProfileActivity : AppCompatActivity() {
     private fun clickSaveMenu() {
         // TODO: check changes and then save changes
         finish()
+    }
+
+    private fun setRecyclerView() {
+        binding.certificationRecyclerView.adapter = CertificationAdapter()
+        binding.certificationRecyclerView.layoutManager = LinearLayoutManager(this)
     }
 
     private fun setBtnClickListener() {

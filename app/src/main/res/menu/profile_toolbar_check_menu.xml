@@ -4,6 +4,6 @@
     <item
         android:id="@+id/profileSaveMenu"
         android:icon="@drawable/ic_check_very_peri"
-        android:title="@string/profile_save_menu"
+        android:title=""
         app:showAsAction="always" />
 </menu>
