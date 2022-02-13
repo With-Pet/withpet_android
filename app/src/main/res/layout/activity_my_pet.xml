@@ -47,7 +47,7 @@
                         android:layout_centerInParent="true"
                         android:contentDescription="@string/profile_image_view"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_account_120dp" />
+                        android:src="@drawable/ic_account_huge" />
 
                     <ImageButton
                         android:id="@+id/myPetImageEditButton"

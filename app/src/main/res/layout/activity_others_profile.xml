@@ -44,7 +44,7 @@
                     android:layout_margin="8dp"
                     android:contentDescription="@string/profile_image_view"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_account_120dp" />
+                    android:src="@drawable/ic_account_huge" />
 
                 <TextView
                     android:id="@+id/othersProfileTownTextView"
@@ -54,7 +54,7 @@
                     android:layout_gravity="center"
                     android:gravity="center_vertical"
                     android:text="@string/town_example"
-                    app:drawableLeftCompat="@drawable/ic_location" />
+                    app:drawableLeftCompat="@drawable/ic_location_small" />
 
                 <TextView
                     android:id="@+id/othersProfileNicknameTextView"

@@ -38,6 +38,12 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
         binding.petProfileMenu.setOnClickListener {
             startActivity(Intent(activity, MyPetListActivity::class.java))
         }
+        binding.likePostMenu.setOnClickListener {
+            startActivity(Intent(activity, LikePostListActivity::class.java))
+        }
+        binding.likePersonMenu.setOnClickListener {
+            startActivity(Intent(activity, LikePersonListActivity::class.java))
+        }
         binding.noticeMenu.setOnClickListener {
             startActivity(Intent(activity, OthersProfileActivity::class.java))
         }

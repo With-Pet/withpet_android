@@ -19,7 +19,7 @@
                 android:layout_gravity="center"
                 android:contentDescription="@string/profile_image_view"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_account_120dp" />
+                android:src="@drawable/ic_account_huge" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
