@@ -16,58 +16,55 @@
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/myProfileToolbar"
-                style="@style/toolbar_style"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:menu="@menu/profile_toolbar_check_menu"
                 app:navigationIcon="@drawable/ic_arrow_back"
-                app:title="@string/profile_toolbar" />
+                app:title="@string/profile_toolbar"
+                app:titleTextAppearance="@style/TextStyle.Headline6.Bold" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.core.widget.NestedScrollView
+            style="@style/ScrollViewStyle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            android:layout_height="match_parent">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="16dp">
+                <ImageView
+                    android:id="@+id/myProfileImageView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/profile_image_desc"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_account_huge"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/myProfileImageView"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_centerInParent="true"
-                        android:contentDescription="@string/profile_image_view"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ic_account_huge" />
-
-                    <ImageButton
-                        android:id="@+id/myProfileImageEditButton"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_alignEnd="@id/myProfileImageView"
-                        android:layout_alignBottom="@id/myProfileImageView"
-                        android:background="@drawable/round_image_button"
-                        android:contentDescription="@string/profile_edit_image"
-                        android:padding="8dp"
-                        android:src="@drawable/ic_photo"
-                        app:tint="@color/white" />
-                </RelativeLayout>
+                <ImageButton
+                    android:id="@+id/myProfileImageEditButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/round_add_profile_button"
+                    android:contentDescription="@string/edit_image_desc"
+                    android:src="@drawable/ic_photo"
+                    app:layout_constraintBottom_toBottomOf="@id/myProfileImageView"
+                    app:layout_constraintEnd_toEndOf="@id/myProfileImageView"
+                    app:tint="@color/white" />
 
                 <LinearLayout
+                    android:id="@+id/myProfileServiceCountField"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="8dp"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileImageView">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -75,7 +72,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/small_text_style"
+                            style="@style/TextStyle.Body2.Default"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -83,21 +80,19 @@
 
                         <TextView
                             android:id="@+id/myProfileWalkTextView"
-                            style="@style/default_text_style"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="4dp"
-                            android:text="@string/walk_count_example" />
+                            android:text="@string/walk_count_example"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
                     </LinearLayout>
 
                     <com.google.android.material.divider.MaterialDivider
-                        style="@style/divider_style"
+                        style="@style/VerticalDividerStyle"
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp" />
+                        android:layout_gravity="center" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -105,7 +100,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/small_text_style"
+                            style="@style/TextStyle.Body2.Default"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -113,21 +108,19 @@
 
                         <TextView
                             android:id="@+id/myProfileCareTextView"
-                            style="@style/default_text_style"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="4dp"
-                            android:text="@string/care_count_example" />
+                            android:text="@string/care_count_example"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
                     </LinearLayout>
 
                     <com.google.android.material.divider.MaterialDivider
-                        style="@style/divider_style"
+                        style="@style/VerticalDividerStyle"
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp" />
+                        android:layout_gravity="center" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -135,7 +128,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/small_text_style"
+                            style="@style/TextStyle.Body2.Default"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -143,34 +136,38 @@
 
                         <TextView
                             android:id="@+id/myProfileExpTextView"
-                            style="@style/default_text_style"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="4dp"
-                            android:text="@string/exp_count_example" />
+                            android:text="@string/exp_count_example"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <com.google.android.material.divider.MaterialDivider
-                    style="@style/divider_style"
+                    android:id="@+id/myProfileDivider1"
+                    style="@style/HorizontalTopDividerStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileServiceCountField" />
 
                 <TextView
-                    style="@style/profile_margin_style"
+                    android:id="@+id/myProfileNicknameSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/nickname_subtitle" />
+                    android:text="@string/nickname_subtitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileDivider1" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/myProfileNicknameField"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp">
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileNicknameSubtitle">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -181,75 +178,76 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.divider.MaterialDivider
-                    style="@style/divider_style"
+                    android:id="@+id/myProfileDivider2"
+                    style="@style/HorizontalTopDividerStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        style="@style/profile_margin_style"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/town_subtitle"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <LinearLayout
-                        android:id="@+id/myProfileTownEditButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:orientation="horizontal"
-                        android:padding="8dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <TextView
-                            android:id="@+id/profileTownTextView"
-                            style="@style/left_drawable_button_style"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="@string/town_example" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:background="@android:color/transparent"
-                            android:contentDescription="@string/profile_town_edit"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ic_right"
-                            app:tint="@color/very_peri" />
-                    </LinearLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <com.google.android.material.divider.MaterialDivider
-                    style="@style/divider_style"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileNicknameField" />
 
                 <TextView
-                    style="@style/profile_margin_style"
+                    android:id="@+id/myProfileTownSubtitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/introduce_subtitle" />
+                    android:text="@string/town_subtitle"
+                    android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+                    app:layout_constraintBottom_toTopOf="@id/myProfileDivider3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileDivider2" />
+
+                <LinearLayout
+                    android:id="@+id/myProfileTownEditButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileDivider2">
+
+                    <TextView
+                        android:id="@+id/myProfileTownTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/town_example"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:contentDescription="@string/town_edit_desc"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_right"
+                        app:tint="@color/very_peri" />
+                </LinearLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/myProfileDivider3"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileTownEditButton" />
+
+                <TextView
+                    android:id="@+id/myProfileIntroduceSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/introduce_subtitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileDivider3" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/myProfileIntroduceField"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp">
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileIntroduceSubtitle">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -261,23 +259,27 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.divider.MaterialDivider
-                    style="@style/divider_style"
+                    android:id="@+id/myProfileDivider4"
+                    style="@style/HorizontalTopDividerStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileIntroduceField" />
 
                 <TextView
-                    style="@style/profile_margin_style"
+                    android:id="@+id/myProfileServiceSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/service_subtitle" />
+                    android:text="@string/service_subtitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileDivider4" />
 
                 <com.google.android.material.chip.ChipGroup
                     android:id="@+id/myProfileServiceChipGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp">
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileServiceSubtitle">
 
                     <com.google.android.material.chip.Chip
                         style="@style/Widget.MaterialComponents.Chip.Choice"
@@ -335,50 +337,42 @@
                 </com.google.android.material.chip.ChipGroup>
 
                 <com.google.android.material.divider.MaterialDivider
-                    style="@style/divider_style"
+                    android:id="@+id/myProfileDivider5"
+                    style="@style/HorizontalTopDividerStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileServiceChipGroup" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <TextView
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/certificate_subtitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileDivider5" />
 
-                    <TextView
-                        style="@style/profile_margin_style"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
-                        android:text="@string/certificate_subtitle"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageButton
-                        android:id="@+id/myProfileCertificateAddButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@string/profile_certificate_add_button"
-                        android:paddingLeft="16dp"
-                        android:paddingRight="16dp"
-                        android:src="@drawable/ic_add"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/very_peri" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageButton
+                    android:id="@+id/myProfileCertificateAddButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/certificate_add_desc"
+                    android:src="@drawable/ic_add"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileDivider5"
+                    app:tint="@color/very_peri" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/certificationRecyclerView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:overScrollMode="never" />
+                    android:layout_marginTop="8dp"
+                    android:overScrollMode="never"
+                    app:layout_constraintTop_toBottomOf="@id/myProfileCertificateAddButton" />
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.core.widget.NestedScrollView>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

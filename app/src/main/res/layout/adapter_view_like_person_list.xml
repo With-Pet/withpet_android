@@ -5,85 +5,72 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginBottom="16dp"
         app:cardElevation="2dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp">
+            android:padding="16dp">
 
             <ImageView
                 android:id="@+id/profileImageView"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="16dp"
-                android:contentDescription="@string/profile_image_view"
-                android:scaleType="fitCenter"
+                android:contentDescription="@string/profile_image_desc"
+                android:scaleType="centerCrop"
                 android:src="@drawable/ic_account_huge"
-                app:layout_constraintBottom_toTopOf="@id/divider"
-                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/profileTownTextView"
+                style="@style/TextStyle.Body2.Default"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toTopOf="@id/divider"
-                app:layout_constraintLeft_toRightOf="@id/profileImageView"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/profileTownTextView"
-                    style="@style/small_text_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:text="@string/town_example"
-                    app:drawableLeftCompat="@drawable/ic_location_small" />
-
-                <TextView
-                    android:id="@+id/profileNicknameTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
-                    android:text="@string/nickname_example"
-                    android:textColor="@color/black"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <com.google.android.material.divider.MaterialDivider
-                android:id="@+id/divider"
-                style="@style/divider_style"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toTopOf="@id/profileServiceTitle" />
+                android:gravity="center_vertical"
+                android:text="@string/town_example"
+                app:drawableLeftCompat="@drawable/ic_location_small"
+                app:layout_constraintBottom_toTopOf="@id/profileNicknameTextView"
+                app:layout_constraintStart_toEndOf="@id/profileImageView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
 
             <TextView
-                android:id="@+id/profileServiceTitle"
-                style="@style/bold_text_style"
+                android:id="@+id/profileNicknameTextView"
+                style="@style/TextStyle.Headline5.Bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:paddingTop="4dp"
-                android:paddingBottom="4dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/nickname_example"
+                app:layout_constraintBottom_toTopOf="@id/personListDivider"
+                app:layout_constraintStart_toEndOf="@id/profileImageView"
+                app:layout_constraintTop_toBottomOf="@id/profileTownTextView" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/personListDivider"
+                style="@style/HorizontalTopDividerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/profileImageView" />
+
+            <TextView
+                android:id="@+id/profileServiceSubtitle"
+                style="@style/SubtitleVerticalMarginStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/service_subtitle"
-                app:layout_constraintBottom_toTopOf="@id/profileServiceChipGroup"
-                app:layout_constraintLeft_toLeftOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/personListDivider" />
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/profileServiceChipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginTop="8dp"
                 app:chipSpacing="8dp"
-                app:layout_constraintBottom_toBottomOf="parent">
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileServiceSubtitle">
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
@@ -91,7 +78,8 @@
                     android:clickable="false"
                     android:text="병원"
                     android:textSize="12sp"
-                    app:ensureMinTouchTargetSize="false" />
+                    app:ensureMinTouchTargetSize="false"
+                    app:rippleColor="@android:color/transparent" />
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
@@ -99,7 +87,8 @@
                     android:clickable="false"
                     android:text="목욕"
                     android:textSize="12sp"
-                    app:ensureMinTouchTargetSize="false" />
+                    app:ensureMinTouchTargetSize="false"
+                    app:rippleColor="@android:color/transparent" />
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
@@ -107,8 +96,8 @@
                     android:clickable="false"
                     android:text="집 앞 픽업"
                     android:textSize="12sp"
-                    app:ensureMinTouchTargetSize="false" />
-
+                    app:ensureMinTouchTargetSize="false"
+                    app:rippleColor="@android:color/transparent" />
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
@@ -116,7 +105,8 @@
                     android:clickable="false"
                     android:text="미용"
                     android:textSize="12sp"
-                    app:ensureMinTouchTargetSize="false" />
+                    app:ensureMinTouchTargetSize="false"
+                    app:rippleColor="@android:color/transparent" />
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
@@ -124,7 +114,8 @@
                     android:clickable="false"
                     android:text="소독"
                     android:textSize="12sp"
-                    app:ensureMinTouchTargetSize="false" />
+                    app:ensureMinTouchTargetSize="false"
+                    app:rippleColor="@android:color/transparent" />
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
@@ -132,7 +123,8 @@
                     android:clickable="false"
                     android:text="마당 보유"
                     android:textSize="12sp"
-                    app:ensureMinTouchTargetSize="false" />
+                    app:ensureMinTouchTargetSize="false"
+                    app:rippleColor="@android:color/transparent" />
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
@@ -140,7 +132,8 @@
                     android:clickable="false"
                     android:text="실내 놀이"
                     android:textSize="12sp"
-                    app:ensureMinTouchTargetSize="false" />
+                    app:ensureMinTouchTargetSize="false"
+                    app:rippleColor="@android:color/transparent" />
 
             </com.google.android.material.chip.ChipGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>

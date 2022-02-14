@@ -7,8 +7,8 @@
     <string name="pet_toolbar">반려동물 프로필</string>
     <string name="review_toolbar">리뷰</string>
     <string name="review_write_toolbar">리뷰 작성하기</string>
-    <string name="like_person_toolbar">찜한 돌봄이</string>
-    <string name="like_post_toolbar">찜한 게시물</string>
+    <string name="like_person_list_toolbar">찜한 돌봄이</string>
+    <string name="like_post_list_toolbar">찜한 게시물</string>
 
     <!-- content description -->
     <string name="main_fab">맡기기 등록 버튼</string>
@@ -23,12 +23,15 @@
     <string name="logout_menu_icon">로그아웃 아이콘</string>
     <string name="withdrawal_menu_icon">회원탈퇴 아이콘</string>
 
-    <string name="profile_image_view">프로필 이미지</string>
-    <string name="profile_edit_image">프로필 이미지 수정</string>
-    <string name="profile_town_edit">동네 수정</string>
-    <string name="profile_certificate_add_button">자격 및 교육 추가</string>
-    <string name="certificate_image_view">자격증 사진</string>
-    <string name="more_review_button">리뷰 더보기</string>
+    <string name="profile_image_desc">프로필 이미지</string>
+    <string name="edit_image_desc">이미지 수정</string>
+    <string name="town_edit_desc">동네 수정</string>
+    <string name="certificate_add_desc">자격 및 교육 추가</string>
+    <string name="certificate_image_desc">자격증 사진</string>
+    <string name="more_review_desc">리뷰 더보기</string>
+    <string name="review_image_add_desc">리뷰 이미지 추가</string>
+    <string name="post_thumbnail_desc">게시물 썸네일</string>
+    <string name="review_image_desc">리뷰 이미지</string>
 
     <!-- account text -->
     <string name="my_profile_menu">내 프로필 관리하기</string>
@@ -90,7 +93,7 @@
     <string name="pet_weight_wight_kg_example">2.8 kg</string>
     <string name="pet_weight_suffix">kg</string>
     <string name="pet_caution">특이사항</string>
-    <string name="pet_caution_example">청력이 약해서 소리를 잘 듣지 못합니다.</string>
+    <string name="pet_introduce_example">청력이 약해서 소리를 잘 듣지 못합니다.</string>
 
     <!-- review -->
     <string name="review_date_example">2021년 12월 3일</string>
@@ -101,16 +104,13 @@
     <string name="review_fee">비용</string>
     <string name="review_fee_example">10,000원 / 시간</string>
     <string name="review_text_example">저희 아이들이 너무 좋아해요\n처음 후기 남겨보는데 자주 애용하겠습니다\n너무 친절하셔요 :)</string>
-    <string name="review_image">리뷰 이미지</string>
     <string name="review_name_title">담당자</string>
     <string name="review_name_example">지휘찬</string>
     <string name="review_notice">평점과 리뷰를 남겨주세요!</string>
     <string name="review_text_hint">다른 이용자들을 위해 리뷰를 작성해주세요.</string>
-    <string name="review_image_add_button">리뷰 이미지 추가 버튼</string>
     <string name="review_image_add_button_text">0/3</string>
 
     <!-- post -->
-    <string name="post_thumbnail">게시물 썸네일</string>
     <string name="post_title_example">3시간 정도 한강 공원 산책 시켜주실 분~</string>
     <string name="post_date_example">02/14 09:00 – 02/14 12:00</string>
     <string name="post_category_example">강아지</string>

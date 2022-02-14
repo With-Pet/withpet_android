@@ -25,7 +25,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_weight="1"
-            android:theme="@style/rating_progress_bar_style" />
+            android:theme="@style/RatingProgressBarStyle" />
 
         <TextView
             android:id="@+id/ratingCountTextView"

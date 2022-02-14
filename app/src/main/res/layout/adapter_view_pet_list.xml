@@ -20,20 +20,18 @@
                 android:layout_height="80dp"
                 android:layout_gravity="center"
                 android:layout_margin="8dp"
-                android:contentDescription="@string/profile_image_view"
-                android:scaleType="fitCenter"
+                android:contentDescription="@string/profile_image_desc"
+                android:scaleType="centerCrop"
                 android:src="@drawable/ic_account_huge" />
 
             <TextView
                 android:id="@+id/petListNameTextView"
+                style="@style/TextStyle.Headline6.Bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="8dp"
-                android:text="@string/pet_name_example"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:text="@string/pet_name_example" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 </layout>

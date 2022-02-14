@@ -16,19 +16,21 @@
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/reviewListToolbar"
-                style="@style/toolbar_style"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:navigationIcon="@drawable/ic_arrow_back"
-                app:title="@string/review_toolbar" />
+                app:title="@string/review_toolbar"
+                app:titleTextAppearance="@style/TextStyle.Headline6.Bold" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/reviewListRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:overScrollMode="ifContentScrolls"
+            android:clipToPadding="false"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

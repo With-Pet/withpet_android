@@ -16,10 +16,10 @@
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/accountToolbar"
-                style="@style/toolbar_style"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="@string/account_toolbar" />
+                app:title="@string/account_toolbar"
+                app:titleTextAppearance="@style/TextStyle.Headline6.Bold" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -35,201 +35,205 @@
 
                 <LinearLayout
                     android:id="@+id/myProfileMenu"
-                    style="@style/linear_layout_button_style"
+                    style="@style/LinearMenuStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        style="@style/account_icon_style"
+                        style="@style/AccountIconStyle"
                         android:layout_weight="0"
                         android:contentDescription="@string/my_profile_menu_icon"
                         android:src="@drawable/ic_person" />
 
                     <TextView
-                        style="@style/default_text_style"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:text="@string/my_profile_menu" />
+                        android:text="@string/my_profile_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/petProfileMenu"
-                    style="@style/linear_layout_button_style"
+                    style="@style/LinearMenuStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        style="@style/account_icon_style"
+                        style="@style/AccountIconStyle"
                         android:layout_weight="0"
                         android:contentDescription="@string/pet_profile_menu_icon"
                         android:src="@drawable/ic_pet_profile" />
 
                     <TextView
-                        style="@style/default_text_style"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:text="@string/pet_profile_menu" />
+                        android:text="@string/pet_profile_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
                 </LinearLayout>
 
                 <com.google.android.material.divider.MaterialDivider
-                    style="@style/divider_style"
+                    style="@style/HorizontalDividerStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp" />
 
                 <LinearLayout
                     android:id="@+id/likePostMenu"
-                    style="@style/linear_layout_button_style"
+                    style="@style/LinearMenuStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        style="@style/account_icon_style"
+                        style="@style/AccountIconStyle"
                         android:layout_weight="0"
                         android:contentDescription="@string/like_person_menu_icon"
                         android:src="@drawable/ic_star" />
 
                     <TextView
-                        style="@style/default_text_style"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:text="@string/like_post_menu" />
+                        android:text="@string/like_post_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/likePersonMenu"
-                    style="@style/linear_layout_button_style"
+                    style="@style/LinearMenuStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        style="@style/account_icon_style"
+                        style="@style/AccountIconStyle"
                         android:layout_weight="0"
                         android:contentDescription="@string/like_pet_menu_icon"
                         android:src="@drawable/ic_like_border" />
 
                     <TextView
-                        style="@style/default_text_style"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:text="@string/like_person_menu" />
+                        android:text="@string/like_person_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
                 </LinearLayout>
 
                 <com.google.android.material.divider.MaterialDivider
-                    style="@style/divider_style"
+                    style="@style/HorizontalDividerStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp" />
 
                 <LinearLayout
                     android:id="@+id/noticeMenu"
-                    style="@style/linear_layout_button_style"
+                    style="@style/LinearMenuStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        style="@style/account_icon_style"
+                        style="@style/AccountIconStyle"
                         android:layout_weight="0"
                         android:contentDescription="@string/notice_menu_icon"
                         android:src="@drawable/ic_notice" />
 
                     <TextView
-                        style="@style/default_text_style"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:text="@string/notice_menu" />
+                        android:text="@string/notice_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/faqMenu"
-                    style="@style/linear_layout_button_style"
+                    style="@style/LinearMenuStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        style="@style/account_icon_style"
+                        style="@style/AccountIconStyle"
                         android:layout_weight="0"
                         android:contentDescription="@string/faq_menu_icon"
                         android:src="@drawable/ic_faq" />
 
                     <TextView
-                        style="@style/default_text_style"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:text="@string/faq_menu" />
+                        android:text="@string/faq_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/settingMenu"
-                    style="@style/linear_layout_button_style"
+                    style="@style/LinearMenuStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        style="@style/account_icon_style"
+                        style="@style/AccountIconStyle"
                         android:layout_weight="0"
                         android:contentDescription="@string/setting_menu_icon"
                         android:src="@drawable/ic_setting" />
 
                     <TextView
-                        style="@style/default_text_style"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:text="@string/setting_menu" />
+                        android:text="@string/setting_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/logoutMenu"
-                    style="@style/linear_layout_button_style"
+                    style="@style/LinearMenuStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        style="@style/account_icon_style"
+                        style="@style/AccountIconStyle"
                         android:layout_weight="0"
                         android:contentDescription="@string/logout_menu_icon"
                         android:src="@drawable/ic_logout" />
 
                     <TextView
-                        style="@style/default_text_style"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:text="@string/logout_menu" />
+                        android:text="@string/logout_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/withdrawalMenu"
-                    style="@style/linear_layout_button_style"
+                    style="@style/LinearMenuStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        style="@style/account_icon_style"
+                        style="@style/AccountIconStyle"
                         android:layout_weight="0"
                         android:contentDescription="@string/withdrawal_menu_icon"
                         android:src="@drawable/ic_withdrawal" />
 
                     <TextView
-                        style="@style/default_text_style"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:text="@string/withdrawal_menu" />
+                        android:text="@string/withdrawal_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
                 </LinearLayout>
 
             </LinearLayout>

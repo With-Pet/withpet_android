@@ -16,143 +16,154 @@
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/reviewWriteToolbar"
-                style="@style/toolbar_style"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:menu="@menu/profile_toolbar_check_menu"
                 app:navigationIcon="@drawable/ic_arrow_back"
-                app:title="@string/review_write_toolbar" />
+                app:title="@string/review_write_toolbar"
+                app:titleTextAppearance="@style/TextStyle.Headline6.Bold" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.core.widget.NestedScrollView
+            style="@style/ScrollViewStyle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            android:layout_height="match_parent">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/reviewWriteNameSubtitle"
+                    style="@style/TextStyle.Body2.Default"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/review_name_title"
+                    app:layout_constraintEnd_toStartOf="@id/reviewWriteNameTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/reviewWriteNameTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/review_name_example"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintStart_toEndOf="@id/reviewWriteNameSubtitle"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/reviewWriteServiceSubtitle"
+                    style="@style/TextStyle.Body2.Default"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/review_service"
+                    app:layout_constraintEnd_toStartOf="@id/reviewWriteServiceTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/reviewWriteNameSubtitle" />
 
-                    <TextView
-                        android:id="@+id/reviewWriteNameTitleView"
-                        style="@style/small_text_style"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="@string/review_name_title" />
-
-                    <TextView
-                        android:id="@+id/reviewWriteNameTextView"
-                        style="@style/default_text_style"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:text="@string/review_name_example" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/reviewWriteServiceTextView"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
+                    android:text="@string/review_service_example"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintStart_toEndOf="@id/reviewWriteServiceSubtitle"
+                    app:layout_constraintTop_toBottomOf="@id/reviewWriteNameTextView" />
 
-                    <TextView
-                        style="@style/small_text_style"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="@string/review_service" />
-
-                    <TextView
-                        android:id="@+id/reviewWriteServiceTextView"
-                        style="@style/default_text_style"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:text="@string/review_service_example" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/reviewWriteReservationSubtitle"
+                    style="@style/TextStyle.Body2.Default"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/review_reservation"
+                    app:layout_constraintEnd_toStartOf="@id/reviewWriteReservationTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/reviewWriteServiceSubtitle" />
 
-                    <TextView
-                        style="@style/small_text_style"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="@string/review_reservation" />
-
-                    <TextView
-                        android:id="@+id/reviewWriteReservationTextView"
-                        style="@style/default_text_style"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:text="@string/review_reservation_example" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/reviewWriteReservationTextView"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
+                    android:text="@string/review_reservation_example"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintStart_toEndOf="@id/reviewWriteReservationSubtitle"
+                    app:layout_constraintTop_toBottomOf="@id/reviewWriteServiceTextView" />
 
-                    <TextView
-                        style="@style/small_text_style"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="@string/review_fee" />
+                <TextView
+                    android:id="@+id/reviewWriteFeeSubtitle"
+                    style="@style/TextStyle.Body2.Default"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/review_fee"
+                    app:layout_constraintEnd_toStartOf="@id/reviewWriteFeeTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/reviewWriteReservationSubtitle" />
 
-                    <TextView
-                        android:id="@+id/reviewWriteFeeTextView"
-                        style="@style/default_text_style"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:text="@string/review_fee_example" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/reviewWriteFeeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/review_fee_example"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintStart_toEndOf="@id/reviewWriteFeeSubtitle"
+                    app:layout_constraintTop_toBottomOf="@id/reviewWriteReservationTextView" />
 
                 <RatingBar
+                    android:id="@+id/reviewWriteRatingBar"
                     style="@style/Widget.AppCompat.RatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginTop="32dp"
                     android:numStars="5"
                     android:rating="1"
                     android:stepSize="1"
-                    android:theme="@style/rating_bar_style" />
+                    android:theme="@style/RatingBarStyle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/reviewWriteFeeSubtitle" />
 
                 <TextView
-                    style="@style/small_text_style"
+                    android:id="@+id/reviewWriteNoticeTextView"
+                    style="@style/TextStyle.Body2.Default"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/review_notice" />
+                    android:layout_marginTop="8dp"
+                    android:text="@string/review_notice"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/reviewWriteRatingBar" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/reviewWriteTextField"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    app:hintEnabled="false">
+                    android:layout_marginTop="16dp"
+                    app:hintEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@id/reviewWriteNoticeTextView">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -168,17 +179,19 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginTop="32dp"
-                    android:background="@drawable/round_photo_button"
+                    android:background="@drawable/round_add_photo_button"
                     android:clickable="true"
                     android:focusable="true"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/reviewWriteTextField">
 
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
-                        android:contentDescription="@string/review_image_add_button"
+                        android:contentDescription="@string/review_image_add_desc"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_photo"
                         app:tint="@color/very_peri" />
@@ -193,7 +206,7 @@
                         android:textSize="16sp"
                         android:textStyle="bold" />
                 </LinearLayout>
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

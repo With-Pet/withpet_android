@@ -6,7 +6,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.adapter.CertificationAdapter
-import com.withpet.withpet_android.adapter.RatingBarAdapter
 import com.withpet.withpet_android.databinding.ActivityMyProfileBinding
 import com.withpet.withpet_android.ui.dialog.CertificationBottomSheet
 
