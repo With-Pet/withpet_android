@@ -10,6 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WithPet">
         <activity
+            android:name=".ui.activities.LikePostListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.LikePersonListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.MyPetListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.ReviewWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.ReviewListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.OthersPetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.MyPetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.OthersProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.MyProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.MainActivity"
             android:exported="true">
             <intent-filter>

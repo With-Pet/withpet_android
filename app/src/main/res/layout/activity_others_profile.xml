@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.OthersProfileActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:liftOnScroll="true">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/othersProfileToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/profile_toolbar_like_menu"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="@string/profile_toolbar"
+                app:titleTextAppearance="@style/TextStyle.Headline6.Bold" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            style="@style/ScrollViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/othersProfileImageView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/profile_image_desc"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_account_huge"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/othersProfileTownTextView"
+                    style="@style/BodyVerticalMarginStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/town_example"
+                    app:drawableLeftCompat="@drawable/ic_location_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileImageView" />
+
+                <TextView
+                    android:id="@+id/othersProfileNicknameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/nickname_example"
+                    android:textAppearance="@style/TextStyle.Headline5.Bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileTownTextView" />
+
+                <LinearLayout
+                    android:id="@+id/othersProfileServiceCountField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileNicknameTextView">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextStyle.Body2.Default"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/walk_label" />
+
+                        <TextView
+                            android:id="@+id/othersProfileWalkTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/walk_count_example"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        style="@style/VerticalDividerStyle"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextStyle.Body2.Default"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/care_label" />
+
+                        <TextView
+                            android:id="@+id/othersProfileCareTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/care_count_example"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        style="@style/VerticalDividerStyle"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextStyle.Body2.Default"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/exp_label" />
+
+                        <TextView
+                            android:id="@+id/othersProfileExpTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/exp_count_example"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/othersProfileSeePostButton"
+                    style="@style/ButtonStyle.Outlined"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/see_post_button"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileServiceCountField" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/othersProfileDivider1"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileSeePostButton" />
+
+                <TextView
+                    android:id="@+id/othersProfileIntroduceSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/introduce_subtitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileDivider1" />
+
+                <TextView
+                    android:id="@+id/othersProfileIntroduceTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="top"
+                    android:text="@string/introduce_subtitle_example"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileIntroduceSubtitle" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/othersProfileDivider2"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileIntroduceTextView" />
+
+                <TextView
+                    android:id="@+id/othersProfileServiceSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_subtitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileDivider2" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/othersProfileServiceChipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileServiceSubtitle">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="병원" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="목욕" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="집 앞 픽업" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="미용" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="소독" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/othersProfileDivider3"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileServiceChipGroup" />
+
+                <TextView
+                    android:id="@+id/othersProfileCertificationSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/certificate_subtitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileDivider3" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/certificationRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:overScrollMode="never"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileCertificationSubtitle" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/othersProfileDivider4"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/certificationRecyclerView" />
+
+                <TextView
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/person_review_subtitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileDivider4" />
+
+                <ImageButton
+                    android:id="@+id/othersProfileMoreReviewButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/more_review_desc"
+                    android:src="@drawable/ic_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileDivider4"
+                    app:tint="@color/very_peri" />
+
+                <TextView
+                    android:id="@+id/othersProfileReviewScoreTextView"
+                    style="@style/TextStyle.Headline4.Default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/review_example"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@id/othersProfileReviewRatingBar"
+                    app:layout_constraintEnd_toStartOf="@id/othersProfileReviewRecyclerView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileMoreReviewButton"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <RatingBar
+                    android:id="@+id/othersProfileReviewRatingBar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="4.7"
+                    android:stepSize="0.5"
+                    android:theme="@style/RatingBarStyle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/othersProfileReviewRecyclerView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileReviewScoreTextView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/othersProfileReviewRecyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:overScrollMode="never"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/othersProfileReviewRatingBar"
+                    app:layout_constraintTop_toBottomOf="@id/othersProfileMoreReviewButton" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

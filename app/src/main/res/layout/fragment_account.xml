@@ -1,17 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.AccountFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.fragments.LeaveListFragment">
+        android:layout_height="match_parent">
 
-        <TextView
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:liftOnScroll="true">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/accountToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="@string/account_toolbar"
+                app:titleTextAppearance="@style/TextStyle.Headline6.Bold" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="account" />
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/myProfileMenu"
+                    style="@style/LinearMenuStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/AccountIconStyle"
+                        android:layout_weight="0"
+                        android:contentDescription="@string/my_profile_menu_icon"
+                        android:src="@drawable/ic_person" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/my_profile_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/petProfileMenu"
+                    style="@style/LinearMenuStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/AccountIconStyle"
+                        android:layout_weight="0"
+                        android:contentDescription="@string/pet_profile_menu_icon"
+                        android:src="@drawable/ic_pet_profile" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/pet_profile_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+                </LinearLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/likePostMenu"
+                    style="@style/LinearMenuStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/AccountIconStyle"
+                        android:layout_weight="0"
+                        android:contentDescription="@string/like_person_menu_icon"
+                        android:src="@drawable/ic_star" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/like_post_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/likePersonMenu"
+                    style="@style/LinearMenuStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/AccountIconStyle"
+                        android:layout_weight="0"
+                        android:contentDescription="@string/like_pet_menu_icon"
+                        android:src="@drawable/ic_like_border" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/like_person_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+                </LinearLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/noticeMenu"
+                    style="@style/LinearMenuStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/AccountIconStyle"
+                        android:layout_weight="0"
+                        android:contentDescription="@string/notice_menu_icon"
+                        android:src="@drawable/ic_notice" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/notice_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/faqMenu"
+                    style="@style/LinearMenuStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/AccountIconStyle"
+                        android:layout_weight="0"
+                        android:contentDescription="@string/faq_menu_icon"
+                        android:src="@drawable/ic_faq" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/faq_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/settingMenu"
+                    style="@style/LinearMenuStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/AccountIconStyle"
+                        android:layout_weight="0"
+                        android:contentDescription="@string/setting_menu_icon"
+                        android:src="@drawable/ic_setting" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/setting_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/logoutMenu"
+                    style="@style/LinearMenuStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/AccountIconStyle"
+                        android:layout_weight="0"
+                        android:contentDescription="@string/logout_menu_icon"
+                        android:src="@drawable/ic_logout" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/logout_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/withdrawalMenu"
+                    style="@style/LinearMenuStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/AccountIconStyle"
+                        android:layout_weight="0"
+                        android:contentDescription="@string/withdrawal_menu_icon"
+                        android:src="@drawable/ic_withdrawal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/withdrawal_menu"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

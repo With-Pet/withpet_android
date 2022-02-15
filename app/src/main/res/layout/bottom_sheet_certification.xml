@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.dialog.CertificationBottomSheet">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/certificationImageView"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_image_view"
+            android:contentDescription="@string/certificate_image_desc"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/certificationNameSubtitle"
+            style="@style/TextStyle.Subtitle1.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/certificate_name"
+            app:layout_constraintBottom_toBottomOf="@id/certificationNameField"
+            app:layout_constraintEnd_toStartOf="@id/certificationNameField"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/certificationNameField" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/certificationNameField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toEndOf="@id/certificationNameSubtitle"
+            app:layout_constraintTop_toBottomOf="@id/certificationImageView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:text="@string/certificate_name_example" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/certificationOrgSubtitle"
+            style="@style/TextStyle.Subtitle1.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/certificate_org"
+            app:layout_constraintBottom_toBottomOf="@id/certificationOrgField"
+            app:layout_constraintEnd_toStartOf="@id/certificationOrgField"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/certificationOrgField" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/certificationOrgField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toEndOf="@id/certificationOrgSubtitle"
+            app:layout_constraintTop_toBottomOf="@id/certificationNameField">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:text="@string/certificate_org_example" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/certificationDateSubtitle"
+            style="@style/TextStyle.Subtitle1.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/certificate_date"
+            app:layout_constraintBottom_toBottomOf="@id/certificationDateButton"
+            app:layout_constraintEnd_toStartOf="@id/certificationDateButton"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/certificationDateButton" />
+
+        <Button
+            android:id="@+id/certificationDateButton"
+            style="@style/ButtonStyle.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/certificate_date_example"
+            app:icon="@drawable/ic_calendar"
+            app:iconPadding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toEndOf="@id/certificationDateSubtitle"
+            app:layout_constraintTop_toBottomOf="@id/certificationOrgField" />
+
+        <Button
+            android:id="@+id/certificationRegisterButton"
+            style="@style/ButtonStyle.VeryPeri.Fill"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/certificate_register_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/certificationDateButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

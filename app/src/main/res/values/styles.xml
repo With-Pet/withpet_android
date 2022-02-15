@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextStyle.Headline4.Default" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyle.Headline5.Bold" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.Headline6.Bold" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.Subtitle1.Bold" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.Body1.Bold" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.Body2.Default" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">@color/default_text_color</item>
+    </style>
+
+    <style name="SubtitleVerticalMarginStyle">
+        <item name="android:textAppearance">@style/TextStyle.Subtitle1.Bold</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="BodyVerticalMarginStyle">
+        <item name="android:textAppearance">@style/TextStyle.Body2.Default</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="ScrollViewStyle">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:padding">16dp</item>
+        <item name="layout_behavior">@string/appbar_scrolling_view_behavior</item>
+    </style>
+
+    <style name="HorizontalTopDividerStyle" parent="Widget.MaterialComponents.MaterialDivider">
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="HorizontalDividerStyle" parent="Widget.MaterialComponents.MaterialDivider">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="VerticalDividerStyle" parent="Widget.MaterialComponents.MaterialDivider">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="LinearMenuStyle">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="AccountIconStyle">
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="tint">@color/black</item>
+    </style>
+
+    <style name="ButtonStyle.VeryPeri.Fill" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/TextStyle.Headline6.Bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:backgroundTint">@color/very_peri</item>
+    </style>
+
+    <style name="ButtonStyle.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="strokeColor">@color/text_field_stroke_color</item>
+        <item name="android:textColor">@color/text_field_text_color</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <style name="RatingBarStyle" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlActivated">@color/yellow</item>
+    </style>
+
+    <style name="RatingProgressBarStyle">
+        <item name="colorAccent">@color/yellow</item>
+    </style>
+
+    <style name="ModalBottomSheetDialog" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.LargeComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+</resources>
