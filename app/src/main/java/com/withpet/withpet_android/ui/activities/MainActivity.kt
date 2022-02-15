@@ -1,5 +1,6 @@
 package com.withpet.withpet_android.ui.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -27,5 +28,9 @@ class MainActivity : AppCompatActivity() {
         binding.mainBottomNavigationView.setupWithNavController(navController)
         binding.mainBottomNavigationView.background = null
         binding.mainBottomNavigationView.menu.getItem(2).isEnabled = false
+
+        binding.mainFab.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
     }
 }

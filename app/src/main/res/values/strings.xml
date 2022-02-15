@@ -9,6 +9,7 @@
     <string name="review_write_toolbar">리뷰 작성하기</string>
     <string name="like_person_list_toolbar">찜한 돌봄이</string>
     <string name="like_post_list_toolbar">찜한 게시물</string>
+    <string name="register_toolbar">등록</string>
 
     <!-- content description -->
     <string name="main_fab">맡기기 등록 버튼</string>

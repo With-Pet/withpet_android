@@ -20,7 +20,12 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_account, container, false)
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_account,
+            container,
+            false
+        )
 
         return binding.root
     }
