@@ -115,23 +115,23 @@
 
         <Button
             android:id="@+id/serviceRegisterPrevButton"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
+            style="@style/ButtonStyle.Transparent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="-16dp"
             android:text="@string/register_prev_button"
-            android:textAppearance="@style/TextStyle.Subtitle1.Bold"
             app:icon="@drawable/ic_left_very_peri"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/serviceRegisterNextButton"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
+            style="@style/ButtonStyle.Transparent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="-16dp"
             android:drawableEnd="@drawable/ic_right_very_peri"
             android:text="@string/register_next_button"
-            android:textAppearance="@style/TextStyle.Subtitle1.Bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

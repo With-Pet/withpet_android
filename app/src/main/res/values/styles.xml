@@ -107,10 +107,7 @@
     </style>
 
     <style name="ButtonStyle.Transparent" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="android:background">@android:color/transparent</item>
-        <item name="android:textColor">@color/very_peri</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textAppearance">@style/TextStyle.Subtitle1.Bold</item>
     </style>
 
     <style name="RatingBarStyle" parent="Theme.AppCompat">
@@ -120,6 +117,12 @@
 
     <style name="RatingProgressBarStyle">
         <item name="colorAccent">@color/yellow</item>
+    </style>
+
+    <style name="SpinnerPickerStyle">
+        <item name="android:textColorPrimary">@color/very_peri</item>
+        <item name="android:textSize">24sp</item>
+        <item name="colorControlNormal">@color/light_gray</item>
     </style>
 
     <style name="ModalBottomSheetDialog" parent="Widget.MaterialComponents.BottomSheet.Modal">
