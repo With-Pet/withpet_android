@@ -32,5 +32,5 @@ class PetListAdapter(
         // TODO("Not yet implemented")
     }
 
-    override fun getItemCount() = 7
+    override fun getItemCount() = 10
 }
