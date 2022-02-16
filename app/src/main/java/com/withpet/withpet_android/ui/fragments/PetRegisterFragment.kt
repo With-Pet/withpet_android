@@ -17,7 +17,7 @@ import com.withpet.withpet_android.ui.activities.MyPetActivity
 class PetRegisterFragment : Fragment(R.layout.fragment_pet_register) {
 
     private lateinit var binding: FragmentPetRegisterBinding
-    private var isExistPet = false
+    private var isExistPet = true
 
     override fun onCreateView(
         inflater: LayoutInflater,

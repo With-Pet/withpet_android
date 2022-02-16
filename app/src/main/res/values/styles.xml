@@ -40,6 +40,11 @@
         <item name="android:layout_marginTop">8dp</item>
     </style>
 
+    <style name="LabelTextStyle">
+        <item name="android:textAppearance">@style/TextStyle.Headline6.Bold</item>
+        <item name="android:textColor">@color/default_text_color</item>
+    </style>
+
     <style name="ScrollViewStyle">
         <item name="android:clipToPadding">false</item>
         <item name="android:padding">16dp</item>
@@ -90,6 +95,17 @@
         <item name="android:paddingBottom">12dp</item>
     </style>
 
+    <style name="ButtonStyle.OutlinedIconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">28dp</item>
+        <item name="android:minWidth">112dp</item>
+        <item name="android:minHeight">112dp</item>
+        <item name="iconSize">64dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.CircularButton</item>
+    </style>
+
     <style name="ButtonStyle.Transparent" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textColor">@color/very_peri</item>
@@ -113,6 +129,11 @@
     <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.CircularButton" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
 
 </resources>

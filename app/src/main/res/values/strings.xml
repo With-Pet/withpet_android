@@ -120,9 +120,12 @@
     <string name="post_fee_example">-10,000원/시간</string>
 
     <!-- register -->
-    <string name="register_pet_subtitle">반려동물 선택</string>
+    <string name="register_pet_title">반려동물 선택</string>
     <string name="register_pet_nothing">맡길 수 있는 반려동물이 없습니다.</string>
     <string name="register_pet_register_button">등록하러 가기</string>
+    <string name="register_service_title">서비스 선택</string>
+    <string name="register_prev_button">이전</string>
+    <string name="register_next_button">다음</string>
 
     <!-- dropdown menu -->
     <string-array name="pet_category_arr">
