@@ -33,6 +33,7 @@
     <string name="review_image_add_desc">리뷰 이미지 추가</string>
     <string name="post_thumbnail_desc">게시물 썸네일</string>
     <string name="review_image_desc">리뷰 이미지</string>
+    <string name="post_image_desc">게시물 이미지</string>
 
     <!-- account text -->
     <string name="my_profile_menu">내 프로필 관리하기</string>
@@ -133,6 +134,8 @@
     <string name="register_day_label">일</string>
     <string name="register_hour_label">시</string>
     <string name="register_minute_label">분</string>
+    <string name="register_your_pet_photo">당신의 반려동물 사진을 올려주세요!</string>
+    <string name="register_selected_photo">선택된 사진 목록</string>
 
     <!-- dropdown menu -->
     <string-array name="pet_category_arr">

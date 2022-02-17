@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import com.withpet.withpet_android.R
+import com.withpet.withpet_android.adapter.RegisterImageListAdapter
 import com.withpet.withpet_android.databinding.FragmentPhotoRegisterBinding
 
 class PhotoRegisterFragment : Fragment(R.layout.fragment_photo_register) {
@@ -33,6 +35,7 @@ class PhotoRegisterFragment : Fragment(R.layout.fragment_photo_register) {
         super.onViewCreated(view, savedInstanceState)
 
         setButtonListener()
+        setRecyclerView()
     }
 
     private fun setButtonListener() {
@@ -42,5 +45,10 @@ class PhotoRegisterFragment : Fragment(R.layout.fragment_photo_register) {
         binding.photoRegisterNextButton.setOnClickListener {
             findNavController().navigate(R.id.action_photoRegisterFragment_to_detailRegisterFragment)
         }
+    }
+
+    private fun setRecyclerView() {
+        binding.photoRegisterRecyclerView.adapter = RegisterImageListAdapter()
+        binding.photoRegisterRecyclerView.layoutManager = GridLayoutManager(activity, 3)
     }
 }
