@@ -4,137 +4,143 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragments.ServiceRegisterFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
+        android:clipToPadding="true"
+        android:fillViewport="true">
 
-        <TextView
-            android:id="@+id/serviceRegisterTitle"
-            style="@style/TextStyle.Headline5.Bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/register_service_title"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
 
-        <com.google.android.material.button.MaterialButtonToggleGroup
-            android:id="@+id/petServiceWalkToggleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
-            app:checkedButton="@id/petServiceWalkButton"
-            app:layout_constraintBottom_toTopOf="@id/serviceRegisterWalkTextView"
-            app:layout_constraintEnd_toStartOf="@id/petServiceCareToggleButton"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/serviceRegisterTitle"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:selectionRequired="true">
-
-            <Button
-                android:id="@+id/petServiceWalkButton"
-                style="@style/ButtonStyle.OutlinedIconOnly"
+            <TextView
+                android:id="@+id/serviceRegisterTitle"
+                style="@style/TextStyle.Headline5.Bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:icon="@drawable/ic_pet_walk" />
-        </com.google.android.material.button.MaterialButtonToggleGroup>
+                android:text="@string/register_service_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/serviceRegisterWalkTextView"
-            style="@style/LabelTextStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/walk_label"
-            app:layout_constraintBottom_toTopOf="@id/petServiceExpToggleButton"
-            app:layout_constraintEnd_toEndOf="@id/petServiceWalkToggleButton"
-            app:layout_constraintStart_toStartOf="@id/petServiceWalkToggleButton"
-            app:layout_constraintTop_toBottomOf="@id/petServiceWalkToggleButton" />
-
-        <com.google.android.material.button.MaterialButtonToggleGroup
-            android:id="@+id/petServiceCareToggleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@id/petServiceWalkToggleButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/petServiceWalkToggleButton"
-            app:layout_constraintTop_toTopOf="@id/petServiceWalkToggleButton"
-            app:selectionRequired="true">
-
-            <Button
-                android:id="@+id/petServiceCareButton"
-                style="@style/ButtonStyle.OutlinedIconOnly"
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/petServiceWalkToggleButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:icon="@drawable/ic_pet_care" />
-        </com.google.android.material.button.MaterialButtonToggleGroup>
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                app:checkedButton="@id/petServiceWalkButton"
+                app:layout_constraintBottom_toTopOf="@id/serviceRegisterWalkTextView"
+                app:layout_constraintEnd_toStartOf="@id/petServiceCareToggleButton"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/serviceRegisterTitle"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:selectionRequired="true">
 
-        <TextView
-            android:id="@+id/serviceRegisterCareTextView"
-            style="@style/LabelTextStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/care_label"
-            app:layout_constraintBottom_toBottomOf="@id/serviceRegisterWalkTextView"
-            app:layout_constraintEnd_toEndOf="@id/petServiceCareToggleButton"
-            app:layout_constraintStart_toStartOf="@id/petServiceCareToggleButton"
-            app:layout_constraintTop_toTopOf="@id/serviceRegisterWalkTextView" />
+                <Button
+                    android:id="@+id/petServiceWalkButton"
+                    style="@style/ButtonStyle.OutlinedIconOnly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_pet_walk" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
 
-        <com.google.android.material.button.MaterialButtonToggleGroup
-            android:id="@+id/petServiceExpToggleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:layout_constraintBottom_toTopOf="@id/serviceRegisterExpTextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/serviceRegisterWalkTextView"
-            app:selectionRequired="true">
-
-            <Button
-                android:id="@+id/petServiceExpButton"
-                style="@style/ButtonStyle.OutlinedIconOnly"
+            <TextView
+                android:id="@+id/serviceRegisterWalkTextView"
+                style="@style/LabelTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:icon="@drawable/ic_pet_exp" />
-        </com.google.android.material.button.MaterialButtonToggleGroup>
+                android:layout_marginTop="8dp"
+                android:text="@string/walk_label"
+                app:layout_constraintBottom_toTopOf="@id/petServiceExpToggleButton"
+                app:layout_constraintEnd_toEndOf="@id/petServiceWalkToggleButton"
+                app:layout_constraintStart_toStartOf="@id/petServiceWalkToggleButton"
+                app:layout_constraintTop_toBottomOf="@id/petServiceWalkToggleButton" />
 
-        <TextView
-            android:id="@+id/serviceRegisterExpTextView"
-            style="@style/LabelTextStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/exp_label"
-            app:layout_constraintBottom_toTopOf="@id/serviceRegisterPrevButton"
-            app:layout_constraintEnd_toEndOf="@id/petServiceExpToggleButton"
-            app:layout_constraintStart_toStartOf="@id/petServiceExpToggleButton"
-            app:layout_constraintTop_toBottomOf="@id/petServiceExpToggleButton" />
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/petServiceCareToggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/petServiceWalkToggleButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/petServiceWalkToggleButton"
+                app:layout_constraintTop_toTopOf="@id/petServiceWalkToggleButton"
+                app:selectionRequired="true">
 
-        <Button
-            android:id="@+id/serviceRegisterPrevButton"
-            style="@style/ButtonStyle.Transparent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="-16dp"
-            android:text="@string/register_prev_button"
-            app:icon="@drawable/ic_left_very_peri"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+                <Button
+                    android:id="@+id/petServiceCareButton"
+                    style="@style/ButtonStyle.OutlinedIconOnly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_pet_care" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
 
-        <Button
-            android:id="@+id/serviceRegisterNextButton"
-            style="@style/ButtonStyle.Transparent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="-16dp"
-            android:drawableEnd="@drawable/ic_right_very_peri"
-            android:text="@string/register_next_button"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/serviceRegisterCareTextView"
+                style="@style/LabelTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/care_label"
+                app:layout_constraintBottom_toBottomOf="@id/serviceRegisterWalkTextView"
+                app:layout_constraintEnd_toEndOf="@id/petServiceCareToggleButton"
+                app:layout_constraintStart_toStartOf="@id/petServiceCareToggleButton"
+                app:layout_constraintTop_toTopOf="@id/serviceRegisterWalkTextView" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/petServiceExpToggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toTopOf="@id/serviceRegisterExpTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/serviceRegisterWalkTextView"
+                app:selectionRequired="true">
 
+                <Button
+                    android:id="@+id/petServiceExpButton"
+                    style="@style/ButtonStyle.OutlinedIconOnly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_pet_exp" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:id="@+id/serviceRegisterExpTextView"
+                style="@style/LabelTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/exp_label"
+                app:layout_constraintBottom_toTopOf="@id/serviceRegisterPrevButton"
+                app:layout_constraintEnd_toEndOf="@id/petServiceExpToggleButton"
+                app:layout_constraintStart_toStartOf="@id/petServiceExpToggleButton"
+                app:layout_constraintTop_toBottomOf="@id/petServiceExpToggleButton" />
+
+            <Button
+                android:id="@+id/serviceRegisterPrevButton"
+                style="@style/ButtonStyle.Transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-16dp"
+                android:text="@string/register_prev_button"
+                app:icon="@drawable/ic_left_very_peri"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/serviceRegisterNextButton"
+                style="@style/ButtonStyle.Transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="-16dp"
+                android:drawableEnd="@drawable/ic_right_very_peri"
+                android:text="@string/register_next_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </layout>

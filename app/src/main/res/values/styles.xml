@@ -134,9 +134,8 @@
         <item name="cornerSize">16dp</item>
     </style>
 
-    <style name="ShapeAppearanceOverlay.CircularButton" parent="">
+    <style name="ShapeAppearanceOverlay.CircularButton">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
-
 </resources>
