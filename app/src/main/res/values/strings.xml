@@ -136,6 +136,18 @@
     <string name="register_minute_label">분</string>
     <string name="register_your_pet_photo">당신의 반려동물 사진을 올려주세요!</string>
     <string name="register_selected_photo">선택된 사진 목록</string>
+    <string name="register_title">제목</string>
+    <string name="register_title_hint">게시물 제목을 입력해주세요</string>
+    <string name="register_fee">비용</string>
+    <string name="register_reward">보상</string>
+    <string name="register_fee_suffix">원 / 시간</string>
+    <string name="register_fee_hint">비용을 입력해주세요</string>
+    <string name="register_reward_hint">보상을 입력해주세요</string>
+    <string name="register_town">동네</string>
+    <string name="register_town_example">논현1동</string>
+    <string name="register_service">서비스 상세</string>
+    <string name="register_caution">요청 사항</string>
+    <string name="register_caution_hint">요청 사항을 입력해주세요.</string>
 
     <!-- dropdown menu -->
     <string-array name="pet_category_arr">

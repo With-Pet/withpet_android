@@ -60,7 +60,7 @@
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_pet_list.xml" value="0.22" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_post_image_list.xml" value="0.1470713980333476" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_rating_bar.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_register_image_list.xml" value="0.1470713980333476" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_register_image_list.xml" value="0.1" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_review.xml" value="0.22" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adpater_view_dropdown.xml" value="0.13994565217391305" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/bottom_sheet_certification.xml" value="0.22" />
@@ -68,7 +68,7 @@
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_chatt.xml" value="0.13994565217391305" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_confirm.xml" value="0.1470713980333476" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_date_register.xml" value="0.22" />
-        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_detail_register.xml" value="0.1470713980333476" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_detail_register.xml" value="0.22" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_leave_list.xml" value="0.1" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_pet_choice.xml" value="0.1470713980333476" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_pet_register.xml" value="0.22" />
