@@ -148,6 +148,13 @@
     <string name="register_service">서비스 상세</string>
     <string name="register_caution">요청 사항</string>
     <string name="register_caution_hint">요청 사항을 입력해주세요.</string>
+    <string name="register_register">등록하기</string>
+    <string name="register_service_subtitle">서비스 종류</string>
+    <string name="register_service_detail_subtitle">서비스 상세</string>
+    <string name="register_date_subtitle">날짜</string>
+    <string name="register_date_example">02월 14일 AM 09:00 ~ 02월 14일 PM 12:00</string>
+    <string name="register_caution_example">가파른 산은 가급적 피해주시길 바랍니다.</string>
+    <string name="register_photo_subtitle">선택된 사진 목록</string>
 
     <!-- dropdown menu -->
     <string-array name="pet_category_arr">

@@ -7,33 +7,245 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="true"
         android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="16dp">
 
             <TextView
+                android:id="@+id/confirmPetNameTextView"
+                style="@style/TextStyle.Headline5.Bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
-                android:layout_marginBottom="100dp"
-                android:text="confirm"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/pet_name_example"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/confirmDivider1"
+                style="@style/HorizontalTopDividerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/confirmPetNameTextView" />
+
+            <TextView
+                android:id="@+id/confirmTownSubtitle"
+                style="@style/SubtitleVerticalMarginStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_town"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmDivider1" />
+
+            <TextView
+                android:id="@+id/confirmTownTextView"
+                style="@style/TextStyle.Body1.Default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/register_town_example"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmTownSubtitle" />
+
+            <TextView
+                android:id="@+id/confirmServiceSubtitle"
+                style="@style/SubtitleVerticalMarginStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_service_subtitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmTownTextView" />
+
+            <ImageView
+                android:id="@+id/confirmServiceImageView"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/post_service_image"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_pet_walk"
+                app:layout_constraintEnd_toStartOf="@id/confirmServiceTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmServiceSubtitle"
+                app:tint="@color/default_text_color" />
+
+            <TextView
+                android:id="@+id/confirmServiceTextView"
+                style="@style/TextStyle.Body1.Default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/walk_label"
+                app:layout_constraintBottom_toBottomOf="@id/confirmServiceImageView"
+                app:layout_constraintStart_toEndOf="@id/confirmServiceImageView"
+                app:layout_constraintTop_toTopOf="@id/confirmServiceImageView" />
+
+            <TextView
+                android:id="@+id/confirmServiceDetailSubtitle"
+                style="@style/SubtitleVerticalMarginStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_service_detail_subtitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmServiceImageView" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/confirmServiceChipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/confirmServiceDetailSubtitle">
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="병원" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="목욕" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="집 앞 픽업" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="미용" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="소독" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:id="@+id/confirmDateSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/register_date_subtitle"
+                android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmServiceChipGroup" />
+
+            <TextView
+                android:id="@+id/confirmDateTextView"
+                style="@style/TextStyle.Body1.Default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/register_date_example"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmDateSubtitle" />
+
+            <TextView
+                android:id="@+id/confirmFeeSubtitle"
+                style="@style/SubtitleVerticalMarginStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_fee"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmDateTextView" />
+
+            <TextView
+                android:id="@+id/confirmFeeTextView"
+                style="@style/TextStyle.Body1.Default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/review_fee_example"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmFeeSubtitle" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/confirmDivider2"
+                style="@style/HorizontalTopDividerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/confirmFeeTextView" />
+
+            <TextView
+                android:id="@+id/confirmCautionSubtitle"
+                style="@style/SubtitleVerticalMarginStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_caution"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmDivider2" />
+
+            <TextView
+                android:id="@+id/confirmCautionTextView"
+                style="@style/TextStyle.Body1.Default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/register_caution_example"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmCautionSubtitle" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/confirmDivider3"
+                style="@style/HorizontalTopDividerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/confirmCautionTextView" />
+
+            <TextView
+                android:id="@+id/confirmPhotoSubtitle"
+                style="@style/SubtitleVerticalMarginStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_photo_subtitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmDivider3" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/confirmRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="-8dp"
+                android:overScrollMode="never"
+                app:layout_constraintTop_toBottomOf="@id/confirmPhotoSubtitle" />
 
             <Button
                 android:id="@+id/confirmPrevButton"
                 style="@style/ButtonStyle.Transparent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="이전"
+                android:layout_marginStart="-16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/register_prev_button"
                 app:icon="@drawable/ic_left_very_peri"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmRecyclerView"
+                app:layout_constraintVertical_bias="1" />
+
+            <Button
+                android:id="@+id/confirmRegisterButton"
+                style="@style/ButtonStyle.VeryPeri.Fill"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/register_register"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/confirmPrevButton"
+                app:layout_constraintTop_toBottomOf="@id/confirmRecyclerView"
+                app:layout_constraintVertical_bias="1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
