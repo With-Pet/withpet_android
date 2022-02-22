@@ -3,6 +3,7 @@
     <color name="very_peri">#FF6667AB</color>
     <color name="very_peri_light">#FF9695DD</color>
     <color name="very_peri_dark">#FF373D7B</color>
+    <color name="very_peri_alpha">#1E6667AB</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
@@ -13,5 +14,5 @@
 
     <color name="yellow">#FBC02D</color>
     <color name="paradise_pink">#E9435E</color>
-    <color name="very_peri_alpha">#1E6667AB</color>
+    <color name="green_briar">#47996B</color>
 </resources>

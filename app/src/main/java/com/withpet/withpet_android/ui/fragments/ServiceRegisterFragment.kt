@@ -38,6 +38,8 @@ class ServiceRegisterFragment : Fragment(R.layout.fragment_service_register) {
             binding.petServiceExpToggleButton
         )
 
+        binding.serviceRegisterStepView.goStep(1)
+
         return binding.root
     }
 

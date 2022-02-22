@@ -36,6 +36,8 @@ class PhotoRegisterFragment : Fragment(R.layout.fragment_photo_register) {
 
         setButtonListener()
         setRecyclerView()
+
+        binding.photoRegisterStepView.goStep(3)
     }
 
     private fun setButtonListener() {

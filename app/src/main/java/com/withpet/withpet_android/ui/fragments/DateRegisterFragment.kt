@@ -33,6 +33,8 @@ class DateRegisterFragment : Fragment(R.layout.fragment_date_register) {
         super.onViewCreated(view, savedInstanceState)
 
         setButtonListener()
+
+        binding.dateRegisterStepView.goStep(2)
     }
 
     private fun setButtonListener() {

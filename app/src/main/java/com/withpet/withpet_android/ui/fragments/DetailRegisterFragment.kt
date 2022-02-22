@@ -34,6 +34,8 @@ class DetailRegisterFragment : Fragment(R.layout.fragment_detail_register) {
         super.onViewCreated(view, savedInstanceState)
 
         setButtonListener()
+
+        binding.detailRegisterStepView.goStep(4)
     }
 
     private fun setButtonListener() {

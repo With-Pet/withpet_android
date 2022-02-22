@@ -14,14 +14,21 @@
             android:layout_height="match_parent"
             android:padding="16dp">
 
+            <com.withpet.withpet_android.ui.custom.StepView
+                android:id="@+id/confirmStepView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:steps="@array/register_step_arr" />
+
             <TextView
                 android:id="@+id/confirmPetNameTextView"
-                style="@style/TextStyle.Headline5.Bold"
+                style="@style/TitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pet_name_example"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/confirmStepView" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/confirmDivider1"

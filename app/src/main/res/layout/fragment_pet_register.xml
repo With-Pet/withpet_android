@@ -14,6 +14,14 @@
             android:layout_height="match_parent"
             android:descendantFocusability="blocksDescendants">
 
+            <com.withpet.withpet_android.ui.custom.StepView
+                android:id="@+id/petRegisterStepView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:steps="@array/register_step_arr" />
+
             <TextView
                 android:id="@+id/petRegisterTitle"
                 style="@style/TitleVerticalMarginStyle"
@@ -22,7 +30,7 @@
                 android:layout_marginStart="16dp"
                 android:text="@string/register_pet_title"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/petRegisterStepView" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/petRegisterRecyclerView"

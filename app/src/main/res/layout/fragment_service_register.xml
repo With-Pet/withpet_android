@@ -14,14 +14,21 @@
             android:layout_height="match_parent"
             android:padding="16dp">
 
+            <com.withpet.withpet_android.ui.custom.StepView
+                android:id="@+id/serviceRegisterStepView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:steps="@array/register_step_arr" />
+
             <TextView
                 android:id="@+id/serviceRegisterTitle"
-                style="@style/TextStyle.Headline5.Bold"
+                style="@style/TitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_service_title"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/serviceRegisterStepView" />
 
             <com.google.android.material.button.MaterialButtonToggleGroup
                 android:id="@+id/petServiceWalkToggleButton"

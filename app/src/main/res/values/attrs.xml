@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StepView">
+        <attr name="lineYetColor" format="color" />
+        <attr name="lineDoneColor" format="color" />
+
+        <attr name="circleYetColor" format="color" />
+        <attr name="circleNowColor" format="color" />
+        <attr name="circleDoneColor" format="color" />
+
+        <attr name="titleYetColor" format="color" />
+        <attr name="titleNowColor" format="color" />
+        <attr name="titleDoneColor" format="color" />
+        <attr name="titleTextSize" format="dimension" />
+
+        <attr name="stepNumColor" format="color" />
+        <attr name="stepNumSize" format="dimension" />
+
+        <attr name="stepPadding" format="dimension" />
+        <attr name="textPadding" format="dimension" />
+
+        <attr name="circleRadius" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+
+        <attr name="steps" format="reference" />
+    </declare-styleable>
+</resources>

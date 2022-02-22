@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="StepView">
+        <item name="lineYetColor">@android:color/darker_gray</item>
+        <item name="lineDoneColor" format="color" >@color/very_peri</item>
+
+        <item name="circleYetColor" format="color" >@android:color/darker_gray</item>
+        <item name="circleNowColor" format="color" >@color/green_briar</item>
+        <item name="circleDoneColor" format="color" >@color/very_peri</item>
+
+        <item name="titleYetColor" format="color" >@android:color/darker_gray</item>
+        <item name="titleNowColor" format="color" >@color/green_briar</item>
+        <item name="titleDoneColor" format="color" >@color/very_peri</item>
+        <item name="titleTextSize" format="dimension" >11sp</item>
+
+        <item name="stepNumColor" format="color" >@color/white</item>
+        <item name="stepNumSize" format="dimension" >12sp</item>
+
+        <item name="stepPadding" format="dimension" >4dp</item>
+        <item name="textPadding" format="dimension" >12dp</item>
+
+        <item name="circleRadius" format="dimension" >14dp</item>
+        <item name="lineWidth" format="dimension" >2dp</item>
+    </style>
+
     <style name="TextStyle.Headline4.Default" parent="TextAppearance.MaterialComponents.Headline4">
         <item name="android:textColor">@color/black</item>
     </style>

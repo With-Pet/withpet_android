@@ -134,6 +134,7 @@
     <string name="register_day_label">일</string>
     <string name="register_hour_label">시</string>
     <string name="register_minute_label">분</string>
+    <string name="register_photo_title">사진 등록</string>
     <string name="register_your_pet_photo">당신의 반려동물 사진을 올려주세요!</string>
     <string name="register_selected_photo">선택된 사진 목록</string>
     <string name="register_title">제목</string>
@@ -171,5 +172,14 @@
     <string-array name="pet_surgery_arr">
         <item>O</item>
         <item>X</item>
+    </string-array>
+    
+    <string-array name="register_step_arr">
+        <item>반려동물\n선택</item>
+        <item>서비스\n선택</item>
+        <item>날짜선택</item>
+        <item>사진등록</item>
+        <item>세부사항\n입력</item>
+        <item>최종확인</item>
     </string-array>
 </resources>

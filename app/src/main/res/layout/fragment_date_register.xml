@@ -15,9 +15,15 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <com.withpet.withpet_android.ui.custom.StepView
+                android:id="@+id/dateRegisterStepView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:steps="@array/register_step_arr" />
+
             <TextView
                 android:id="@+id/dateRegisterStartTitle"
-                style="@style/TextStyle.Headline5.Bold"
+                style="@style/TitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_start_date_title" />
@@ -28,10 +34,9 @@
 
             <TextView
                 android:id="@+id/dateRegisterEndTitle"
-                style="@style/TextStyle.Headline5.Bold"
+                style="@style/TitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:text="@string/register_end_date_title" />
 
             <include

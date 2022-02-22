@@ -37,6 +37,8 @@ class ConfirmFragment : Fragment(R.layout.fragment_confirm) {
 
         setButtonListener()
         setRecyclerView()
+
+        binding.confirmStepView.goStep(5)
     }
 
     private fun setButtonListener() {

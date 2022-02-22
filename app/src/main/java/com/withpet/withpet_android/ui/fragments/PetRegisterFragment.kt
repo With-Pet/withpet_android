@@ -44,6 +44,8 @@ class PetRegisterFragment : Fragment(R.layout.fragment_pet_register) {
             binding.petRegisterRecyclerView.visibility = View.GONE
             setButtonListener()
         }
+
+        binding.petRegisterStepView.goStep(0)
     }
 
     private fun setButtonListener() {
