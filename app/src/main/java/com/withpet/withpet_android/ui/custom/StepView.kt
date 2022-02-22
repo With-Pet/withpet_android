@@ -8,7 +8,6 @@ import android.text.Layout
 import android.text.StaticLayout
 import android.text.TextPaint
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
 import androidx.core.view.ViewCompat
 import com.withpet.withpet_android.R
@@ -47,7 +46,7 @@ class StepView : View {
     private var startLinesX = intArrayOf()
     private var endLinesX = intArrayOf()
     private var constraints = floatArrayOf()
-    private var textLayouts = mutableListOf<StaticLayout?>()
+    private var textLayouts = mutableListOf<StaticLayout>()
     private var textY = 0
 
     constructor(context: Context) : this(context, null, 0)
@@ -62,11 +61,11 @@ class StepView : View {
     }
 
     private fun initialize() {
+        bounds = Rect()
         paint = Paint(Paint.ANTI_ALIAS_FLAG)
         paint.textAlign = Paint.Align.CENTER
         textPaint = TextPaint(Paint.ANTI_ALIAS_FLAG)
         textPaint.textAlign = Paint.Align.CENTER
-        bounds = Rect()
     }
 
     private fun setStyles(context: Context, attrs: AttributeSet?, defStyleAttr: Int) {
@@ -82,32 +81,28 @@ class StepView : View {
 
         yetLineColor = typedArr.getColor(R.styleable.StepView_lineYetColor, 0)
         doneLineColor = typedArr.getColor(R.styleable.StepView_lineDoneColor, 0)
+
         yetCircleColor = typedArr.getColor(R.styleable.StepView_circleYetColor, 0)
         nowCircleColor = typedArr.getColor(R.styleable.StepView_circleNowColor, 0)
         doneCircleColor = typedArr.getColor(R.styleable.StepView_circleDoneColor, 0)
+
         yetTitleColor = typedArr.getColor(R.styleable.StepView_titleYetColor, 0)
         nowTitleColor = typedArr.getColor(R.styleable.StepView_titleNowColor, 0)
         doneTitleColor = typedArr.getColor(R.styleable.StepView_titleDoneColor, 0)
+
         stepNumColor = typedArr.getColor(R.styleable.StepView_stepNumColor, 0)
 
-        titleTextSize = typedArr.getDimension(R.styleable.StepView_titleTextSize, 0f)
         stepNumSize = typedArr.getDimension(R.styleable.StepView_stepNumSize, 0f)
+        titleTextSize = typedArr.getDimension(R.styleable.StepView_titleTextSize, 0f)
 
         textPadding = typedArr.getDimensionPixelSize(R.styleable.StepView_textPadding, 0)
         stepPadding = typedArr.getDimensionPixelSize(R.styleable.StepView_stepPadding, 0)
 
         typedArr.getTextArray(R.styleable.StepView_steps).let { titleList ->
-            if (titleList != null) stepList = titleList.map { it.toString() }
+            if (titleList.isNotEmpty()) stepList = titleList.map { it.toString() }
         }
-        textPaint.textSize = titleTextSize
 
         typedArr.recycle()
-    }
-
-    fun setSteps(newSteps: List<String>) {
-        stepList = newSteps
-        requestLayout()
-        goStep(startStep)
     }
 
     fun goStep(step: Int) {
@@ -136,7 +131,6 @@ class StepView : View {
         for (i in constraints.indices) {
             constraints[i] = constraints[0] * (i + 1)
         }
-
     }
 
     private fun calculateMeasureHeight(heightMeasureSpec: Int): Int {
@@ -155,10 +149,11 @@ class StepView : View {
 
     private fun measureStepsHeight(): Int {
         var maxHeight = 0
-        textLayouts = MutableList(stepList.size) { null }
+        textLayouts = mutableListOf()
         textPaint.textSize = titleTextSize
 
         for (i in stepList.indices) {
+            var newLayout: StaticLayout
             val text = stepList[i]
             val alignment = if (isRtl()) {
                 Layout.Alignment.ALIGN_OPPOSITE
@@ -166,16 +161,13 @@ class StepView : View {
                 Layout.Alignment.ALIGN_NORMAL
             }
 
-            var newLayout: StaticLayout
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                Log.d("STEP_VIEW", "$measuredWidth")
                 newLayout = StaticLayout.Builder
                     .obtain(text, 0, text.length, textPaint, measuredWidth / stepList.size)
                     .setAlignment(alignment)
                     .setLineSpacing(0.0f, 1.0f)
                     .setIncludePad(true)
                     .build()
-                Log.d("STEP_VIEW", "lineCount: ${newLayout.lineCount}")
             } else {
                 newLayout = StaticLayout(
                     text,
@@ -187,7 +179,7 @@ class StepView : View {
                     true
                 )
             }
-            textLayouts[i] = newLayout
+            textLayouts.add(newLayout)
             maxHeight = max(maxHeight, newLayout.height)
         }
         return maxHeight
@@ -199,13 +191,13 @@ class StepView : View {
     }
 
     private fun measureAttributes() {
-        circlesCenterY = getCircleY()
-        circlesCenterX = getCirclePositions()
+        circlesCenterY = getCircleCenterY()
+        circlesCenterX = getCircleCenterXs()
         textY = circlesCenterY + circleRadius + textPadding
         measureLines()
     }
 
-    private fun getCircleY(): Int {
+    private fun getCircleCenterY(): Int {
         val availableHeight = measuredHeight - paddingTop - paddingBottom
         val maxItemHeight = getMaxTextHeight() + circleRadius * 2 + textPadding
         val additionalPadding = (availableHeight - maxItemHeight) / 2
@@ -214,13 +206,11 @@ class StepView : View {
 
     private fun getMaxTextHeight(): Int {
         var maxTextHeight = 0
-        textLayouts.forEach { textLayout ->
-            maxTextHeight = max(textLayout!!.height, maxTextHeight)
-        }
+        textLayouts.forEach { textLayout -> maxTextHeight = max(textLayout.height, maxTextHeight) }
         return maxTextHeight
     }
 
-    private fun getCirclePositions(): IntArray {
+    private fun getCircleCenterXs(): IntArray {
         val ret = IntArray(stepList.size)
         if (ret.isEmpty()) return ret
 
@@ -253,9 +243,9 @@ class StepView : View {
     }
 
     private fun getStartCirclePosition() = if (isRtl()) {
-        measuredWidth - paddingRight - max(getMaxTextWidth(textLayouts[0]!!) / 2, circleRadius)
+        measuredWidth - paddingRight - max(getMaxTextWidth(textLayouts[0]) / 2, circleRadius)
     } else {
-        paddingLeft + max(getMaxTextWidth(textLayouts[0]!!) / 2, circleRadius)
+        paddingLeft + max(getMaxTextWidth(textLayouts[0]) / 2, circleRadius)
     }
 
 
@@ -268,14 +258,15 @@ class StepView : View {
     }
 
     private fun getEndCirclePosition() = if (isRtl()) {
-        paddingLeft + max(getMaxTextWidth(textLayouts.last()!!) / 2, circleRadius)
+        paddingLeft + max(getMaxTextWidth(textLayouts.last()) / 2, circleRadius)
     } else {
-        measuredWidth - paddingRight - max(getMaxTextWidth(textLayouts.last()!!) / 2, circleRadius)
+        measuredWidth - paddingRight - max(getMaxTextWidth(textLayouts.last()) / 2, circleRadius)
     }
 
     private fun measureLines() {
         startLinesX = IntArray(stepList.size - 1)
         endLinesX = IntArray(stepList.size - 1)
+
         val padding = stepPadding + circleRadius
 
         for (i in 1 until stepList.size) {
@@ -290,11 +281,12 @@ class StepView : View {
     }
 
     override fun onDraw(canvas: Canvas?) {
-        Log.d("STEP_VIEW", "HERE")
         if (height == 0 || stepList.isEmpty()) return
+
         for (i in stepList.indices) {
             drawStep(canvas, i, circlesCenterX[i].toFloat(), circlesCenterY.toFloat())
         }
+
         for (i in startLinesX.indices) {
             if (i < currentStep) {
                 drawLine(
@@ -325,55 +317,39 @@ class StepView : View {
         when {
             isNow -> {
                 paint.color = nowCircleColor
-                canvas?.drawCircle(centerX, centerY, circleRadius.toFloat(), paint)
-
-                paint.color = stepNumColor
-                paint.textSize = stepNumSize
-                drawNumber(canvas, stepNum, centerX, paint)
-
                 textPaint.color = nowTitleColor
-                textPaint.textSize = titleTextSize
-                drawText(canvas, text, textY, step)
             }
             isDone -> {
                 paint.color = doneCircleColor
-                canvas?.drawCircle(centerX, centerY, circleRadius.toFloat(), paint)
-
-                paint.color = stepNumColor
-                paint.textSize = stepNumSize
-                drawNumber(canvas, stepNum, centerX, paint)
-
                 textPaint.color = doneTitleColor
-                textPaint.textSize = titleTextSize
-                drawText(canvas, text, textY, step)
             }
             else -> {
                 paint.color = yetCircleColor
-                canvas?.drawCircle(centerX, centerY, circleRadius.toFloat(), paint)
-
-                paint.color = stepNumColor
-                paint.textSize = stepNumSize
-                drawNumber(canvas, stepNum, centerX, paint)
-
                 textPaint.color = yetTitleColor
-                textPaint.textSize = titleTextSize
-                drawText(canvas, text, textY, step)
             }
         }
+
+        canvas?.drawCircle(centerX, centerY, circleRadius.toFloat(), paint)
+
+        paint.color = stepNumColor
+        paint.textSize = stepNumSize
+        drawNumber(canvas, stepNum, centerX, paint)
+
+        textPaint.textSize = titleTextSize
+        drawText(canvas, text, textY, step)
     }
 
     private fun drawNumber(canvas: Canvas?, stepNum: String, centerX: Float, numPaint: Paint) {
         numPaint.getTextBounds(stepNum, 0, stepNum.length, bounds)
-        val y = circlesCenterY + bounds.height() / 2f - bounds.bottom
-        canvas?.drawText(stepNum, centerX, y, numPaint)
+        val centerY = circlesCenterY + bounds.height() / 2f - bounds.bottom
+        canvas?.drawText(stepNum, centerX, centerY, numPaint)
     }
 
     private fun drawText(canvas: Canvas?, text: String, textY: Int, step: Int) {
         if (text.isEmpty()) return
-        val textLayout = textLayouts[step]
         canvas?.save()
         canvas?.translate(circlesCenterX[step].toFloat(), textY.toFloat())
-        textLayout!!.draw(canvas)
+        textLayouts[step].draw(canvas)
         canvas?.restore()
     }
 
@@ -384,14 +360,8 @@ class StepView : View {
         centerY: Float,
         isDone: Boolean
     ) {
-        if (isDone) {
-            paint.color = doneLineColor
-            paint.strokeWidth = lineWidth.toFloat()
-            canvas?.drawLine(startX, centerY, endX, centerY, paint)
-        } else {
-            paint.color = yetLineColor
-            paint.strokeWidth = lineWidth.toFloat()
-            canvas?.drawLine(startX, centerY, endX, centerY, paint)
-        }
+        paint.color = if (isDone) doneLineColor else yetLineColor
+        paint.strokeWidth = lineWidth.toFloat()
+        canvas?.drawLine(startX, centerY, endX, centerY, paint)
     }
 }
