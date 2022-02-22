@@ -26,7 +26,7 @@
                 style="@style/TitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_start_date_title" />
+                android:text="@string/start_date" />
 
             <include
                 android:id="@+id/dateRegisterStartField"
@@ -37,7 +37,7 @@
                 style="@style/TitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_end_date_title" />
+                android:text="@string/end_date" />
 
             <include
                 android:id="@+id/dateRegisterEndField"
@@ -55,7 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="-16dp"
-                    android:text="@string/register_prev_button"
+                    android:text="@string/previous"
                     app:icon="@drawable/ic_left_very_peri"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="-16dp"
                     android:drawableEnd="@drawable/ic_right_very_peri"
-                    android:text="@string/register_next_button"
+                    android:text="@string/next"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>

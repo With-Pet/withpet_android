@@ -111,7 +111,7 @@
                     android:layout_width="14dp"
                     android:layout_height="14dp"
                     android:layout_gravity="center_vertical"
-                    android:contentDescription="@string/post_service_image"
+                    android:contentDescription="@string/service_image_desc"
                     android:src="@drawable/ic_pet_exp" />
 
                 <TextView

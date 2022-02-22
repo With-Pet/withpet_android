@@ -26,7 +26,7 @@
                 style="@style/TitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_service_title"
+                android:text="@string/service_choice"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/serviceRegisterStepView" />
 
@@ -59,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/walk_label"
+                android:text="@string/walk"
                 app:layout_constraintBottom_toTopOf="@id/petServiceExpToggleButton"
                 app:layout_constraintEnd_toEndOf="@id/petServiceWalkToggleButton"
                 app:layout_constraintStart_toStartOf="@id/petServiceWalkToggleButton"
@@ -88,7 +88,7 @@
                 style="@style/LabelTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/care_label"
+                android:text="@string/care"
                 app:layout_constraintBottom_toBottomOf="@id/serviceRegisterWalkTextView"
                 app:layout_constraintEnd_toEndOf="@id/petServiceCareToggleButton"
                 app:layout_constraintStart_toStartOf="@id/petServiceCareToggleButton"
@@ -119,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/exp_label"
+                android:text="@string/exp"
                 app:layout_constraintBottom_toTopOf="@id/serviceRegisterPrevButton"
                 app:layout_constraintEnd_toEndOf="@id/petServiceExpToggleButton"
                 app:layout_constraintStart_toStartOf="@id/petServiceExpToggleButton"
@@ -131,7 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="-16dp"
-                android:text="@string/register_prev_button"
+                android:text="@string/previous"
                 app:icon="@drawable/ic_left_very_peri"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -143,7 +143,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="-16dp"
                 android:drawableEnd="@drawable/ic_right_very_peri"
-                android:text="@string/register_next_button"
+                android:text="@string/next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 

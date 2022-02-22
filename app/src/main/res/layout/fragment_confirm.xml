@@ -26,7 +26,7 @@
                 style="@style/TitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/pet_name_example"
+                android:text="@string/name_example"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/confirmStepView" />
 
@@ -42,7 +42,7 @@
                 style="@style/SubtitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_town"
+                android:text="@string/town"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/confirmDivider1" />
 
@@ -61,7 +61,7 @@
                 style="@style/SubtitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_service_subtitle"
+                android:text="@string/service_class"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/confirmTownTextView" />
 
@@ -70,7 +70,7 @@
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/post_service_image"
+                android:contentDescription="@string/service_image_desc"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_pet_walk"
                 app:layout_constraintEnd_toStartOf="@id/confirmServiceTextView"
@@ -84,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="@string/walk_label"
+                android:text="@string/walk"
                 app:layout_constraintBottom_toBottomOf="@id/confirmServiceImageView"
                 app:layout_constraintStart_toEndOf="@id/confirmServiceImageView"
                 app:layout_constraintTop_toTopOf="@id/confirmServiceImageView" />
@@ -94,7 +94,7 @@
                 style="@style/SubtitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_service_detail_subtitle"
+                android:text="@string/service_detail"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/confirmServiceImageView" />
 
@@ -142,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/register_date_subtitle"
+                android:text="@string/period"
                 android:textAppearance="@style/TextStyle.Subtitle1.Bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/confirmServiceChipGroup" />
@@ -162,7 +162,7 @@
                 style="@style/SubtitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_fee"
+                android:text="@string/fee"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/confirmDateTextView" />
 
@@ -188,7 +188,7 @@
                 style="@style/SubtitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_caution"
+                android:text="@string/request"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/confirmDivider2" />
 
@@ -214,7 +214,7 @@
                 style="@style/SubtitleVerticalMarginStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_photo_subtitle"
+                android:text="@string/selected_photo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/confirmDivider3" />
 
@@ -233,7 +233,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="-16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/register_prev_button"
+                android:text="@string/previous"
                 app:icon="@drawable/ic_left_very_peri"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -247,7 +247,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/register_register"
+                android:text="@string/register"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/confirmPrevButton"

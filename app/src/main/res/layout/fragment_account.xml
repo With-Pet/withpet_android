@@ -18,7 +18,7 @@
                 android:id="@+id/accountToolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="@string/account_toolbar"
+                app:title="@string/account"
                 app:titleTextAppearance="@style/TextStyle.Headline6.Bold" />
 
         </com.google.android.material.appbar.AppBarLayout>

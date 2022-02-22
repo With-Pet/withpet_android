@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="@string/register_pet_title"
+                android:text="@string/pet_choice"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/petRegisterStepView" />
 
@@ -55,7 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/register_pet_nothing"
+                    android:text="@string/no_pet"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
                 <Button
@@ -64,7 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="@string/register_pet_register_button"
+                    android:text="@string/go_register"
                     android:textAppearance="@style/TextStyle.Body1.Bold" />
             </LinearLayout>
 

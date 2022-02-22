@@ -1,19 +1,118 @@
 <resources>
     <string name="app_name">With Pet</string>
 
-    <!-- toolbar title -->
-    <string name="account_toolbar">계정</string>
-    <string name="profile_toolbar">프로필</string>
-    <string name="pet_toolbar">반려동물 프로필</string>
-    <string name="review_toolbar">리뷰</string>
-    <string name="review_write_toolbar">리뷰 작성하기</string>
-    <string name="like_person_list_toolbar">찜한 돌봄이</string>
-    <string name="like_post_list_toolbar">찜한 게시물</string>
-    <string name="register_toolbar">등록</string>
+    <string name="account">계정</string>
+    <string name="profile">프로필</string>
+    <string name="pet_list">내 반려동물들</string>
+    <string name="pet_profile">반려동물 프로필</string>
+    <string name="review">리뷰</string>
+    <string name="write_review">리뷰 작성하기</string>
+    <string name="like_person_list">찜한 돌봄이</string>
+    <string name="like_post_list">찜한 게시물</string>
+    <string name="registration">등록</string>
+
+    <string name="walk">산책</string>
+    <string name="care">돌봄</string>
+    <string name="exp">체험</string>
+
+    <string name="register">등록하기</string>
+    <string name="see_user_post">게시물 모아보기</string>
+
+    <string name="nickname">닉네임</string>
+    <string name="town">동네</string>
+    <string name="introduce">자기소개</string>
+    <string name="available_service">이용 가능 서비스</string>
+    <string name="person_review">서비스 이용자 후기</string>
+    <string name="pet_review">체험 후기</string>
+
+    <string name="certification">자격 및 교육</string>
+    <string name="certification_name">자격증 이름</string>
+    <string name="certification_org">인증 기관</string>
+    <string name="certification_date">취득 날짜</string>
+
+    <string name="name">이름</string>
+    <string name="gender">성별</string>
+    <string name="surgery">중성화</string>
+    <string name="category">종류</string>
+    <string name="variety">품종</string>
+    <string name="birthday">생일</string>
+    <string name="age">나이</string>
+    <string name="weight">몸무게</string>
+    <string name="kg">kg</string>
+    <string name="caution">특이사항</string>
+
+    <string name="service">서비스</string>
+    <string name="fee">비용</string>
+    <string name="reservation_date">예약 날짜</string>
+    <string name="reviewed_nickname">담당자</string>
+    <string name="review_notice">평점과 리뷰를 남겨주세요!</string>
+    <string name="review_image_add_count">0/3</string>
+
+    <string name="pet_choice">반려동물 선택</string>
+    <string name="no_pet">맡길 수 있는 반려동물이 없습니다.</string>
+    <string name="go_register">등록하러 가기</string>
+    <string name="service_choice">서비스 선택</string>
+    <string name="start_date">시작 날짜</string>
+    <string name="end_date">종료 날짜</string>
+    <string name="previous">이전</string>
+    <string name="next">다음</string>
+    <string name="year">연도</string>
+    <string name="month">월</string>
+    <string name="day">일</string>
+    <string name="hour">시</string>
+    <string name="minute">분</string>
+
+    <string name="photo_register">사진 등록</string>
+    <string name="register_your_pet_photo">당신의 반려동물 사진을 올려주세요!</string>
+    <string name="selected_photo">선택된 사진 목록</string>
+    <string name="title">제목</string>
+    <string name="reward">보상</string>
+    <string name="fee_suffix">원 / 시간</string>
+    <string name="service_detail">서비스 상세</string>
+    <string name="request">요청 사항</string>
+    <string name="service_class">서비스 종류</string>
+    <string name="period">기간</string>
+
+    <!-- example -->
+    <string name="walk_count_example">12건</string>
+    <string name="care_count_example">4건</string>
+    <string name="exp_count_example">0건</string>
+
+    <string name="nickname_example">홍길동</string>
+    <string name="town_example">논현1동</string>
+    <string name="introduce_subtitle_example">현재 6세 말티즈를 키우고 있고, 자격증을 보유 하고 있습니다.</string>
+    <string name="review_example">4.7</string>
+
+    <string name="certificate_name_example">펫시터 전문가 교육</string>
+    <string name="certificate_org_example">(사) K.S.D 문화교육원</string>
+    <string name="certificate_date_example">2020년 4월 14일</string>
+
+    <string name="name_example">콩이</string>
+    <string name="gender_example">남자</string>
+    <string name="surgery_example">O</string>
+    <string name="category_example">강아지</string>
+    <string name="variety_example">말티즈</string>
+    <string name="birthday_example">2019년 10월 28일</string>
+    <string name="age_example">3살</string>
+    <string name="weight_example">2.8</string>
+    <string name="weight_kg_example">2.8 kg</string>
+    <string name="caution_example">청력이 약해서 소리를 잘 듣지 못합니다.</string>
+
+    <string name="review_date_example">2021년 12월 3일</string>
+    <string name="review_name_example">지휘찬</string>
+    <string name="review_fee_example">10,000원 / 시간</string>
+    <string name="review_text_example">저희 아이들이 너무 좋아해요\n처음 후기 남겨보는데 자주 애용하겠습니다\n너무 친절하셔요 :)</string>
+
+    <string name="post_title_example">3시간 정도 한강 공원 산책 시켜주실 분~</string>
+    <string name="post_date_example">02/14 09:00 – 02/14 12:00</string>
+    <string name="post_category_example">강아지</string>
+    <string name="post_service_example">산책</string>
+    <string name="post_fee_example">-10,000원/시간</string>
+    <string name="register_town_example">논현1동</string>
+    <string name="register_date_example">02월 14일 AM 09:00 ~ 02월 14일 PM 12:00</string>
+    <string name="register_caution_example">가파른 산은 가급적 피해주시길 바랍니다.</string>
 
     <!-- content description -->
-    <string name="main_fab">맡기기 등록 버튼</string>
-
     <string name="my_profile_menu_icon">내 프로필 관리하기 아이콘</string>
     <string name="pet_profile_menu_icon">반려동물 프로필 관리하기 아이콘</string>
     <string name="like_person_menu_icon">찜한 돌봄이 아이콘</string>
@@ -24,6 +123,7 @@
     <string name="logout_menu_icon">로그아웃 아이콘</string>
     <string name="withdrawal_menu_icon">회원탈퇴 아이콘</string>
 
+    <string name="main_fab_desc">맡기기 등록 버튼</string>
     <string name="profile_image_desc">프로필 이미지</string>
     <string name="edit_image_desc">이미지 수정</string>
     <string name="town_edit_desc">동네 수정</string>
@@ -34,8 +134,9 @@
     <string name="post_thumbnail_desc">게시물 썸네일</string>
     <string name="review_image_desc">리뷰 이미지</string>
     <string name="post_image_desc">게시물 이미지</string>
+    <string name="service_image_desc">서비스 이미지</string>
 
-    <!-- account text -->
+    <!-- account menu text -->
     <string name="my_profile_menu">내 프로필 관리하기</string>
     <string name="pet_profile_menu">반려동물 프로필 관리하기</string>
     <string name="like_person_menu">찜한 돌봄이</string>
@@ -46,116 +147,12 @@
     <string name="logout_menu">로그아웃</string>
     <string name="withdrawal_menu">회원탈퇴</string>
 
-    <!-- profile text -->
-    <string name="walk_label">산책</string>
-    <string name="walk_count_example">12건</string>
-    <string name="care_label">돌봄</string>
-    <string name="care_count_example">4건</string>
-    <string name="exp_label">체험</string>
-    <string name="exp_count_example">0건</string>
-
-    <string name="see_post_button">게시물 모아보기</string>
-
-    <string name="nickname_subtitle">닉네임</string>
-    <string name="nickname_example">홍길동</string>
-    <string name="town_subtitle">동네</string>
-    <string name="town_example">논현1동</string>
-    <string name="introduce_subtitle">자기소개</string>
-    <string name="introduce_subtitle_example">현재 6세 말티즈를 키우고 있고, 자격증을 보유 하고 있습니다.</string>
-    <string name="service_subtitle">이용 가능 서비스</string>
-    <string name="certificate_subtitle">자격 및 교육</string>
-    <string name="person_review_subtitle">서비스 이용자 후기</string>
-    <string name="pet_review_subtitle">체험 후기</string>
-    <string name="review_example">4.7</string>
-
-    <string name="certificate_name">자격증 이름</string>
-    <string name="certificate_org">인증 기관</string>
-    <string name="certificate_date">취득 날짜</string>
-    <string name="certificate_name_example">펫시터 전문가 교육</string>
-    <string name="certificate_org_example">(사) K.S.D 문화교육원</string>
-    <string name="certificate_date_example">2020년 4월 14일</string>
-    <string name="certificate_register_button">등록하기</string>
-
-    <string name="pet_name">이름</string>
-    <string name="pet_name_example">콩이</string>
-    <string name="pet_gender">성별</string>
-    <string name="pet_gender_example">남자</string>
-    <string name="pet_surgery">중성화</string>
-    <string name="pet_surgery_example">O</string>
-    <string name="pet_category">종류</string>
-    <string name="pet_category_example">강아지</string>
-    <string name="pet_variety">품종</string>
-    <string name="pet_variety_example">말티즈</string>
-    <string name="pet_birthday">생일</string>
-    <string name="pet_birthday_example">2019년 10월 28일</string>
-    <string name="pet_age">나이</string>
-    <string name="pet_age_example">3살</string>
-    <string name="pet_weight">몸무게</string>
-    <string name="pet_weight_example">2.8</string>
-    <string name="pet_weight_wight_kg_example">2.8 kg</string>
-    <string name="pet_weight_suffix">kg</string>
-    <string name="pet_caution">특이사항</string>
-    <string name="pet_introduce_example">청력이 약해서 소리를 잘 듣지 못합니다.</string>
-
-    <!-- review -->
-    <string name="review_date_example">2021년 12월 3일</string>
-    <string name="review_service">서비스</string>
-    <string name="review_service_example">산책</string>
-    <string name="review_reservation">예약 날짜</string>
-    <string name="review_reservation_example">2021년 12월 3일</string>
-    <string name="review_fee">비용</string>
-    <string name="review_fee_example">10,000원 / 시간</string>
-    <string name="review_text_example">저희 아이들이 너무 좋아해요\n처음 후기 남겨보는데 자주 애용하겠습니다\n너무 친절하셔요 :)</string>
-    <string name="review_name_title">담당자</string>
-    <string name="review_name_example">지휘찬</string>
-    <string name="review_notice">평점과 리뷰를 남겨주세요!</string>
-    <string name="review_text_hint">다른 이용자들을 위해 리뷰를 작성해주세요.</string>
-    <string name="review_image_add_button_text">0/3</string>
-
-    <!-- post -->
-    <string name="post_title_example">3시간 정도 한강 공원 산책 시켜주실 분~</string>
-    <string name="post_date_example">02/14 09:00 – 02/14 12:00</string>
-    <string name="post_category_example">강아지</string>
-    <string name="post_service_image">서비스 이미지</string>
-    <string name="post_service_example">산책</string>
-    <string name="post_fee_example">-10,000원/시간</string>
-
-    <!-- register -->
-    <string name="register_pet_title">반려동물 선택</string>
-    <string name="register_pet_nothing">맡길 수 있는 반려동물이 없습니다.</string>
-    <string name="register_pet_register_button">등록하러 가기</string>
-    <string name="register_service_title">서비스 선택</string>
-    <string name="register_start_date_title">시작 날짜</string>
-    <string name="register_end_date_title">종료 날짜</string>
-    <string name="register_prev_button">이전</string>
-    <string name="register_next_button">다음</string>
-    <string name="register_year_label">연도</string>
-    <string name="register_month_label">월</string>
-    <string name="register_day_label">일</string>
-    <string name="register_hour_label">시</string>
-    <string name="register_minute_label">분</string>
-    <string name="register_photo_title">사진 등록</string>
-    <string name="register_your_pet_photo">당신의 반려동물 사진을 올려주세요!</string>
-    <string name="register_selected_photo">선택된 사진 목록</string>
-    <string name="register_title">제목</string>
-    <string name="register_title_hint">게시물 제목을 입력해주세요</string>
-    <string name="register_fee">비용</string>
-    <string name="register_reward">보상</string>
-    <string name="register_fee_suffix">원 / 시간</string>
-    <string name="register_fee_hint">비용을 입력해주세요</string>
-    <string name="register_reward_hint">보상을 입력해주세요</string>
-    <string name="register_town">동네</string>
-    <string name="register_town_example">논현1동</string>
-    <string name="register_service">서비스 상세</string>
-    <string name="register_caution">요청 사항</string>
-    <string name="register_caution_hint">요청 사항을 입력해주세요.</string>
-    <string name="register_register">등록하기</string>
-    <string name="register_service_subtitle">서비스 종류</string>
-    <string name="register_service_detail_subtitle">서비스 상세</string>
-    <string name="register_date_subtitle">날짜</string>
-    <string name="register_date_example">02월 14일 AM 09:00 ~ 02월 14일 PM 12:00</string>
-    <string name="register_caution_example">가파른 산은 가급적 피해주시길 바랍니다.</string>
-    <string name="register_photo_subtitle">선택된 사진 목록</string>
+    <!-- hint -->
+    <string name="review_hint">다른 이용자들을 위해 리뷰를 작성해주세요.</string>
+    <string name="title_hint">게시물 제목을 입력해주세요</string>
+    <string name="fee_hint">비용을 입력해주세요</string>
+    <string name="reward_hint">보상을 입력해주세요</string>
+    <string name="request_hint">요청 사항을 입력해주세요.</string>
 
     <!-- dropdown menu -->
     <string-array name="pet_category_arr">
