@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.DateRegisterFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.withpet.withpet_android.ui.custom.StepView
+                android:id="@+id/dateRegisterStepView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:steps="@array/register_step_arr" />
+
+            <TextView
+                android:id="@+id/dateRegisterStartTitle"
+                style="@style/TitleVerticalMarginStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_date" />
+
+            <include
+                android:id="@+id/dateRegisterStartField"
+                layout="@layout/layout_date_time_picker" />
+
+            <TextView
+                android:id="@+id/dateRegisterEndTitle"
+                style="@style/TitleVerticalMarginStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/end_date" />
+
+            <include
+                android:id="@+id/dateRegisterEndField"
+                layout="@layout/layout_date_time_picker" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/dateRegisterPrevButton"
+                    style="@style/ButtonStyle.Transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-16dp"
+                    android:text="@string/previous"
+                    app:icon="@drawable/ic_left_very_peri"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/dateRegisterNextButton"
+                    style="@style/ButtonStyle.Transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="-16dp"
+                    android:drawableEnd="@drawable/ic_right_very_peri"
+                    android:text="@string/next"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

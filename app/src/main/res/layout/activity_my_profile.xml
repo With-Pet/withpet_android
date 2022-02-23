@@ -20,7 +20,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:menu="@menu/profile_toolbar_check_menu"
                 app:navigationIcon="@drawable/ic_arrow_back"
-                app:title="@string/profile_toolbar"
+                app:title="@string/profile"
                 app:titleTextAppearance="@style/TextStyle.Headline6.Bold" />
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -76,7 +76,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="@string/walk_label" />
+                            android:text="@string/walk" />
 
                         <TextView
                             android:id="@+id/myProfileWalkTextView"
@@ -104,7 +104,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="@string/care_label" />
+                            android:text="@string/care" />
 
                         <TextView
                             android:id="@+id/myProfileCareTextView"
@@ -132,7 +132,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="@string/exp_label" />
+                            android:text="@string/exp" />
 
                         <TextView
                             android:id="@+id/myProfileExpTextView"
@@ -157,7 +157,7 @@
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/nickname_subtitle"
+                    android:text="@string/nickname"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/myProfileDivider1" />
 
@@ -188,7 +188,7 @@
                     android:id="@+id/myProfileTownSubtitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/town_subtitle"
+                    android:text="@string/town"
                     android:textAppearance="@style/TextStyle.Subtitle1.Bold"
                     app:layout_constraintBottom_toTopOf="@id/myProfileDivider3"
                     app:layout_constraintStart_toStartOf="parent"
@@ -237,7 +237,7 @@
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/introduce_subtitle"
+                    android:text="@string/introduce"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/myProfileDivider3" />
 
@@ -270,7 +270,7 @@
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/service_subtitle"
+                    android:text="@string/available_service"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/myProfileDivider4" />
 
@@ -347,7 +347,7 @@
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/certificate_subtitle"
+                    android:text="@string/certification"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/myProfileDivider5" />
 

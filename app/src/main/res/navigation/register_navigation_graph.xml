@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_navigation_graph"
+    app:startDestination="@id/petRegisterFragment">
+
+    <fragment
+        android:id="@+id/dateRegisterFragment"
+        android:name="com.withpet.withpet_android.ui.fragments.DateRegisterFragment"
+        android:label="fragment_date_register"
+        tools:layout="@layout/fragment_date_register">
+        <action
+            android:id="@+id/action_dateRegisterFragment_to_photoRegisterFragment"
+            app:destination="@id/photoRegisterFragment" />
+        <action
+            android:id="@+id/action_dateRegisterFragment_to_serviceRegisterFragment"
+            app:destination="@id/serviceRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailRegisterFragment"
+        android:name="com.withpet.withpet_android.ui.fragments.DetailRegisterFragment"
+        android:label="fragment_detail_register"
+        tools:layout="@layout/fragment_detail_register">
+        <action
+            android:id="@+id/action_detailRegisterFragment_to_confirmFragment"
+            app:destination="@id/confirmFragment" />
+        <action
+            android:id="@+id/action_detailRegisterFragment_to_photoRegisterFragment"
+            app:destination="@id/photoRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/petRegisterFragment"
+        android:name="com.withpet.withpet_android.ui.fragments.PetRegisterFragment"
+        android:label="fragment_pet_register"
+        tools:layout="@layout/fragment_pet_register">
+        <action
+            android:id="@+id/action_petRegisterFragment_to_serviceRegisterFragment"
+            app:destination="@id/serviceRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoRegisterFragment"
+        android:name="com.withpet.withpet_android.ui.fragments.PhotoRegisterFragment"
+        android:label="fragment_photo_register"
+        tools:layout="@layout/fragment_photo_register">
+        <action
+            android:id="@+id/action_photoRegisterFragment_to_detailRegisterFragment"
+            app:destination="@id/detailRegisterFragment" />
+        <action
+            android:id="@+id/action_photoRegisterFragment_to_dateRegisterFragment"
+            app:destination="@id/dateRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceRegisterFragment"
+        android:name="com.withpet.withpet_android.ui.fragments.ServiceRegisterFragment"
+        android:label="fragment_service_register"
+        tools:layout="@layout/fragment_service_register">
+        <action
+            android:id="@+id/action_serviceRegisterFragment_to_dateRegisterFragment"
+            app:destination="@id/dateRegisterFragment" />
+        <action
+            android:id="@+id/action_serviceRegisterFragment_to_petRegisterFragment"
+            app:destination="@id/petRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmFragment"
+        android:name="com.withpet.withpet_android.ui.fragments.ConfirmFragment"
+        android:label="fragment_confirm"
+        tools:layout="@layout/fragment_confirm">
+        <action
+            android:id="@+id/action_confirmFragment_to_detailRegisterFragment"
+            app:destination="@id/detailRegisterFragment" />
+    </fragment>
+</navigation>

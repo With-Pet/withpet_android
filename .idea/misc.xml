@@ -32,11 +32,14 @@
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_star_selected.xml" value="0.14" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_star_unselected.xml" value="0.14" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/like_selector.xml" value="0.14" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/round_add_photo_button.xml" value="0.1" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/round_add_profile_button.xml" value="0.1" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/round_bottom_sheet.xml" value="0.1" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/round_image_button.xml" value="0.1545" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/round_image_view.xml" value="0.1545" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/round_photo_button.xml" value="0.14" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/round_stroke_button.xml" value="0.14" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/round_stroke_spinner_field.xml" value="0.1" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/selector.xml" value="0.1545" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/star_selector.xml" value="0.14" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_like_person_list.xml" value="0.1" />
@@ -47,21 +50,33 @@
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_my_profile.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_others_pet.xml" value="0.1" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_others_profile.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_register.xml" value="0.1470713980333476" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_review_list.xml" value="0.13994565217391305" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_review_write.xml" value="0.22" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_certification.xml" value="0.22" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_confirm_image_list.xml" value="0.1470713980333476" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_dropdown.xml" value="0.13994565217391305" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_like_person_list.xml" value="0.22" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_like_post_list.xml" value="0.22" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_pet_list.xml" value="0.22" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_post_image_list.xml" value="0.1470713980333476" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_rating_bar.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_register_image_list.xml" value="0.1" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_review.xml" value="0.22" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adpater_view_dropdown.xml" value="0.13994565217391305" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/bottom_sheet_certification.xml" value="0.22" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_account.xml" value="0.22" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_chatt.xml" value="0.13994565217391305" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_confirm.xml" value="0.22" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_date_register.xml" value="0.22" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_detail_register.xml" value="0.22" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_leave_list.xml" value="0.1" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_pet_choice.xml" value="0.1470713980333476" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_pet_register.xml" value="0.22" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_photo_register.xml" value="0.22" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_reservation.xml" value="0.13994565217391305" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/fragment_service_register.xml" value="0.17941585535465926" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/layout_date_time_picker.xml" value="0.1470713980333476" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/layout_guide_line.xml" value="0.13994565217391305" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/layout_toolbar.xml" value="0.13994565217391305" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/menu/bottom_navigation.xml" value="0.17916666666666667" />

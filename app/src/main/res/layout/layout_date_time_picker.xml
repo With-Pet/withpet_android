@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dateTimeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_stroke_spinner_field"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/yearSubtitle"
+            style="@style/TextStyle.Headline6.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/year"
+            app:layout_constraintEnd_toStartOf="@id/monthSubtitle"
+            app:layout_constraintStart_toStartOf="@id/datePicker"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/monthSubtitle"
+            style="@style/TextStyle.Headline6.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/month"
+            app:layout_constraintEnd_toStartOf="@id/daySubtitle"
+            app:layout_constraintStart_toEndOf="@id/yearSubtitle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/daySubtitle"
+            style="@style/TextStyle.Headline6.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/day"
+            app:layout_constraintEnd_toEndOf="@id/datePicker"
+            app:layout_constraintStart_toEndOf="@id/monthSubtitle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:startYear="2022"
+            android:theme="@style/SpinnerPickerStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/yearSubtitle" />
+
+        <TextView
+            android:id="@+id/hourSubtitle"
+            style="@style/TextStyle.Headline6.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/hour"
+            app:layout_constraintEnd_toStartOf="@id/daySubtitle"
+            app:layout_constraintStart_toEndOf="@id/yearSubtitle"
+            app:layout_constraintTop_toBottomOf="@id/datePicker" />
+
+        <TextView
+            android:id="@+id/minuteSubtitle"
+            style="@style/TextStyle.Headline6.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/minute"
+            app:layout_constraintEnd_toEndOf="@id/datePicker"
+            app:layout_constraintStart_toEndOf="@id/monthSubtitle"
+            app:layout_constraintTop_toBottomOf="@id/datePicker" />
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/SpinnerPickerStyle"
+            android:timePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hourSubtitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

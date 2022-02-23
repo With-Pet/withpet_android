@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="?attr/actionBarSize"
-            app:defaultNavHost="true"
+            app:defaultNavHost="false"
             app:navGraph="@navigation/bottom_navigation_graph" />
 
         <com.google.android.material.bottomappbar.BottomAppBar
@@ -42,7 +42,7 @@
             android:id="@+id/mainFab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/main_fab"
+            android:contentDescription="@string/main_fab_desc"
             android:src="@drawable/ic_add"
             app:layout_anchor="@id/mainBottomAppBar" />
 

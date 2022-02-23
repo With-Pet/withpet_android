@@ -3,13 +3,16 @@
     <color name="very_peri">#FF6667AB</color>
     <color name="very_peri_light">#FF9695DD</color>
     <color name="very_peri_dark">#FF373D7B</color>
+    <color name="very_peri_alpha">#1E6667AB</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
     <color name="text_field_stroke_color">#6B000000</color>
     <color name="text_field_text_color">#DE000000</color>
     <color name="default_text_color">#808080</color>
+    <color name="light_gray">#D3D3D3</color>
 
     <color name="yellow">#FBC02D</color>
     <color name="paradise_pink">#E9435E</color>
+    <color name="green_briar">#47996B</color>
 </resources>

@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="StepView">
+        <item name="lineYetColor">@android:color/darker_gray</item>
+        <item name="lineDoneColor" format="color" >@color/very_peri</item>
+
+        <item name="circleYetColor" format="color" >@android:color/darker_gray</item>
+        <item name="circleNowColor" format="color" >@color/green_briar</item>
+        <item name="circleDoneColor" format="color" >@color/very_peri</item>
+
+        <item name="titleYetColor" format="color" >@android:color/darker_gray</item>
+        <item name="titleNowColor" format="color" >@color/green_briar</item>
+        <item name="titleDoneColor" format="color" >@color/very_peri</item>
+        <item name="titleTextSize" format="dimension" >11sp</item>
+
+        <item name="stepNumColor" format="color" >@color/white</item>
+        <item name="stepNumSize" format="dimension" >12sp</item>
+
+        <item name="stepPadding" format="dimension" >4dp</item>
+        <item name="textPadding" format="dimension" >12dp</item>
+
+        <item name="circleRadius" format="dimension" >14dp</item>
+        <item name="lineWidth" format="dimension" >2dp</item>
+    </style>
+
     <style name="TextStyle.Headline4.Default" parent="TextAppearance.MaterialComponents.Headline4">
         <item name="android:textColor">@color/black</item>
     </style>
@@ -21,8 +44,17 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="TextStyle.Body1.Default" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/default_text_color</item>
+    </style>
+
     <style name="TextStyle.Body2.Default" parent="TextAppearance.MaterialComponents.Body2">
         <item name="android:textColor">@color/default_text_color</item>
+    </style>
+
+    <style name="TitleVerticalMarginStyle">
+        <item name="android:textAppearance">@style/TextStyle.Headline5.Bold</item>
+        <item name="android:layout_marginTop">16dp</item>
     </style>
 
     <style name="SubtitleVerticalMarginStyle">
@@ -33,6 +65,11 @@
     <style name="BodyVerticalMarginStyle">
         <item name="android:textAppearance">@style/TextStyle.Body2.Default</item>
         <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="LabelTextStyle">
+        <item name="android:textAppearance">@style/TextStyle.Headline6.Bold</item>
+        <item name="android:textColor">@color/default_text_color</item>
     </style>
 
     <style name="ScrollViewStyle">
@@ -71,9 +108,8 @@
     </style>
 
     <style name="ButtonStyle.VeryPeri.Fill" parent="Widget.MaterialComponents.Button">
-        <item name="android:textAppearance">@style/TextStyle.Headline6.Bold</item>
+        <item name="android:textAppearance">@style/TextStyle.Subtitle1.Bold</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:padding">12dp</item>
         <item name="android:backgroundTint">@color/very_peri</item>
     </style>
 
@@ -85,6 +121,21 @@
         <item name="android:paddingBottom">12dp</item>
     </style>
 
+    <style name="ButtonStyle.OutlinedIconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">28dp</item>
+        <item name="android:minWidth">112dp</item>
+        <item name="android:minHeight">112dp</item>
+        <item name="iconSize">64dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.CircularButton</item>
+    </style>
+
+    <style name="ButtonStyle.Transparent" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">@style/TextStyle.Subtitle1.Bold</item>
+    </style>
+
     <style name="RatingBarStyle" parent="Theme.AppCompat">
         <item name="colorControlNormal">@android:color/darker_gray</item>
         <item name="colorControlActivated">@color/yellow</item>
@@ -92,6 +143,12 @@
 
     <style name="RatingProgressBarStyle">
         <item name="colorAccent">@color/yellow</item>
+    </style>
+
+    <style name="SpinnerPickerStyle">
+        <item name="android:textColorPrimary">@color/very_peri</item>
+        <item name="android:textSize">24sp</item>
+        <item name="colorControlNormal">@color/light_gray</item>
     </style>
 
     <style name="ModalBottomSheetDialog" parent="Widget.MaterialComponents.BottomSheet.Modal">
@@ -103,4 +160,8 @@
         <item name="cornerSize">16dp</item>
     </style>
 
+    <style name="ShapeAppearanceOverlay.CircularButton">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

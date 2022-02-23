@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.DetailRegisterFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <com.withpet.withpet_android.ui.custom.StepView
+                android:id="@+id/detailRegisterStepView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:steps="@array/register_step_arr" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/registerDetailDivider1"
+                style="@style/HorizontalTopDividerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/detailRegisterStepView" />
+
+            <TextView
+                android:id="@+id/registerDetailTitleSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/title"
+                android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerDetailDivider1" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@null"
+                android:hint="@string/title_hint"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintBottom_toBottomOf="@id/registerDetailTitleSubtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/registerDetailTitleSubtitle"
+                app:layout_constraintTop_toTopOf="@id/registerDetailTitleSubtitle" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/registerDetailDivider2"
+                style="@style/HorizontalTopDividerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/registerDetailTitleSubtitle" />
+
+            <TextView
+                android:id="@+id/registerDetailFeeSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/fee"
+                android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerDetailDivider2" />
+
+            <EditText
+                android:id="@+id/registerDetailFeeEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@null"
+                android:gravity="end"
+                android:hint="@string/fee_hint"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintBottom_toBottomOf="@id/registerDetailFeeSubtitle"
+                app:layout_constraintEnd_toStartOf="@id/registerDetailFeeSuffix"
+                app:layout_constraintStart_toEndOf="@id/registerDetailFeeSubtitle"
+                app:layout_constraintTop_toTopOf="@id/registerDetailFeeSubtitle" />
+
+            <TextView
+                android:id="@+id/registerDetailFeeSuffix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/fee_suffix"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintBottom_toBottomOf="@id/registerDetailFeeSubtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/registerDetailFeeEditText"
+                app:layout_constraintTop_toTopOf="@id/registerDetailFeeSubtitle" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/registerDetailDivider3"
+                style="@style/HorizontalTopDividerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/registerDetailFeeSubtitle" />
+
+            <TextView
+                android:id="@+id/registerDetailTownSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/town"
+                android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+                app:layout_constraintBottom_toBottomOf="@id/registerDetailTownEditButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/registerDetailTownEditButton" />
+
+            <LinearLayout
+                android:id="@+id/registerDetailTownEditButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerDetailDivider3">
+
+                <TextView
+                    android:id="@+id/registerDetailTownTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/register_town_example"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/town_edit_desc"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_right"
+                    app:tint="@color/very_peri" />
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/registerDetailDivider4"
+                style="@style/HorizontalTopDividerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/registerDetailTownEditButton" />
+
+            <TextView
+                android:id="@+id/registerDetailServiceSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/service_detail"
+                android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerDetailDivider4" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/registerDetailServiceChipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/registerDetailServiceSubtitle">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="병원" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="목욕" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="집 앞 픽업" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="실내 놀이" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="등산" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="미용" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="소독" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="마당 보유" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/registerDetailDivider5"
+                style="@style/HorizontalTopDividerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/registerDetailServiceChipGroup" />
+
+            <TextView
+                android:id="@+id/registerDetailCautionSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/request"
+                android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerDetailDivider5" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerDetailCautionField"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/registerDetailCautionSubtitle"
+                app:layout_constraintVertical_bias="0">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:hint="@string/request_hint"
+                    android:inputType="textMultiLine"
+                    android:lines="6" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/detailRegisterPrevButton"
+                style="@style/ButtonStyle.Transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/previous"
+                app:icon="@drawable/ic_left_very_peri"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerDetailCautionField"
+                app:layout_constraintVertical_bias="1" />
+
+            <Button
+                android:id="@+id/detailRegisterNextButton"
+                style="@style/ButtonStyle.Transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="-16dp"
+                android:drawableEnd="@drawable/ic_right_very_peri"
+                android:text="@string/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerDetailCautionField"
+                app:layout_constraintVertical_bias="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

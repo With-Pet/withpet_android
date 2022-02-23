@@ -20,7 +20,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:menu="@menu/profile_toolbar_like_menu"
                 app:navigationIcon="@drawable/ic_arrow_back"
-                app:title="@string/profile_toolbar"
+                app:title="@string/profile"
                 app:titleTextAppearance="@style/TextStyle.Headline6.Bold" />
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -88,7 +88,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="@string/walk_label" />
+                            android:text="@string/walk" />
 
                         <TextView
                             android:id="@+id/othersProfileWalkTextView"
@@ -116,7 +116,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="@string/care_label" />
+                            android:text="@string/care" />
 
                         <TextView
                             android:id="@+id/othersProfileCareTextView"
@@ -144,7 +144,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="@string/exp_label" />
+                            android:text="@string/exp" />
 
                         <TextView
                             android:id="@+id/othersProfileExpTextView"
@@ -163,7 +163,7 @@
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="@string/see_post_button"
+                    android:text="@string/see_user_post"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -181,7 +181,7 @@
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/introduce_subtitle"
+                    android:text="@string/introduce"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/othersProfileDivider1" />
 
@@ -206,7 +206,7 @@
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/service_subtitle"
+                    android:text="@string/available_service"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/othersProfileDivider2" />
 
@@ -261,7 +261,7 @@
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/certificate_subtitle"
+                    android:text="@string/certification"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/othersProfileDivider3" />
 
@@ -284,7 +284,7 @@
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/person_review_subtitle"
+                    android:text="@string/person_review"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/othersProfileDivider4" />
 

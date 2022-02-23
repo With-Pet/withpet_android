@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.activities.ReviewListActivity">
+    tools:context=".ui.activities.RegisterActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -15,22 +15,22 @@
             app:liftOnScroll="true">
 
             <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/reviewListToolbar"
+                android:id="@+id/registerToolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:navigationIcon="@drawable/ic_arrow_back"
-                app:title="@string/review"
+                app:navigationIcon="@drawable/ic_clear"
+                app:title="@string/registration"
                 app:titleTextAppearance="@style/TextStyle.Headline6.Bold" />
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/reviewListRecyclerView"
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/registerNavHost"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
+            app:defaultNavHost="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:navGraph="@navigation/register_navigation_graph" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 </layout>
