@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sign_up_navigation_graph"
+    app:startDestination="@id/emailFragment">
+
+    <fragment
+        android:id="@+id/emailFragment"
+        android:name="com.withpet.withpet_android.ui.fragments.EmailFragment"
+        android:label="EmailFragment">
+        <action
+            android:id="@+id/action_emailFragment_to_initialProfileFragment"
+            app:destination="@id/initialProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/initialProfileFragment"
+        android:name="com.withpet.withpet_android.ui.fragments.InitialProfileFragment"
+        android:label="InitialProfileFragment">
+        <action
+            android:id="@+id/action_initialProfileFragment_to_emailFragment"
+            app:destination="@id/emailFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/globalActionToEmailFragment"
+        app:destination="@id/emailFragment" />
+</navigation>

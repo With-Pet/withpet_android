@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/initialProfileTitle"
+            style="@style/TitleVerticalMarginStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/profile_setting"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/initialProfileImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/profile_image_desc"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_account_huge"
+            app:layout_constraintBottom_toTopOf="@id/initialProfileNicknameSubtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/initialProfileTitle"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ImageButton
+            android:id="@+id/initialProfileImageEditButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/round_add_profile_button"
+            android:contentDescription="@string/edit_image_desc"
+            android:src="@drawable/ic_photo"
+            app:layout_constraintBottom_toBottomOf="@id/initialProfileImageView"
+            app:layout_constraintEnd_toEndOf="@id/initialProfileImageView"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/initialProfileNicknameSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:text="@string/nickname"
+            android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+            app:layout_constraintBottom_toTopOf="@id/initialProfileEdittext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/initialProfileImageView" />
+
+        <EditText
+            android:id="@+id/initialProfileEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:hint="@string/nickname_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/initialProfileNicknameSubtitle"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/initialProfilePrevButton"
+            style="@style/ButtonStyle.Transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/previous"
+            app:icon="@drawable/ic_left_very_peri"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/initialProfileStartButton"
+            style="@style/ButtonStyle.VeryPeri.Fill"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/initialProfilePrevButton"
+            app:layout_constraintVertical_bias="1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

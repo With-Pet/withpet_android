@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WithPet">
         <activity
+            android:name=".ui.activities.SignUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.SignInActivity"
             android:exported="true">
             <intent-filter>
