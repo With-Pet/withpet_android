@@ -66,20 +66,41 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
             startActivity(Intent(activity, ReviewWriteActivity::class.java))
         }
         binding.logoutMenu.setOnClickListener {
-            signOut()
+            showDialog(R.string.sign_out_message, ::signOut)
+        }
+        binding.withdrawalMenu.setOnClickListener {
+            showDialog(R.string.unlink_message, ::unlink)
         }
     }
 
-    private fun signOut() {
+    private fun showDialog(message: Int, action: () -> Unit) {
         MaterialAlertDialogBuilder(requireContext())
-            .setMessage(R.string.sing_out_message)
+            .setMessage(message)
             .setNegativeButton(R.string.cancel, null)
             .setPositiveButton(R.string.ok) { _, _ ->
-                UserApiClient.instance.logout { error ->
-                    if (error != null) Log.e(TAG, "로그아웃 실패", error)
-                    startActivity(Intent(activity, SignInActivity::class.java))
-                    activity?.finish()
-                }
+                action()
             }.show()
+    }
+
+    private fun signOut() {
+        UserApiClient.instance.logout { error ->
+            if (error != null) Log.e(TAG, "로그아웃 실패", error)
+            moveToSignInActivity()
+        }
+    }
+
+    private fun unlink() {
+        UserApiClient.instance.unlink { error ->
+            if (error != null) {
+                Log.e(TAG, "연결 끊기 실패", error)
+            } else {
+                moveToSignInActivity()
+            }
+        }
+    }
+
+    private fun moveToSignInActivity() {
+        startActivity(Intent(activity, SignInActivity::class.java))
+        activity?.finish()
     }
 }
