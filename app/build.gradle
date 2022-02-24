@@ -48,4 +48,7 @@ dependencies {
     // navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.0'
+
+    // social sign-in
+    implementation "com.kakao.sdk:v2-user:2.8.6"
 }
