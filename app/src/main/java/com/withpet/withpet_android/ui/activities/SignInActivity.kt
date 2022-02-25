@@ -12,7 +12,6 @@ import com.kakao.sdk.common.model.KakaoSdkError
 import com.kakao.sdk.user.UserApiClient
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.databinding.ActivitySignInBinding
-import com.withpet.withpet_android.ui.fragments.EmailFragment
 
 class SignInActivity : AppCompatActivity() {
 
@@ -88,15 +87,7 @@ class SignInActivity : AppCompatActivity() {
 
     private fun checkAccount() {
         // TODO: When our server's api is ready, it will be implemented.
-        UserApiClient.instance.me { user, error ->
-            if (error != null) {
-                Log.e(EmailFragment.TAG, "사용자 정보 요청 실패", error)
-            } else if (user != null) {
-                startActivity(Intent(this, SignUpActivity::class.java).apply {
-                    putExtra("email", user.kakaoAccount?.email)
-                })
-                finish()
-            }
-        }
+        startActivity(Intent(this, SignUpActivity::class.java))
+        finish()
     }
 }

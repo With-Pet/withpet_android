@@ -12,7 +12,6 @@
     <string name="like_post_list">찜한 게시물</string>
     <string name="registration">등록</string>
 
-    <string name="email_setting">이메일 설정</string>
     <string name="profile_setting">프로필 설정</string>
     <string name="start">시작하기</string>
 
@@ -161,7 +160,6 @@
     <string name="withdrawal_menu">회원탈퇴</string>
 
     <!-- hint -->
-    <string name="email_hint">이메일을 입력해주세요.</string>
     <string name="nickname_hint">닉네임을 입력해주세요.</string>
     <string name="review_hint">다른 이용자들을 위해 리뷰를 작성해주세요.</string>
     <string name="title_hint">게시물 제목을 입력해주세요</string>
@@ -193,10 +191,5 @@
         <item>사진등록</item>
         <item>세부사항\n입력</item>
         <item>최종확인</item>
-    </string-array>
-
-    <string-array name="sign_up_step_arr">
-        <item>이메일</item>
-        <item>프로필</item>
     </string-array>
 </resources>
