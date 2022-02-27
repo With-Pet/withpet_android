@@ -27,6 +27,7 @@
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_love_border.xml" value="0.14" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_love_false.xml" value="0.14" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_message.xml" value="0.1545" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_outline_add_photo_alternate_24.xml" value="0.1" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_outline_sms_24.xml" value="0.1545" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_pets.xml" value="0.1545" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_star_selected.xml" value="0.14" />
@@ -53,7 +54,7 @@
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_register.xml" value="0.1470713980333476" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_review_list.xml" value="0.13994565217391305" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_review_write.xml" value="0.22" />
-        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_sign_in.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_sign_in.xml" value="0.43" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_certification.xml" value="0.22" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/adapter_view_confirm_image_list.xml" value="0.1470713980333476" />
