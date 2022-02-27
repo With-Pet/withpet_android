@@ -10,6 +10,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.kakao.sdk.user.UserApiClient
 import com.navercorp.nid.NaverIdLoginSDK
@@ -27,6 +30,8 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
         private const val TAG = "ACCOUNT_FRAGMENT"
     }
 
+    private lateinit var googleSignInClient: GoogleSignInClient
+    private lateinit var gso: GoogleSignInOptions
     private lateinit var binding: FragmentAccountBinding
     private lateinit var pref: SharedPreferences
 
@@ -49,11 +54,17 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
         super.onViewCreated(view, savedInstanceState)
 
         pref = requireActivity().getSharedPreferences(
-            resources.getString(R.string.login_type_key),
+            getString(R.string.login_type_key),
             MODE_PRIVATE
         )
 
+        initializeGoogleLogin()
         setMenuClickListener()
+    }
+
+    private fun initializeGoogleLogin() {
+        gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).build()
+        googleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
     }
 
     private fun setMenuClickListener() {
@@ -96,9 +107,12 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
     }
 
     private fun signOut() {
-        when (getLoginEnumFromInt(pref.getInt(resources.getString(R.string.login_type), -1))) {
+        when (getLoginEnumFromInt(pref.getInt(getString(R.string.login_type), -1))) {
             LoginEnum.GOOGLE -> {
-
+                googleSignInClient.signOut().addOnCompleteListener { task ->
+                    if (task.isCanceled) Log.e(TAG, "구글 로그아웃 실패", task.exception)
+                    moveToSignInActivity()
+                }
             }
             LoginEnum.NAVER -> {
                 NaverIdLoginSDK.logout()
@@ -106,7 +120,7 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
             }
             LoginEnum.KAKAO -> {
                 UserApiClient.instance.logout { error ->
-                    if (error != null) Log.e(TAG, "로그아웃 실패", error)
+                    if (error != null) Log.e(TAG, "카카오 로그아웃 실패", error)
                     moveToSignInActivity()
                 }
             }
@@ -115,9 +129,13 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
     }
 
     private fun unlink() {
-        when (getLoginEnumFromInt(pref.getInt(resources.getString(R.string.login_type), -1))) {
+        when (getLoginEnumFromInt(pref.getInt(getString(R.string.login_type), -1))) {
             LoginEnum.GOOGLE -> {
-
+                googleSignInClient.revokeAccess()
+                    .addOnCompleteListener { task ->
+                        if (task.isCanceled) Log.e(TAG, "구글 연결 끊기 실패", task.exception)
+                        moveToSignInActivity()
+                    }
             }
             LoginEnum.NAVER -> {
                 NidOAuthLogin().callDeleteTokenApi(requireContext(), object : OAuthLoginCallback {
@@ -149,7 +167,7 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
     }
 
     private fun moveToSignInActivity() {
-        pref.edit().putInt(resources.getString(R.string.login_type), -1).apply()
+        pref.edit().putInt(getString(R.string.login_type), -1).apply()
         startActivity(Intent(activity, SignInActivity::class.java))
         activity?.finish()
     }
