@@ -51,4 +51,5 @@ dependencies {
 
     // social sign-in
     implementation "com.kakao.sdk:v2-user:2.8.6"
+    implementation 'com.navercorp.nid:oauth-jdk8:5.0.1'
 }

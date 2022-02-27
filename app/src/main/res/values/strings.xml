@@ -133,7 +133,9 @@
     <string name="logout_menu_icon">로그아웃 아이콘</string>
     <string name="withdrawal_menu_icon">회원탈퇴 아이콘</string>
 
+    <string name="naver_sign_in_desc">네이버 로그인</string>
     <string name="kakao_sign_in_desc">카카오 로그인</string>
+    <string name="login_type">login_type</string>
 
     <string name="main_fab_desc">맡기기 등록 버튼</string>
     <string name="profile_image_desc">프로필 이미지</string>
