@@ -1,6 +1,8 @@
 package com.withpet.withpet_android.ui.fragments
 
+import android.content.Context.MODE_PRIVATE
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,8 +12,13 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.kakao.sdk.user.UserApiClient
+import com.navercorp.nid.NaverIdLoginSDK
+import com.navercorp.nid.oauth.NidOAuthLogin
+import com.navercorp.nid.oauth.OAuthLoginCallback
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.databinding.FragmentAccountBinding
+import com.withpet.withpet_android.others.LoginEnum
+import com.withpet.withpet_android.others.getLoginEnumFromInt
 import com.withpet.withpet_android.ui.activities.*
 
 class AccountFragment : Fragment(R.layout.fragment_account) {
@@ -21,6 +28,7 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
     }
 
     private lateinit var binding: FragmentAccountBinding
+    private lateinit var pref: SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,6 +47,11 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        pref = requireActivity().getSharedPreferences(
+            resources.getString(R.string.login_type_key),
+            MODE_PRIVATE
+        )
 
         setMenuClickListener()
     }
@@ -83,23 +96,60 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
     }
 
     private fun signOut() {
-        UserApiClient.instance.logout { error ->
-            if (error != null) Log.e(TAG, "로그아웃 실패", error)
-            moveToSignInActivity()
+        when (getLoginEnumFromInt(pref.getInt(resources.getString(R.string.login_type), -1))) {
+            LoginEnum.GOOGLE -> {
+
+            }
+            LoginEnum.NAVER -> {
+                NaverIdLoginSDK.logout()
+                moveToSignInActivity()
+            }
+            LoginEnum.KAKAO -> {
+                UserApiClient.instance.logout { error ->
+                    if (error != null) Log.e(TAG, "로그아웃 실패", error)
+                    moveToSignInActivity()
+                }
+            }
+            else -> Log.e(TAG, "로그인 타입 없음")
         }
     }
 
     private fun unlink() {
-        UserApiClient.instance.unlink { error ->
-            if (error != null) {
-                Log.e(TAG, "연결 끊기 실패", error)
-            } else {
-                moveToSignInActivity()
+        when (getLoginEnumFromInt(pref.getInt(resources.getString(R.string.login_type), -1))) {
+            LoginEnum.GOOGLE -> {
+
             }
+            LoginEnum.NAVER -> {
+                NidOAuthLogin().callDeleteTokenApi(requireContext(), object : OAuthLoginCallback {
+                    override fun onSuccess() {
+                        moveToSignInActivity()
+                    }
+
+                    override fun onFailure(httpStatus: Int, message: String) {
+                        Log.e(TAG, "네이버 연결 끊기 실패: $message")
+                        moveToSignInActivity()
+                    }
+
+                    override fun onError(errorCode: Int, message: String) {
+                        onFailure(errorCode, message)
+                    }
+                })
+            }
+            LoginEnum.KAKAO -> {
+                UserApiClient.instance.unlink { error ->
+                    if (error != null) {
+                        Log.e(TAG, "카카오 연결 끊기 실패", error)
+                    } else {
+                        moveToSignInActivity()
+                    }
+                }
+            }
+            else -> Log.e(TAG, "로그인 타입 없음")
         }
     }
 
     private fun moveToSignInActivity() {
+        pref.edit().putInt(resources.getString(R.string.login_type), -1).apply()
         startActivity(Intent(activity, SignInActivity::class.java))
         activity?.finish()
     }
