@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/leaveListNotificationMenu"
+        android:icon="@drawable/ic_notification"
+        android:title=""
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/leaveListFilterMenu"
+        android:icon="@drawable/ic_filter"
+        android:title=""
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/leaveListSearchMenu"
+        android:icon="@drawable/ic_search"
+        android:title=""
+        app:showAsAction="ifRoom"/>
+</menu>

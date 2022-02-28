@@ -7,15 +7,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.databinding.AdapterViewLikePostListBinding
 
-class LikePostListAdapter(
+class PostListAdapter(
     private val itemClickListener: () -> Unit
-) : RecyclerView.Adapter<LikePostListAdapter.LikePostListViewHolder>() {
+) : RecyclerView.Adapter<PostListAdapter.PostListViewHolder>() {
 
-    inner class LikePostListViewHolder(
+    inner class PostListViewHolder(
         binding: AdapterViewLikePostListBinding
     ) : RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LikePostListViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostListViewHolder {
         val binding = DataBindingUtil.inflate<AdapterViewLikePostListBinding>(
             LayoutInflater.from(parent.context),
             R.layout.adapter_view_like_post_list,
@@ -27,10 +27,10 @@ class LikePostListAdapter(
             itemClickListener()
         }
 
-        return LikePostListViewHolder(binding)
+        return PostListViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: LikePostListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: PostListViewHolder, position: Int) {
         // TODO("Not yet implemented")
     }
 
