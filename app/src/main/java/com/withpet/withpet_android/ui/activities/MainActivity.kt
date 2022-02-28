@@ -22,10 +22,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setBottomNavigationView() {
-        val navHostFragment = supportFragmentManager
-            .findFragmentById(R.id.mainNavHost) as NavHostFragment
-        val navController = navHostFragment.navController
-        binding.mainBottomNavigationView.setupWithNavController(navController)
+        val navHost = supportFragmentManager.findFragmentById(R.id.mainNavHost) as NavHostFragment
+        binding.mainBottomNavigationView.setupWithNavController(navHost.navController)
         binding.mainBottomNavigationView.background = null
         binding.mainBottomNavigationView.menu.getItem(2).isEnabled = false
 

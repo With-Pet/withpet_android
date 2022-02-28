@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.SignUpActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/signUpToolbar"
+            style="@style/Widget.MaterialComponents.Toolbar.Surface"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/sign_up"
+            app:titleTextAppearance="@style/TextStyle.Headline6.Bold" />
+
+        <TextView
+            android:id="@+id/signUpProfileTitle"
+            style="@style/TitleVerticalMarginStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/profile_setting"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signUpToolbar" />
+
+        <ImageView
+            android:id="@+id/signUpProfileImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/profile_image_desc"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_account_huge"
+            app:layout_constraintBottom_toTopOf="@id/signUpNicknameSubtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signUpProfileTitle"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ImageButton
+            android:id="@+id/signUpProfileImageEditButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/round_add_profile_button"
+            android:contentDescription="@string/edit_image_desc"
+            android:src="@drawable/ic_photo"
+            app:layout_constraintBottom_toBottomOf="@id/signUpProfileImageView"
+            app:layout_constraintEnd_toEndOf="@id/signUpProfileImageView"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/signUpNicknameSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:text="@string/nickname"
+            android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+            app:layout_constraintBottom_toTopOf="@id/signUpNicknameEdittext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signUpProfileImageView" />
+
+        <EditText
+            android:id="@+id/signUpNicknameEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:hint="@string/nickname_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/signUpNicknameSubtitle"
+            tools:ignore="LabelFor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signUpStartButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/start"
+            android:textAppearance="@style/TextStyle.Headline6.Bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="600:90" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
