@@ -3,25 +3,25 @@
 
     <style name="StepView">
         <item name="lineYetColor">@android:color/darker_gray</item>
-        <item name="lineDoneColor" format="color" >@color/very_peri</item>
+        <item name="lineDoneColor" format="color">@color/very_peri</item>
 
-        <item name="circleYetColor" format="color" >@android:color/darker_gray</item>
-        <item name="circleNowColor" format="color" >@color/green_briar</item>
-        <item name="circleDoneColor" format="color" >@color/very_peri</item>
+        <item name="circleYetColor" format="color">@android:color/darker_gray</item>
+        <item name="circleNowColor" format="color">@color/green_briar</item>
+        <item name="circleDoneColor" format="color">@color/very_peri</item>
 
-        <item name="titleYetColor" format="color" >@android:color/darker_gray</item>
-        <item name="titleNowColor" format="color" >@color/green_briar</item>
-        <item name="titleDoneColor" format="color" >@color/very_peri</item>
-        <item name="titleTextSize" format="dimension" >11sp</item>
+        <item name="titleYetColor" format="color">@android:color/darker_gray</item>
+        <item name="titleNowColor" format="color">@color/green_briar</item>
+        <item name="titleDoneColor" format="color">@color/very_peri</item>
+        <item name="titleTextSize" format="dimension">11sp</item>
 
-        <item name="stepNumColor" format="color" >@color/white</item>
-        <item name="stepNumSize" format="dimension" >12sp</item>
+        <item name="stepNumColor" format="color">@color/white</item>
+        <item name="stepNumSize" format="dimension">12sp</item>
 
-        <item name="stepPadding" format="dimension" >4dp</item>
-        <item name="textPadding" format="dimension" >12dp</item>
+        <item name="stepPadding" format="dimension">4dp</item>
+        <item name="textPadding" format="dimension">12dp</item>
 
-        <item name="circleRadius" format="dimension" >14dp</item>
-        <item name="lineWidth" format="dimension" >2dp</item>
+        <item name="circleRadius" format="dimension">14dp</item>
+        <item name="lineWidth" format="dimension">2dp</item>
     </style>
 
     <style name="TextStyle.Headline4.Default" parent="TextAppearance.MaterialComponents.Headline4">
@@ -149,6 +149,14 @@
         <item name="android:textColorPrimary">@color/very_peri</item>
         <item name="android:textSize">24sp</item>
         <item name="colorControlNormal">@color/light_gray</item>
+    </style>
+
+    <style name="NoOutlinedInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="helperTextEnabled">false</item>
+        <item name="errorEnabled">false</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
     </style>
 
     <style name="ModalBottomSheetDialog" parent="Widget.MaterialComponents.BottomSheet.Modal">

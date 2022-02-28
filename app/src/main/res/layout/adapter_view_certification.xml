@@ -12,7 +12,7 @@
             android:id="@+id/certificateImageView"
             android:layout_width="120dp"
             android:layout_height="75dp"
-            android:background="@drawable/round_image_view"
+            android:background="@drawable/corner_8dp_very_peri_background"
             android:contentDescription="@string/certificate_image_desc"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/certificateNameTextView"

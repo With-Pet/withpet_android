@@ -14,7 +14,7 @@
             android:layout_width="160dp"
             android:layout_height="100dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/round_image_view"
+            android:background="@drawable/corner_8dp_very_peri_background"
             android:contentDescription="@string/certificate_image_desc"
             android:scaleType="centerInside"
             android:src="@drawable/ic_photo"

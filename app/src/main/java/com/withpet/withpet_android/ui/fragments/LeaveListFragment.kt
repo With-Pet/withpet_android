@@ -1,5 +1,6 @@
 package com.withpet.withpet_android.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.adapter.PostListAdapter
 import com.withpet.withpet_android.databinding.FragmentLeaveListBinding
+import com.withpet.withpet_android.ui.activities.LocationSearchActivity
 
 class LeaveListFragment : Fragment(R.layout.fragment_leave_list) {
 
@@ -32,7 +34,14 @@ class LeaveListFragment : Fragment(R.layout.fragment_leave_list) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setBtnClickListener()
         setRecyclerView()
+    }
+
+    private fun setBtnClickListener() {
+        binding.leaveListTownTitle.setOnClickListener {
+            startActivity(Intent(activity, LocationSearchActivity::class.java))
+        }
     }
 
     private fun setRecyclerView() {

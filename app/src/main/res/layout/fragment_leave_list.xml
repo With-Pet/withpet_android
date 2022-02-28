@@ -24,10 +24,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginHorizontal="8dp"
                     android:layout_weight="0"
-                    android:drawablePadding="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawablePadding="4dp"
+                    android:focusable="true"
                     android:gravity="center"
+                    android:padding="8dp"
                     android:text="@string/town_example"
                     android:textAppearance="@style/TextStyle.Headline6.Bold"
                     app:drawableStartCompat="@drawable/ic_location" />
@@ -46,10 +50,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
+            android:overScrollMode="never"
             android:paddingStart="16dp"
             android:paddingTop="16dp"
             android:paddingEnd="16dp"
-            android:overScrollMode="never"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
