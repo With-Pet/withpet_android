@@ -143,6 +143,7 @@
 
     <string name="main_fab_desc">맡기기 등록 버튼</string>
     <string name="gps_desc">GPS 버튼</string>
+    <string name="back_desc">뒤로가기 버튼</string>
     <string name="profile_image_desc">프로필 이미지</string>
     <string name="edit_image_desc">이미지 수정</string>
     <string name="town_edit_desc">동네 수정</string>
@@ -169,6 +170,7 @@
     <!-- hint -->
     <string name="nickname_hint">닉네임을 입력해주세요.</string>
     <string name="town_hint">동네 검색</string>
+    <string name="post_hint">게시물 검색</string>
     <string name="review_hint">다른 이용자들을 위해 리뷰를 작성해주세요.</string>
     <string name="title_hint">게시물 제목을 입력해주세요</string>
     <string name="fee_hint">비용을 입력해주세요</string>

@@ -30,6 +30,8 @@
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_love_border.xml" value="0.14" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_love_false.xml" value="0.14" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_message.xml" value="0.1545" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_notification.xml" value="0.1365" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_notifications.xml" value="0.1" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_outline_add_photo_alternate_24.xml" value="0.1" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_outline_sms_24.xml" value="0.1545" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/drawable/ic_pets.xml" value="0.1545" />
@@ -55,6 +57,7 @@
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_my_profile.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_others_pet.xml" value="0.1" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_others_profile.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_post_search.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_register.xml" value="0.1470713980333476" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_review_list.xml" value="0.13994565217391305" />
         <entry key="..\:/Users/Ji/AndroidStudioProjects/withpet_android/app/src/main/res/layout/activity_review_write.xml" value="0.22" />
