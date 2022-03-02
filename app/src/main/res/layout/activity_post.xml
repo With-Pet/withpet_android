@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.PostActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:liftOnScroll="true">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/postToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="@string/detail_info"
+                app:titleTextAppearance="@style/TextStyle.Headline6.Bold" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/postViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="16:9"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/postTabLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="@null"
+                    app:layout_constraintBottom_toBottomOf="@id/postViewPager"
+                    app:layout_constraintEnd_toEndOf="@id/postViewPager"
+                    app:tabBackground="@drawable/tab_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabPaddingEnd="8dp"
+                    app:tabPaddingStart="8dp" />
+
+                <TextView
+                    android:id="@+id/postTownTextView"
+                    style="@style/TextStyle.Body2.Default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/town_example"
+                    app:drawableLeftCompat="@drawable/ic_location_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postViewPager" />
+
+                <TextView
+                    android:id="@+id/postPetNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/name_example"
+                    android:textAppearance="@style/TextStyle.Headline5.Bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postTownTextView" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/postDivider1"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/postPetNameTextView" />
+
+                <TextView
+                    android:id="@+id/postPetCategorySubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/category"
+                    app:layout_constraintEnd_toStartOf="@id/postPetVarietySubtitle"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postDivider1" />
+
+                <TextView
+                    android:id="@+id/postPetVarietySubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/variety"
+                    app:layout_constraintEnd_toStartOf="@id/postPetGenderSubtitle"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/postPetCategorySubtitle"
+                    app:layout_constraintTop_toBottomOf="@id/postDivider1" />
+
+                <TextView
+                    android:id="@+id/postPetGenderSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/gender"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/postPetVarietySubtitle"
+                    app:layout_constraintTop_toBottomOf="@id/postDivider1" />
+
+                <TextView
+                    android:id="@+id/postPetCategoryTextView"
+                    style="@style/BodyVerticalMarginStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/category_example"
+                    app:layout_constraintEnd_toStartOf="@id/postPetVarietyTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postPetCategorySubtitle" />
+
+                <TextView
+                    android:id="@+id/postPetVarietyTextView"
+                    style="@style/BodyVerticalMarginStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/variety_example"
+                    app:layout_constraintEnd_toStartOf="@id/postPetGenderTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/postPetCategoryTextView"
+                    app:layout_constraintTop_toBottomOf="@id/postPetVarietySubtitle" />
+
+                <TextView
+                    android:id="@+id/postPetGenderTextView"
+                    style="@style/BodyVerticalMarginStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/gender_example"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/postPetVarietyTextView"
+                    app:layout_constraintTop_toBottomOf="@id/postPetGenderSubtitle" />
+
+                <TextView
+                    android:id="@+id/postPetAgeSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/age"
+                    app:layout_constraintEnd_toStartOf="@id/postPetWeightSubtitle"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postPetCategoryTextView" />
+
+                <TextView
+                    android:id="@+id/postPetWeightSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight"
+                    app:layout_constraintEnd_toStartOf="@id/postPetSurgerySubtitle"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/postPetAgeSubtitle"
+                    app:layout_constraintTop_toBottomOf="@id/postPetVarietyTextView" />
+
+                <TextView
+                    android:id="@+id/postPetSurgerySubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/surgery"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/postPetWeightSubtitle"
+                    app:layout_constraintTop_toBottomOf="@id/postPetGenderTextView" />
+
+                <TextView
+                    android:id="@+id/postPetAgeTextView"
+                    style="@style/BodyVerticalMarginStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/age_example"
+                    app:layout_constraintEnd_toStartOf="@id/postPetWeightTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postPetAgeSubtitle" />
+
+                <TextView
+                    android:id="@+id/postPetWeightTextView"
+                    style="@style/BodyVerticalMarginStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight_kg_example"
+                    app:layout_constraintEnd_toStartOf="@id/postPetSurgeryTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/postPetAgeTextView"
+                    app:layout_constraintTop_toBottomOf="@id/postPetWeightSubtitle" />
+
+                <TextView
+                    android:id="@+id/postPetSurgeryTextView"
+                    style="@style/BodyVerticalMarginStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/surgery_example"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/postPetWeightTextView"
+                    app:layout_constraintTop_toBottomOf="@id/postPetSurgerySubtitle" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/postDivider2"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/postPetAgeTextView" />
+
+                <TextView
+                    android:id="@+id/postServiceSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="@string/service_class"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postDivider2" />
+
+                <ImageView
+                    android:id="@+id/postServiceImageView"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/service_image_desc"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_pet_walk"
+                    app:layout_constraintEnd_toStartOf="@id/postServiceTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postServiceSubtitle"
+                    app:tint="@color/default_text_color" />
+
+                <TextView
+                    android:id="@+id/postServiceTextView"
+                    style="@style/TextStyle.Body1.Default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/walk"
+                    app:layout_constraintBottom_toBottomOf="@id/postServiceImageView"
+                    app:layout_constraintStart_toEndOf="@id/postServiceImageView"
+                    app:layout_constraintTop_toTopOf="@id/postServiceImageView" />
+
+                <TextView
+                    android:id="@+id/postServiceDetailSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="@string/service_detail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postServiceImageView" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/postServiceChipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/postServiceDetailSubtitle">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="병원" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="목욕" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="집 앞 픽업" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="미용" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="소독" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:id="@+id/postDateSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/period"
+                    android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postServiceChipGroup" />
+
+                <TextView
+                    android:id="@+id/postDateTextView"
+                    style="@style/TextStyle.Body1.Default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/register_date_example"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postDateSubtitle" />
+
+                <TextView
+                    android:id="@+id/postFeeSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="@string/fee"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postDateTextView" />
+
+                <TextView
+                    android:id="@+id/postFeeTextView"
+                    style="@style/TextStyle.Body1.Default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/review_fee_example"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postFeeSubtitle" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/postDivider3"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/postFeeTextView" />
+
+                <TextView
+                    android:id="@+id/postCautionSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="@string/caution"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postDivider3" />
+
+                <TextView
+                    android:id="@+id/postCautionTextView"
+                    style="@style/TextStyle.Body1.Default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/caution_example"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postCautionSubtitle" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/postDivider4"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/postCautionTextView" />
+
+                <TextView
+                    android:id="@+id/postRequestSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="@string/request"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postDivider4" />
+
+                <TextView
+                    android:id="@+id/postRequestTextView"
+                    style="@style/TextStyle.Body1.Default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/register_request_example"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postRequestSubtitle" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/postDivider5"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/postRequestTextView" />
+
+                <TextView
+                    android:id="@+id/postMasterSubtitle"
+                    style="@style/SubtitleVerticalMarginStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="@string/master"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postDivider5" />
+
+                <ImageView
+                    android:id="@+id/postMasterProfileImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginVertical="8dp"
+                    android:contentDescription="@string/profile_image_desc"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_account"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postMasterSubtitle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/nickname_example"
+                    android:textAppearance="@style/TextStyle.Body1.Bold"
+                    app:layout_constraintBottom_toBottomOf="@id/postMasterProfileImage"
+                    app:layout_constraintStart_toEndOf="@id/postMasterProfileImage"
+                    app:layout_constraintTop_toTopOf="@id/postMasterProfileImage" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            app:elevation="2dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:id="@+id/postLikeButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/star_selector"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/postDivider6"
+                    style="@style/VerticalDividerStyle"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="16dp"
+                    app:layout_constraintStart_toEndOf="@id/postLikeButton" />
+
+                <Button
+                    android:id="@+id/postSuggestButton"
+                    style="@style/ButtonStyle.VeryPeri.Fill"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:text="@string/suggest_by_chat"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/postDivider6"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.bottomappbar.BottomAppBar>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

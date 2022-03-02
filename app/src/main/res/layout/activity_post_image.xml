@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.PostImageActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/postImageViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/postImageTabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"
+            app:tabPaddingEnd="8dp"
+            app:tabPaddingStart="8dp" />
+
+        <ImageButton
+            android:id="@+id/postImageCloseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@null"
+            android:contentDescription="@string/clear_button_desc"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_clear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

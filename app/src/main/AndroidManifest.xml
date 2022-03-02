@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WithPet">
         <activity
+            android:name=".ui.activities.PostImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.PostActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.PostSearchActivity"
             android:exported="false" />
         <activity
