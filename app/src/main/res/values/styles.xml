@@ -121,6 +121,19 @@
         <item name="android:paddingBottom">12dp</item>
     </style>
 
+    <style name="ButtonStyle.Outlined.VeryPeri" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="strokeColor">@color/very_peri</item>
+        <item name="android:textColor">@color/very_peri</item>
+    </style>
+
+    <style name="ButtonStyle.Outlined.Dense" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="strokeColor">@color/text_field_stroke_color</item>
+        <item name="android:textColor">@color/text_field_text_color</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
     <style name="ButtonStyle.OutlinedIconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="iconPadding">0dp</item>
         <item name="android:insetTop">0dp</item>
@@ -147,7 +160,7 @@
 
     <style name="SpinnerPickerStyle">
         <item name="android:textColorPrimary">@color/very_peri</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="colorControlNormal">@color/light_gray</item>
     </style>
 

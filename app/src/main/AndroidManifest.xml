@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WithPet">
         <activity
+            android:name=".ui.activities.FilterActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.PostImageActivity"
             android:exported="false" />
         <activity

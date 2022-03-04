@@ -14,6 +14,7 @@ import com.google.android.material.badge.BadgeUtils
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.adapter.PostListAdapter
 import com.withpet.withpet_android.databinding.FragmentLeaveListBinding
+import com.withpet.withpet_android.ui.activities.FilterActivity
 import com.withpet.withpet_android.ui.activities.LocationSearchActivity
 import com.withpet.withpet_android.ui.activities.PostActivity
 import com.withpet.withpet_android.ui.activities.PostSearchActivity
@@ -74,6 +75,7 @@ class LeaveListFragment : Fragment(R.layout.fragment_leave_list) {
                     true
                 }
                 R.id.leaveListFilterMenu -> {
+                    startActivity(Intent(activity, FilterActivity::class.java))
                     true
                 }
                 R.id.leaveListSearchMenu -> {
