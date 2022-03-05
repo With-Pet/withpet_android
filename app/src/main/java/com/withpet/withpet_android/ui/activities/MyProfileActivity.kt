@@ -1,5 +1,6 @@
 package com.withpet.withpet_android.ui.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -55,7 +56,8 @@ class MyProfileActivity : AppCompatActivity() {
 
         }
         binding.myProfileTownEditButton.setOnClickListener {
-
+            // TODO: Change to ActivityResult API
+            startActivity(Intent(this, LocationSearchActivity::class.java))
         }
         binding.myProfileCertificateAddButton.setOnClickListener {
             val certificationBottomSheet = CertificationBottomSheet()

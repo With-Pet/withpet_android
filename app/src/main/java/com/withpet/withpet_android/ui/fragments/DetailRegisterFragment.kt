@@ -1,5 +1,6 @@
 package com.withpet.withpet_android.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.databinding.FragmentDateRegisterBinding
 import com.withpet.withpet_android.databinding.FragmentDetailRegisterBinding
+import com.withpet.withpet_android.ui.activities.LocationSearchActivity
 
 class DetailRegisterFragment : Fragment(R.layout.fragment_detail_register) {
 
@@ -39,6 +41,10 @@ class DetailRegisterFragment : Fragment(R.layout.fragment_detail_register) {
     }
 
     private fun setButtonListener() {
+        binding.registerDetailTownEditButton.setOnClickListener {
+            // TODO: Change to ActivityResult API
+            startActivity(Intent(activity, LocationSearchActivity::class.java))
+        }
         binding.detailRegisterPrevButton.setOnClickListener {
             findNavController().navigate(R.id.action_detailRegisterFragment_to_photoRegisterFragment)
         }

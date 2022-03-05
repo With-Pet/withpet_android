@@ -6,7 +6,11 @@
     <string name="kakao_sign_in">카카오 로그인</string>
     <string name="login_type">login_type</string>
 
+    <string name="town_setting">동네 설정</string>
+    <string name="town_search_result">동네 검색 결과</string>
+
     <string name="sign_up">회원가입</string>
+    <string name="detail_info">상세정보</string>
     <string name="account">계정</string>
     <string name="profile">프로필</string>
     <string name="pet_list">내 반려동물들</string>
@@ -16,16 +20,26 @@
     <string name="like_person_list">찜한 돌봄이</string>
     <string name="like_post_list">찜한 게시물</string>
     <string name="registration">등록</string>
+    <string name="filter">필터</string>
+    <string name="apply">적용하기</string>
+    <string name="reset">초기화</string>
 
     <string name="profile_setting">프로필 설정</string>
     <string name="start">시작하기</string>
 
+    <string name="entire">전체</string>
     <string name="walk">산책</string>
     <string name="care">돌봄</string>
     <string name="exp">체험</string>
 
+    <string name="pet_category">반려동물 종류</string>
+    <string name="dog">강아지</string>
+    <string name="cat">고양이</string>
+    <string name="etc">기타</string>
+
     <string name="register">등록하기</string>
     <string name="see_user_post">게시물 모아보기</string>
+    <string name="suggest_by_chat">채팅으로 제안하기</string>
 
     <string name="nickname">닉네임</string>
     <string name="town">동네</string>
@@ -33,6 +47,7 @@
     <string name="available_service">이용 가능 서비스</string>
     <string name="person_review">서비스 이용자 후기</string>
     <string name="pet_review">체험 후기</string>
+    <string name="master">보호자</string>
 
     <string name="certification">자격 및 교육</string>
     <string name="certification_name">자격증 이름</string>
@@ -81,7 +96,10 @@
     <string name="request">요청 사항</string>
     <string name="service_class">서비스 종류</string>
     <string name="period">기간</string>
+    <string name="free">무료</string>
+    <string name="fee_range">%1$s ~ %2$s</string>
 
+    <string name="decide">결정</string>
     <string name="ok">확인</string>
     <string name="cancel">취소</string>
 
@@ -125,7 +143,7 @@
     <string name="post_fee_example">-10,000원/시간</string>
     <string name="register_town_example">논현1동</string>
     <string name="register_date_example">02월 14일 AM 09:00 ~ 02월 14일 PM 12:00</string>
-    <string name="register_caution_example">가파른 산은 가급적 피해주시길 바랍니다.</string>
+    <string name="register_request_example">가파른 산은 가급적 피해주시길 바랍니다.</string>
 
     <!-- content description -->
     <string name="my_profile_menu_icon">내 프로필 관리하기 아이콘</string>
@@ -139,9 +157,12 @@
     <string name="withdrawal_menu_icon">회원탈퇴 아이콘</string>
 
     <string name="main_fab_desc">맡기기 등록 버튼</string>
+    <string name="gps_desc">GPS 버튼</string>
+    <string name="back_desc">뒤로가기 버튼</string>
     <string name="profile_image_desc">프로필 이미지</string>
     <string name="edit_image_desc">이미지 수정</string>
     <string name="town_edit_desc">동네 수정</string>
+    <string name="clear_button_desc">닫기 버튼</string>
     <string name="certificate_add_desc">자격 및 교육 추가</string>
     <string name="certificate_image_desc">자격증 사진</string>
     <string name="more_review_desc">리뷰 더보기</string>
@@ -164,35 +185,11 @@
 
     <!-- hint -->
     <string name="nickname_hint">닉네임을 입력해주세요.</string>
+    <string name="town_hint">동네 검색</string>
+    <string name="post_hint">게시물 검색</string>
     <string name="review_hint">다른 이용자들을 위해 리뷰를 작성해주세요.</string>
     <string name="title_hint">게시물 제목을 입력해주세요</string>
     <string name="fee_hint">비용을 입력해주세요</string>
     <string name="reward_hint">보상을 입력해주세요</string>
     <string name="request_hint">요청 사항을 입력해주세요.</string>
-
-    <!-- dropdown menu -->
-    <string-array name="pet_category_arr">
-        <item>강이지</item>
-        <item>고양이</item>
-        <item>기타</item>
-    </string-array>
-
-    <string-array name="pet_gender_arr">
-        <item>남자</item>
-        <item>여자</item>
-    </string-array>
-
-    <string-array name="pet_surgery_arr">
-        <item>O</item>
-        <item>X</item>
-    </string-array>
-
-    <string-array name="register_step_arr">
-        <item>반려동물\n선택</item>
-        <item>서비스\n선택</item>
-        <item>날짜선택</item>
-        <item>사진등록</item>
-        <item>세부사항\n입력</item>
-        <item>최종확인</item>
-    </string-array>
 </resources>

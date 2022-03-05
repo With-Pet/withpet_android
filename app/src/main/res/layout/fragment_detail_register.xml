@@ -110,22 +110,22 @@
                 android:id="@+id/registerDetailTownSubtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="@string/town"
                 android:textAppearance="@style/TextStyle.Subtitle1.Bold"
-                app:layout_constraintBottom_toBottomOf="@id/registerDetailTownEditButton"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/registerDetailTownEditButton" />
+                app:layout_constraintTop_toBottomOf="@id/registerDetailDivider3" />
 
             <LinearLayout
                 android:id="@+id/registerDetailTownEditButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:clickable="true"
-                android:focusable="true"
                 android:orientation="horizontal"
+                android:paddingVertical="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/registerDetailTownSubtitle"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/registerDetailDivider3">
+
+                app:layout_constraintTop_toTopOf="@id/registerDetailTownSubtitle">
 
                 <TextView
                     android:id="@+id/registerDetailTownTextView"
@@ -150,7 +150,7 @@
                 style="@style/HorizontalTopDividerStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/registerDetailTownEditButton" />
+                app:layout_constraintTop_toBottomOf="@id/registerDetailTownSubtitle" />
 
             <TextView
                 android:id="@+id/registerDetailServiceSubtitle"

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- dropdown menu -->
+    <string-array name="pet_category_arr">
+        <item>강이지</item>
+        <item>고양이</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="pet_gender_arr">
+        <item>남자</item>
+        <item>여자</item>
+    </string-array>
+
+    <string-array name="pet_surgery_arr">
+        <item>O</item>
+        <item>X</item>
+    </string-array>
+
+    <string-array name="register_step_arr">
+        <item>반려동물\n선택</item>
+        <item>서비스\n선택</item>
+        <item>날짜선택</item>
+        <item>사진등록</item>
+        <item>세부사항\n입력</item>
+        <item>최종확인</item>
+    </string-array>
+</resources>

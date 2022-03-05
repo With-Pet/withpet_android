@@ -53,4 +53,7 @@ dependencies {
     implementation "com.kakao.sdk:v2-user:2.8.6"
     implementation 'com.navercorp.nid:oauth-jdk8:5.0.1'
     implementation 'com.google.android.gms:play-services-auth:20.1.0'
+
+    /// viewpager2
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
 }

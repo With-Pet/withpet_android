@@ -3,25 +3,25 @@
 
     <style name="StepView">
         <item name="lineYetColor">@android:color/darker_gray</item>
-        <item name="lineDoneColor" format="color" >@color/very_peri</item>
+        <item name="lineDoneColor" format="color">@color/very_peri</item>
 
-        <item name="circleYetColor" format="color" >@android:color/darker_gray</item>
-        <item name="circleNowColor" format="color" >@color/green_briar</item>
-        <item name="circleDoneColor" format="color" >@color/very_peri</item>
+        <item name="circleYetColor" format="color">@android:color/darker_gray</item>
+        <item name="circleNowColor" format="color">@color/green_briar</item>
+        <item name="circleDoneColor" format="color">@color/very_peri</item>
 
-        <item name="titleYetColor" format="color" >@android:color/darker_gray</item>
-        <item name="titleNowColor" format="color" >@color/green_briar</item>
-        <item name="titleDoneColor" format="color" >@color/very_peri</item>
-        <item name="titleTextSize" format="dimension" >11sp</item>
+        <item name="titleYetColor" format="color">@android:color/darker_gray</item>
+        <item name="titleNowColor" format="color">@color/green_briar</item>
+        <item name="titleDoneColor" format="color">@color/very_peri</item>
+        <item name="titleTextSize" format="dimension">11sp</item>
 
-        <item name="stepNumColor" format="color" >@color/white</item>
-        <item name="stepNumSize" format="dimension" >12sp</item>
+        <item name="stepNumColor" format="color">@color/white</item>
+        <item name="stepNumSize" format="dimension">12sp</item>
 
-        <item name="stepPadding" format="dimension" >4dp</item>
-        <item name="textPadding" format="dimension" >12dp</item>
+        <item name="stepPadding" format="dimension">4dp</item>
+        <item name="textPadding" format="dimension">12dp</item>
 
-        <item name="circleRadius" format="dimension" >14dp</item>
-        <item name="lineWidth" format="dimension" >2dp</item>
+        <item name="circleRadius" format="dimension">14dp</item>
+        <item name="lineWidth" format="dimension">2dp</item>
     </style>
 
     <style name="TextStyle.Headline4.Default" parent="TextAppearance.MaterialComponents.Headline4">
@@ -121,6 +121,19 @@
         <item name="android:paddingBottom">12dp</item>
     </style>
 
+    <style name="ButtonStyle.Outlined.VeryPeri" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="strokeColor">@color/very_peri</item>
+        <item name="android:textColor">@color/very_peri</item>
+    </style>
+
+    <style name="ButtonStyle.Outlined.Dense" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="strokeColor">@color/text_field_stroke_color</item>
+        <item name="android:textColor">@color/text_field_text_color</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
     <style name="ButtonStyle.OutlinedIconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="iconPadding">0dp</item>
         <item name="android:insetTop">0dp</item>
@@ -147,8 +160,16 @@
 
     <style name="SpinnerPickerStyle">
         <item name="android:textColorPrimary">@color/very_peri</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="colorControlNormal">@color/light_gray</item>
+    </style>
+
+    <style name="NoOutlinedInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="helperTextEnabled">false</item>
+        <item name="errorEnabled">false</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
     </style>
 
     <style name="ModalBottomSheetDialog" parent="Widget.MaterialComponents.BottomSheet.Modal">

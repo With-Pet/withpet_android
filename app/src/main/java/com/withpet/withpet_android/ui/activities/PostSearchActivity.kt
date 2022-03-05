@@ -6,28 +6,29 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.adapter.PostListAdapter
-import com.withpet.withpet_android.databinding.ActivityLikePostListBinding
+import com.withpet.withpet_android.databinding.ActivityPostSearchBinding
 
-class LikePostListActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityLikePostListBinding
+class PostSearchActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityPostSearchBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_like_post_list)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_post_search)
 
         setToolbar()
         setRecyclerView()
     }
 
     private fun setToolbar() {
-        binding.likePostListToolbar.setNavigationOnClickListener { finish() }
+        binding.postSearchBackButton.setOnClickListener { finish() }
     }
 
     private fun setRecyclerView() {
-        binding.likePostListRecyclerView.adapter = PostListAdapter {
+        binding.postSearchRecyclerView.adapter = PostListAdapter {
 
         }
-        binding.likePostListRecyclerView.layoutManager = LinearLayoutManager(this)
+        binding.postSearchRecyclerView.layoutManager = LinearLayoutManager(this)
     }
 }
