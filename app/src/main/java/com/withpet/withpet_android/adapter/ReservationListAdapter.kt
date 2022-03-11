@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.withpet.withpet_android.R
-import com.withpet.withpet_android.databinding.AdapterReservationListBinding
+import com.withpet.withpet_android.databinding.AdapterViewReservationListBinding
 
 class ReservationListAdapter :
     RecyclerView.Adapter<ReservationListAdapter.ReservationListViewHolder>() {
@@ -17,7 +17,7 @@ class ReservationListAdapter :
     }
 
     inner class ReservationListViewHolder(
-        private val binding: AdapterReservationListBinding
+        private val binding: AdapterViewReservationListBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun btnClickListener(listener: ReservationClickListener?) {
             binding.reservationProfileButton.setOnClickListener { listener?.profileButtonClickListener() }
@@ -28,9 +28,9 @@ class ReservationListAdapter :
     private var listener: ReservationClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReservationListViewHolder {
-        val binding = DataBindingUtil.inflate<AdapterReservationListBinding>(
+        val binding = DataBindingUtil.inflate<AdapterViewReservationListBinding>(
             LayoutInflater.from(parent.context),
-            R.layout.adapter_reservation_list,
+            R.layout.adapter_view_reservation_list,
             parent,
             false
         )
