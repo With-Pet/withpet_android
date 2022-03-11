@@ -20,8 +20,8 @@ import com.navercorp.nid.oauth.NidOAuthLogin
 import com.navercorp.nid.oauth.OAuthLoginCallback
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.databinding.FragmentAccountBinding
-import com.withpet.withpet_android.others.LoginEnum
-import com.withpet.withpet_android.others.getLoginEnumFromInt
+import com.withpet.withpet_android.enums.LoginEnum
+import com.withpet.withpet_android.enums.getLoginEnumFromInt
 import com.withpet.withpet_android.ui.activities.*
 
 class AccountFragment : Fragment(R.layout.fragment_account) {

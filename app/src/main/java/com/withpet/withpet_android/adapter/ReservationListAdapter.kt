@@ -7,13 +7,25 @@ import androidx.recyclerview.widget.RecyclerView
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.databinding.AdapterReservationListBinding
 
-class ReservationListAdapter(
-    private val profileButtonClickListener: () -> Unit
-) : RecyclerView.Adapter<ReservationListAdapter.ReservationListViewHolder>() {
+class ReservationListAdapter :
+    RecyclerView.Adapter<ReservationListAdapter.ReservationListViewHolder>() {
+
+    interface ReservationClickListener {
+        fun itemClickListener()
+        fun profileButtonClickListener()
+        fun chatButtonClickListener()
+    }
 
     inner class ReservationListViewHolder(
-        binding: AdapterReservationListBinding
-    ) : RecyclerView.ViewHolder(binding.root)
+        private val binding: AdapterReservationListBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
+        fun btnClickListener(listener: ReservationClickListener?) {
+            binding.reservationProfileButton.setOnClickListener { listener?.profileButtonClickListener() }
+            binding.reservationChatButton.setOnClickListener { listener?.chatButtonClickListener() }
+        }
+    }
+
+    private var listener: ReservationClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReservationListViewHolder {
         val binding = DataBindingUtil.inflate<AdapterReservationListBinding>(
@@ -23,15 +35,17 @@ class ReservationListAdapter(
             false
         )
 
-        binding.reservationProfileButton.setOnClickListener {
-            profileButtonClickListener()
-        }
         return ReservationListViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ReservationListViewHolder, position: Int) {
-        // TODO("Not yet implemented")
+        holder.itemView.setOnClickListener { listener?.itemClickListener() }
+        holder.btnClickListener(listener)
     }
 
     override fun getItemCount() = 8
+
+    fun setClickListener(listener: ReservationClickListener) {
+        this.listener = listener
+    }
 }

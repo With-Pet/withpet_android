@@ -12,6 +12,7 @@ import com.withpet.withpet_android.R
 import com.withpet.withpet_android.adapter.ReservationListAdapter
 import com.withpet.withpet_android.databinding.FragmentReservationListBinding
 import com.withpet.withpet_android.ui.activities.OthersProfileActivity
+import com.withpet.withpet_android.ui.activities.ReservationDetailActivity
 
 class ReservationListFragment : Fragment(R.layout.fragment_reservation_list) {
     private lateinit var binding: FragmentReservationListBinding
@@ -38,8 +39,20 @@ class ReservationListFragment : Fragment(R.layout.fragment_reservation_list) {
     }
 
     private fun setRecyclerView() {
-        binding.reservationRecyclerView.adapter = ReservationListAdapter {
-            startActivity(Intent(activity, OthersProfileActivity::class.java))
+        binding.reservationRecyclerView.adapter = ReservationListAdapter().apply {
+            setClickListener(object : ReservationListAdapter.ReservationClickListener {
+                override fun itemClickListener() {
+                    startActivity(Intent(activity, ReservationDetailActivity::class.java))
+                }
+
+                override fun profileButtonClickListener() {
+                    startActivity(Intent(activity, OthersProfileActivity::class.java))
+                }
+
+                override fun chatButtonClickListener() {
+                    // TODO("Not yet implemented")
+                }
+            })
         }
         binding.reservationRecyclerView.layoutManager = LinearLayoutManager(requireContext())
     }

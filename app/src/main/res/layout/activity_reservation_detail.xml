@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.ReservationDetailActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:liftOnScroll="true">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/reservationDetailToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="@string/reservation_history"
+                app:titleTextAppearance="@style/TextStyle.Headline6.Bold" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/reservationDetailStateSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/usage_finish"
+                    android:textAppearance="@style/TextStyle.Headline5.Bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <include
+                    android:id="@+id/reservationDetailPetInfo"
+                    layout="@layout/layout_pet_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailStateSubtitle" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/reservationDetailDivider1"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailPetInfo" />
+
+                <TextView
+                    android:id="@+id/reservationDetailTownSubtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/town"
+                    android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+                    app:layout_constraintEnd_toStartOf="@id/reservationDetailTownTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailDivider1" />
+
+                <TextView
+                    android:id="@+id/reservationDetailTownTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/full_town_example"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    app:layout_constraintBottom_toBottomOf="@id/reservationDetailTownSubtitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintStart_toEndOf="@id/reservationDetailTownSubtitle"
+                    app:layout_constraintTop_toTopOf="@id/reservationDetailTownSubtitle" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/reservationDetailDivider2"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailTownSubtitle" />
+
+                <TextView
+                    android:id="@+id/reservationDetailDateSubtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/reservation_date"
+                    android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+                    app:layout_constraintEnd_toStartOf="@id/reservationDetailDateTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailDivider2" />
+
+                <TextView
+                    android:id="@+id/reservationDetailDateTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/start_date_example"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    app:layout_constraintBottom_toBottomOf="@id/reservationDetailDateSubtitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintStart_toEndOf="@id/reservationDetailDateSubtitle"
+                    app:layout_constraintTop_toTopOf="@id/reservationDetailDateSubtitle" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/reservationDetailDivider3"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailDateSubtitle" />
+
+                <TextView
+                    android:id="@+id/reservationDetailMasterSubtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/master"
+                    android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+                    app:layout_constraintEnd_toStartOf="@id/reservationDetailMasterTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailDivider3" />
+
+                <TextView
+                    android:id="@+id/reservationDetailMasterTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/nickname_example"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    app:layout_constraintBottom_toBottomOf="@id/reservationDetailMasterSubtitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintStart_toEndOf="@id/reservationDetailMasterSubtitle"
+                    app:layout_constraintTop_toTopOf="@id/reservationDetailMasterSubtitle" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/reservationDetailDivider4"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailMasterSubtitle" />
+
+                <TextView
+                    android:id="@+id/reservationDetailServiceSubtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/service"
+                    android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+                    app:layout_constraintEnd_toStartOf="@id/reservationDetailServiceTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailDivider4" />
+
+                <TextView
+                    android:id="@+id/reservationDetailServiceTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/care"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    app:layout_constraintBottom_toBottomOf="@id/reservationDetailServiceSubtitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintStart_toEndOf="@id/reservationDetailServiceSubtitle"
+                    app:layout_constraintTop_toTopOf="@id/reservationDetailServiceSubtitle" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/reservationDetailDivider5"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailServiceSubtitle" />
+
+                <TextView
+                    android:id="@+id/reservationDetailRequestSubtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/request"
+                    android:textAppearance="@style/TextStyle.Subtitle1.Bold"
+                    app:layout_constraintBottom_toBottomOf="@id/reservationDetailRequestTextView"
+                    app:layout_constraintEnd_toStartOf="@id/reservationDetailRequestTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailDivider5"
+                    app:layout_constraintTop_toTopOf="@id/reservationDetailRequestTextView" />
+
+                <TextView
+                    android:id="@+id/reservationDetailRequestTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/register_request_example"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintStart_toEndOf="@id/reservationDetailRequestSubtitle"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailDivider5" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/reservationDetailDivider6"
+                    style="@style/HorizontalTopDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailRequestTextView" />
+
+                <Button
+                    android:id="@+id/reservationDetailReviewButton"
+                    style="@style/ButtonStyle.VeryPeri.Fill"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/write_review"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/reservationDetailDivider6"
+                    app:layout_constraintVertical_bias="1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

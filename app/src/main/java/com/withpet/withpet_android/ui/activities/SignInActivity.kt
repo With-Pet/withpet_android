@@ -28,7 +28,7 @@ import com.navercorp.nid.NaverIdLoginSDK
 import com.navercorp.nid.oauth.OAuthLoginCallback
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.databinding.ActivitySignInBinding
-import com.withpet.withpet_android.others.LoginEnum
+import com.withpet.withpet_android.enums.LoginEnum
 
 
 class SignInActivity : AppCompatActivity() {

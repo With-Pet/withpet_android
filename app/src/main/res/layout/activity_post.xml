@@ -88,31 +88,31 @@
                     app:layout_constraintTop_toBottomOf="@id/postPetNameTextView" />
 
                 <TextView
-                    android:id="@+id/postPetCategorySubtitle"
+                    android:id="@+id/petCategorySubtitle"
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
                     android:text="@string/category"
-                    app:layout_constraintEnd_toStartOf="@id/postPetVarietySubtitle"
+                    app:layout_constraintEnd_toStartOf="@id/petVarietySubtitle"
                     app:layout_constraintHorizontal_weight="1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/postDivider1" />
 
                 <TextView
-                    android:id="@+id/postPetVarietySubtitle"
+                    android:id="@+id/petVarietySubtitle"
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/variety"
-                    app:layout_constraintEnd_toStartOf="@id/postPetGenderSubtitle"
+                    app:layout_constraintEnd_toStartOf="@id/petGenderSubtitle"
                     app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toEndOf="@id/postPetCategorySubtitle"
+                    app:layout_constraintStart_toEndOf="@id/petCategorySubtitle"
                     app:layout_constraintTop_toBottomOf="@id/postDivider1" />
 
                 <TextView
-                    android:id="@+id/postPetGenderSubtitle"
+                    android:id="@+id/petGenderSubtitle"
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -121,35 +121,35 @@
                     android:text="@string/gender"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toEndOf="@id/postPetVarietySubtitle"
+                    app:layout_constraintStart_toEndOf="@id/petVarietySubtitle"
                     app:layout_constraintTop_toBottomOf="@id/postDivider1" />
 
                 <TextView
-                    android:id="@+id/postPetCategoryTextView"
+                    android:id="@+id/petCategoryTextView"
                     style="@style/BodyVerticalMarginStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
                     android:text="@string/category_example"
-                    app:layout_constraintEnd_toStartOf="@id/postPetVarietyTextView"
+                    app:layout_constraintEnd_toStartOf="@id/petVarietyTextView"
                     app:layout_constraintHorizontal_weight="1"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/postPetCategorySubtitle" />
+                    app:layout_constraintTop_toBottomOf="@id/petCategorySubtitle" />
 
                 <TextView
-                    android:id="@+id/postPetVarietyTextView"
+                    android:id="@+id/petVarietyTextView"
                     style="@style/BodyVerticalMarginStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/variety_example"
-                    app:layout_constraintEnd_toStartOf="@id/postPetGenderTextView"
+                    app:layout_constraintEnd_toStartOf="@id/petGenderTextView"
                     app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toEndOf="@id/postPetCategoryTextView"
-                    app:layout_constraintTop_toBottomOf="@id/postPetVarietySubtitle" />
+                    app:layout_constraintStart_toEndOf="@id/petCategoryTextView"
+                    app:layout_constraintTop_toBottomOf="@id/petVarietySubtitle" />
 
                 <TextView
-                    android:id="@+id/postPetGenderTextView"
+                    android:id="@+id/petGenderTextView"
                     style="@style/BodyVerticalMarginStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -158,35 +158,35 @@
                     android:text="@string/gender_example"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toEndOf="@id/postPetVarietyTextView"
-                    app:layout_constraintTop_toBottomOf="@id/postPetGenderSubtitle" />
+                    app:layout_constraintStart_toEndOf="@id/petVarietyTextView"
+                    app:layout_constraintTop_toBottomOf="@id/petGenderSubtitle" />
 
                 <TextView
-                    android:id="@+id/postPetAgeSubtitle"
+                    android:id="@+id/petAgeSubtitle"
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
                     android:text="@string/age"
-                    app:layout_constraintEnd_toStartOf="@id/postPetWeightSubtitle"
+                    app:layout_constraintEnd_toStartOf="@id/petWeightSubtitle"
                     app:layout_constraintHorizontal_weight="1"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/postPetCategoryTextView" />
+                    app:layout_constraintTop_toBottomOf="@id/petCategoryTextView" />
 
                 <TextView
-                    android:id="@+id/postPetWeightSubtitle"
+                    android:id="@+id/petWeightSubtitle"
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/weight"
-                    app:layout_constraintEnd_toStartOf="@id/postPetSurgerySubtitle"
+                    app:layout_constraintEnd_toStartOf="@id/petSurgerySubtitle"
                     app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toEndOf="@id/postPetAgeSubtitle"
-                    app:layout_constraintTop_toBottomOf="@id/postPetVarietyTextView" />
+                    app:layout_constraintStart_toEndOf="@id/petAgeSubtitle"
+                    app:layout_constraintTop_toBottomOf="@id/petVarietyTextView" />
 
                 <TextView
-                    android:id="@+id/postPetSurgerySubtitle"
+                    android:id="@+id/petSurgerySubtitle"
                     style="@style/SubtitleVerticalMarginStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -195,35 +195,35 @@
                     android:text="@string/surgery"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toEndOf="@id/postPetWeightSubtitle"
-                    app:layout_constraintTop_toBottomOf="@id/postPetGenderTextView" />
+                    app:layout_constraintStart_toEndOf="@id/petWeightSubtitle"
+                    app:layout_constraintTop_toBottomOf="@id/petGenderTextView" />
 
                 <TextView
-                    android:id="@+id/postPetAgeTextView"
+                    android:id="@+id/petAgeTextView"
                     style="@style/BodyVerticalMarginStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
                     android:text="@string/age_example"
-                    app:layout_constraintEnd_toStartOf="@id/postPetWeightTextView"
+                    app:layout_constraintEnd_toStartOf="@id/petWeightTextView"
                     app:layout_constraintHorizontal_weight="1"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/postPetAgeSubtitle" />
+                    app:layout_constraintTop_toBottomOf="@id/petAgeSubtitle" />
 
                 <TextView
-                    android:id="@+id/postPetWeightTextView"
+                    android:id="@+id/petWeightTextView"
                     style="@style/BodyVerticalMarginStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/weight_kg_example"
-                    app:layout_constraintEnd_toStartOf="@id/postPetSurgeryTextView"
+                    app:layout_constraintEnd_toStartOf="@id/petSurgeryTextView"
                     app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toEndOf="@id/postPetAgeTextView"
-                    app:layout_constraintTop_toBottomOf="@id/postPetWeightSubtitle" />
+                    app:layout_constraintStart_toEndOf="@id/petAgeTextView"
+                    app:layout_constraintTop_toBottomOf="@id/petWeightSubtitle" />
 
                 <TextView
-                    android:id="@+id/postPetSurgeryTextView"
+                    android:id="@+id/petSurgeryTextView"
                     style="@style/BodyVerticalMarginStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -232,8 +232,8 @@
                     android:text="@string/surgery_example"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toEndOf="@id/postPetWeightTextView"
-                    app:layout_constraintTop_toBottomOf="@id/postPetSurgerySubtitle" />
+                    app:layout_constraintStart_toEndOf="@id/petWeightTextView"
+                    app:layout_constraintTop_toBottomOf="@id/petSurgerySubtitle" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:id="@+id/postDivider2"
@@ -241,7 +241,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
-                    app:layout_constraintTop_toBottomOf="@id/postPetAgeTextView" />
+                    app:layout_constraintTop_toBottomOf="@id/petAgeTextView" />
 
                 <TextView
                     android:id="@+id/postServiceSubtitle"
