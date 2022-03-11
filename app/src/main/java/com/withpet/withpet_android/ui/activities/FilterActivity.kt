@@ -9,8 +9,8 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.withpet.withpet_android.R
 import com.withpet.withpet_android.databinding.ActivityFilterBinding
 import com.withpet.withpet_android.databinding.DialogDateTimePickerBinding
-import com.withpet.withpet_android.others.PetCategoryEnum
-import com.withpet.withpet_android.others.ServiceEnum
+import com.withpet.withpet_android.enums.PetCategoryEnum
+import com.withpet.withpet_android.enums.ServiceEnum
 import com.withpet.withpet_android.others.Utils
 import java.text.NumberFormat
 import java.util.*

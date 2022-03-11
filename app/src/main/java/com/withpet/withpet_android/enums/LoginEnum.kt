@@ -1,4 +1,4 @@
-package com.withpet.withpet_android.others
+package com.withpet.withpet_android.enums
 
 enum class LoginEnum(val value: Int) {
     NOTHING(-1),
