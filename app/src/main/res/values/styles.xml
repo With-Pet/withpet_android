@@ -113,6 +113,14 @@
         <item name="android:backgroundTint">@color/very_peri</item>
     </style>
 
+    <style name="ButtonStyle.Outlined.Icon" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="strokeColor">@color/soft_gray</item>
+        <item name="iconTint">@color/black</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+
     <style name="ButtonStyle.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
         <item name="strokeColor">@color/text_field_stroke_color</item>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardElevation="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/reservationTownTextView"
+                style="@style/TextStyle.Headline6.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawablePadding="8dp"
+                android:text="@string/full_town_example"
+                app:drawableStartCompat="@drawable/ic_location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/reservationDivider1"
+                style="@style/HorizontalTopDividerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/reservationTownTextView" />
+
+            <TextView
+                android:id="@+id/reservationServiceTextView"
+                style="@style/TitleVerticalMarginStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/walk"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reservationDivider1" />
+
+            <TextView
+                android:id="@+id/reservationNicknameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/nickname_example"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reservationServiceTextView" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/reservationStateChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:chipEndPadding="4dp"
+                app:chipStartPadding="4dp"
+                app:chipMinHeight="24dp"
+                android:clickable="false"
+                android:text="@string/usage_now"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:chipBackgroundColor="@color/very_peri"
+                app:layout_constraintBottom_toBottomOf="@id/reservationServiceTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/reservationServiceTextView" />
+
+            <Button
+                android:id="@+id/reservationProfileButton"
+                style="@style/ButtonStyle.Outlined.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/see_profile"
+                app:icon="@drawable/ic_person"
+                app:layout_constraintEnd_toStartOf="@id/reservationChatButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reservationNicknameTextView" />
+
+            <Button
+                android:id="@+id/reservationChatButton"
+                style="@style/ButtonStyle.Outlined.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/go_chat"
+                app:icon="@drawable/ic_message"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/reservationProfileButton"
+                app:layout_constraintTop_toBottomOf="@id/reservationNicknameTextView" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/reservationDivider2"
+                style="@style/HorizontalTopDividerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/reservationProfileButton" />
+
+            <TextView
+                android:id="@+id/reservationStartSubtitle"
+                style="@style/TextStyle.Body2.Default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/start_date"
+                app:layout_constraintEnd_toStartOf="@id/reservationEndSubtitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reservationDivider2" />
+
+            <TextView
+                android:id="@+id/reservationEndSubtitle"
+                style="@style/TextStyle.Body2.Default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/end_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/reservationStartSubtitle"
+                app:layout_constraintTop_toBottomOf="@id/reservationDivider2" />
+
+            <TextView
+                android:id="@+id/reservationStartDateTextView"
+                style="@style/TextStyle.Subtitle1.Bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:gravity="center"
+                android:text="@string/start_date_example"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/reservationEndDateTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reservationStartSubtitle" />
+
+            <TextView
+                android:id="@+id/reservationEndDateTextView"
+                style="@style/TextStyle.Subtitle1.Bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:gravity="center"
+                android:text="@string/end_date_example"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/reservationStartDateTextView"
+                app:layout_constraintTop_toBottomOf="@id/reservationEndSubtitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
