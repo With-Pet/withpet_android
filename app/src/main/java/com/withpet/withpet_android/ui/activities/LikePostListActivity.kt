@@ -1,5 +1,6 @@
 package com.withpet.withpet_android.ui.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -26,7 +27,7 @@ class LikePostListActivity : AppCompatActivity() {
 
     private fun setRecyclerView() {
         binding.likePostListRecyclerView.adapter = PostListAdapter {
-
+            startActivity(Intent(this, PostActivity::class.java))
         }
         binding.likePostListRecyclerView.layoutManager = LinearLayoutManager(this)
     }

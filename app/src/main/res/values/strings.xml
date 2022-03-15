@@ -24,6 +24,15 @@
     <string name="apply">적용하기</string>
     <string name="reset">초기화</string>
 
+    <string name="reservation_history">예약 내역</string>
+    <string name="give_service">맡아준 내역</string>
+    <string name="take_service">맡긴 내역</string>
+    <string name="usage_before">이용 전</string>
+    <string name="usage_now">이용 중</string>
+    <string name="usage_finish">이용 완료</string>
+    <string name="see_profile">프로필 보기</string>
+    <string name="go_chat">채팅하기</string>
+
     <string name="profile_setting">프로필 설정</string>
     <string name="start">시작하기</string>
 
@@ -113,6 +122,7 @@
 
     <string name="nickname_example">홍길동</string>
     <string name="town_example">논현1동</string>
+    <string name="full_town_example">서울특별시 강남구 논현1동</string>
     <string name="introduce_subtitle_example">현재 6세 말티즈를 키우고 있고, 자격증을 보유 하고 있습니다.</string>
     <string name="review_example">4.7</string>
 
@@ -144,6 +154,9 @@
     <string name="register_town_example">논현1동</string>
     <string name="register_date_example">02월 14일 AM 09:00 ~ 02월 14일 PM 12:00</string>
     <string name="register_request_example">가파른 산은 가급적 피해주시길 바랍니다.</string>
+
+    <string name="start_date_example">22.01.30 PM 01:30</string>
+    <string name="end_date_example">22.01.30 PM 04:30</string>
 
     <!-- content description -->
     <string name="my_profile_menu_icon">내 프로필 관리하기 아이콘</string>
